@@ -1,0 +1,5 @@
+Contact: mailto:security@starkapital.com
+Expires: 2027-08-05T00:00:00Z
+Preferred-Languages: es, en
+Policy: https://starkapital.com/legal/divulgacion-de-vulnerabilidades/
+Canonical: https://starkapital.com/.well-known/security.txt

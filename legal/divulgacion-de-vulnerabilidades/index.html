@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Divulgación responsable de vulnerabilidades | Starkapital</title>
+<meta name="description" content="Cómo reportar una falla de seguridad de starkapital.com a security@starkapital.com: alcance, compromiso de respuesta y garantía de no acción legal de buena fe.">
+<link rel="canonical" href="https://starkapital.com/legal/divulgacion-de-vulnerabilidades/">
+<meta name="theme-color" content="#0F1E32">
+<link rel="icon" type="image/svg+xml" href="/starkapital-web/img/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Divulgación responsable de vulnerabilidades | Starkapital">
+<meta property="og:description" content="Si encontró una falla de seguridad en starkapital.com, este es el canal para reportarla de buena fe y lo que puede esperar de nosotros a cambio.">
+<meta property="og:url" content="https://starkapital.com/legal/divulgacion-de-vulnerabilidades/">
+<meta property="og:image" content="https://starkapital.com/img/garantia-llaves.jpg?v=2">
+<meta property="og:locale" content="es_CO">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/starkapital-web/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://starkapital.com/"},
+        {"@type":"ListItem","position":2,"name":"Legal","item":"https://starkapital.com/legal/"},
+        {"@type":"ListItem","position":3,"name":"Divulgación de vulnerabilidades","item":"https://starkapital.com/legal/divulgacion-de-vulnerabilidades/"}
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "name": "Política de divulgación responsable de vulnerabilidades de Starkapital",
+      "url": "https://starkapital.com/legal/divulgacion-de-vulnerabilidades/",
+      "inLanguage": "es-CO",
+      "dateModified": "2026-08-05"
+    }
+  ]
+}
+</script>
+<style>
+  .doc-body{padding-top:56px;padding-bottom:88px}
+  .nota-jur{font-size:13.5px;color:var(--warn);border:1px dashed rgba(224,190,104,.4);border-radius:12px;padding:12px 16px;margin:0 0 18px}
+  .nota-jur b{font-weight:600}
+  .doc-fin{border-top:1px solid var(--line);margin-top:48px;padding-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+  .prose .tw{margin:0 0 18px}
+  .prose .tw table{font-size:14px;min-width:520px}
+  .prose .tw td, .prose .tw th{padding:12px 14px}
+  .sec-mail{background:var(--navy-2);border:1px dashed rgba(202,217,0,.5);border-radius:16px;padding:22px 24px;text-align:center;margin:0 0 18px}
+  .sec-mail .ml{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-2);font-weight:600}
+  .sec-mail .ma{font-family:var(--mono);font-size:clamp(18px,3vw,24px);font-weight:600;color:var(--lime);margin-top:6px;word-break:break-all}
+</style>
+</head>
+<body data-wa-msg="Hola, quiero información sobre la política de divulgación de vulnerabilidades de starkapital.com.">
+
+<!-- ============ BARRA SUPERIOR ============ -->
+<div class="topbar">
+  <div class="topbar-in">
+    <a href="#" class="soon" data-page="Portal de cliente (app.starkapital.com)">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Ingresar
+    </a>
+    <a href="#" class="js-wa" target="_blank" rel="noopener">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.7-5c-.8-1.4-1-2.5-.8-3 .1-.5.8-1.3 1.3-1.4h.7c.2 0 .5-.1.8.6l1 2.4c.1.2.1.4 0 .6l-.5.8c-.2.2-.3.4-.1.7a9 9 0 0 0 3.9 3.5c.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .2 0 .6-.5 1.6Z"/></svg>
+      WhatsApp
+    </a>
+    <a href="/starkapital-web/pqrs/">PQRS</a>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav-in">
+    <a href="/starkapital-web/" class="logo-link" aria-label="Starkapital — inicio">
+      <img class="logo" src="/starkapital-web/img/logo.svg" alt="Starkapital" width="172" height="42">
+    </a>
+    <ul class="menu">
+      <li>
+        <button class="mi" aria-haspopup="true" aria-expanded="false">Crédito <span class="caret" aria-hidden="true"></span></button>
+        <div class="dropdown">
+          <div class="dd-lab">El crédito</div>
+          <a href="/starkapital-web/creditos/compra-de-taxi/">Crédito para comprar taxi</a>
+          <a href="/starkapital-web/creditos/compra-de-taxi/bogota/">Comprar taxi en Bogotá</a>
+          <div class="dd-lab" style="margin-top:14px">Herramientas</div>
+          <a href="/starkapital-web/simulador/">Simulador</a>
+          <a href="/starkapital-web/requisitos/">Requisitos</a>
+          <a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a>
+        </div>
+      </li>
+      <li><a href="/starkapital-web/como-funciona/">Cómo funciona</a></li>
+      <li><a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a></li>
+      <li><a href="/starkapital-web/vitrinas/" class="mi-vitrinas">Vitrinas</a></li>
+      <li><a href="/starkapital-web/blog/">Blog</a></li>
+      <li>
+        <button class="mi" aria-haspopup="true" aria-expanded="false">Nosotros <span class="caret" aria-hidden="true"></span></button>
+        <div class="dropdown">
+          <a href="/starkapital-web/nosotros/">Quiénes somos</a>
+          <a href="/starkapital-web/nosotros/manifiesto/">Manifiesto</a>
+          <a href="/starkapital-web/nosotros/equipo/">Equipo</a>
+          <a href="/starkapital-web/nosotros/tecnologia/">Tecnología</a>
+        </div>
+      </li>
+    </ul>
+    <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar mi crédito</a>
+    <button class="hamb" id="hamb" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- drawer móvil -->
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-label="Menú">
+    <button class="drawer-close" id="drawerClose" aria-label="Cerrar menú">✕</button>
+    <div class="dlab">El crédito</div>
+    <a href="/starkapital-web/creditos/compra-de-taxi/">Crédito para comprar taxi</a>
+    <a href="/starkapital-web/creditos/compra-de-taxi/bogota/">Comprar taxi en Bogotá</a>
+    <div class="dlab">Herramientas</div>
+    <a href="/starkapital-web/simulador/">Simulador</a>
+    <a href="/starkapital-web/requisitos/">Requisitos</a>
+    <a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a>
+    <div class="dlab">Sitio</div>
+    <a href="/starkapital-web/como-funciona/">Cómo funciona</a>
+    <a href="/starkapital-web/vitrinas/" class="vit-dot">Vitrinas</a>
+    <a href="/starkapital-web/blog/">Blog</a>
+    <a href="/starkapital-web/nosotros/">Nosotros</a>
+    <a href="/starkapital-web/preguntas-frecuentes/">Preguntas frecuentes</a>
+    <a href="/starkapital-web/contacto/">Contacto</a>
+    <div class="dlab">Utilidades</div>
+    <a href="#" class="soon" data-page="Portal de cliente">Ingresar</a>
+    <a href="/starkapital-web/pqrs/">PQRS</a>
+    <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar mi crédito</a>
+  </div>
+</div>
+
+<nav class="crumbs" aria-label="Miga de pan">
+  <ol>
+    <li><a href="/starkapital-web/">Inicio</a></li>
+    <li><a href="/starkapital-web/legal/" aria-current="true">Legal</a></li>
+    <li><span aria-current="page">Divulgación de vulnerabilidades</span></li>
+  </ol>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero" style="padding-top:46px;padding-bottom:46px">
+    <div class="wrap-narrow">
+      <span class="eyebrow h-in d1">Legal · Documento 06 de 06</span>
+      <h1 class="h-in d2">Divulgación de <em>vulnerabilidades</em></h1>
+      <p class="lead h-in d3">Nuestros formularios manejan cédulas e ingresos de personas que trabajan duro por su plata. Si usted encontró una falla de seguridad, <strong>queremos saberlo</strong> — y este es el canal para contárnoslo sin riesgo.</p>
+      <div class="art-meta h-in d4">
+        <span>Versión: <b>borrador estructurado</b></span>
+        <span>Fecha: <b>5 de agosto de 2026</b></span>
+        <span class="rev">Revisión jurídica: pendiente</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUERPO -->
+  <section class="doc-body" aria-label="Texto del documento">
+    <div class="wrap-narrow">
+
+      <div class="callout warn reveal" style="margin-top:0">
+        <div class="t">Borrador estructurado — pendiente de validación del área jurídica antes de publicar</div>
+        <p>Este documento es una base de trabajo redactada para revisión. El compromiso de no acción legal del numeral 5 debe validarse con el área jurídica antes de publicar: en esta materia, publicar de más es tan riesgoso como publicar de menos.</p>
+      </div>
+
+      <div class="toc reveal">
+        <div class="toc-t">Contenido del documento</div>
+        <ol>
+          <li><a href="#compromiso">Por qué publicamos esta política</a></li>
+          <li><a href="#alcance">Alcance: qué cubre y qué no</a></li>
+          <li><a href="#reportar">¿Cómo reportar una vulnerabilidad?</a></li>
+          <li><a href="#respuesta">Nuestro compromiso de respuesta</a></li>
+          <li><a href="#buena-fe">Reportes de buena fe: sin acciones legales</a></li>
+          <li><a href="#reconocimiento">Reconocimiento</a></li>
+        </ol>
+      </div>
+
+      <div class="prose">
+
+        <h2 id="compromiso">1. ¿Por qué publicamos esta política?</h2>
+        <p>Los formularios de este sitio recogen datos personales protegidos por la Ley 1581 de 2012: cédula, ingresos y datos del vehículo. Una falla de seguridad aquí no es un incidente técnico menor — es un riesgo directo para nuestros clientes. Por eso tratamos los reportes externos de seguridad como un favor, no como una amenaza, y los declaramos también en el archivo estándar <a href="/starkapital-web/.well-known/security.txt">/.well-known/security.txt</a>, conforme a la norma RFC 9116.</p>
+
+        <h2 id="alcance">2. Alcance: ¿qué cubre y qué no?</h2>
+        <p><strong>Dentro del alcance:</strong></p>
+        <ul>
+          <li>El sitio <strong>starkapital.com</strong> y sus subdominios, incluido el portal de clientes app.starkapital.com.</li>
+          <li>Los formularios del sitio: solicitud de crédito, registro de vitrinas, radicación de clientes, PQRS y contacto.</li>
+          <li>Fallas típicas de aplicación web: inyección, secuencias de comandos entre sitios, control de acceso roto, exposición de datos, configuración insegura.</li>
+        </ul>
+        <p><strong>Fuera del alcance:</strong></p>
+        <ul>
+          <li>Servicios de terceros que no operamos: WhatsApp, proveedores de fuentes o de infraestructura. Repórtelos a su titular.</li>
+          <li>Ataques de denegación de servicio o pruebas que degraden la disponibilidad del sitio.</li>
+          <li>Ingeniería social contra nuestro equipo o nuestros clientes, y ataques físicos.</li>
+          <li>Reportes automatizados sin prueba de impacto (salida cruda de un escáner).</li>
+        </ul>
+
+        <h2 id="reportar">3. ¿Cómo reportar una vulnerabilidad?</h2>
+        <div class="sec-mail">
+          <div class="ml">Canal único de reportes de seguridad</div>
+          <div class="ma">security@starkapital.com</div>
+        </div>
+        <p>Para que podamos reproducir y corregir la falla, incluya en su reporte:</p>
+        <ul>
+          <li>Descripción de la vulnerabilidad y su impacto potencial.</li>
+          <li>Pasos para reproducirla: direcciones URL, parámetros, capturas o prueba de concepto.</li>
+          <li>Fecha del hallazgo y condiciones en las que se presenta.</li>
+          <li>Un medio para responderle. Aceptamos reportes anónimos, pero no podremos darle seguimiento.</li>
+        </ul>
+        <p>Puede escribirnos en <strong>español o inglés</strong>. No incluya en el reporte datos personales de clientes: si la falla los expone, descríbala sin extraerlos.</p>
+
+        <h2 id="respuesta">4. Nuestro compromiso de respuesta</h2>
+        <div class="tw">
+          <table>
+            <thead><tr><th style="width:46%">Etapa</th><th>Compromiso</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Acuse de recibo</strong></td><td>Máximo <strong>3 días hábiles</strong> desde su reporte</td></tr>
+              <tr><td><strong>Evaluación inicial</strong></td><td>Máximo <strong>10 días hábiles</strong>: le decimos si confirmamos la falla y con qué severidad</td></tr>
+              <tr><td><strong>Seguimiento</strong></td><td>Le informamos el avance de la corrección hasta cerrarla</td></tr>
+              <tr><td><strong>Divulgación coordinada</strong></td><td>Acordamos con usted el momento de publicar el hallazgo, una vez corregido; como referencia, dentro de los 90 días siguientes al reporte</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="buena-fe">5. Reportes de buena fe: sin acciones legales</h2>
+        <p>Starkapital <strong>no iniciará acciones legales</strong> contra quien reporte una vulnerabilidad de buena fe y dentro de estas reglas:</p>
+        <ul>
+          <li>Acceda solo al mínimo necesario para demostrar la falla; no extraiga, altere ni elimine datos de terceros.</li>
+          <li>No degrade el servicio ni afecte a otros usuarios.</li>
+          <li>No divulgue el hallazgo públicamente antes de la corrección coordinada del numeral 4.</li>
+          <li>No pida dinero a cambio de no divulgar: eso no es un reporte, es una extorsión.</li>
+        </ul>
+        <p>Si su investigación cumple estas reglas, la consideramos autorizada por esta política y no la trataremos como acceso abusivo.</p>
+        <div class="nota-jur"><b>Nota para el área jurídica:</b> validar la redacción de este compromiso frente a la Ley 1273 de 2009 (delitos informáticos) y precisar sus límites en la versión final.</div>
+
+        <h2 id="reconocimiento">6. Reconocimiento</h2>
+        <p>Hoy no operamos un programa de recompensas. Lo que sí hacemos: responder con seriedad, corregir con prioridad y, si usted lo desea, <strong>agradecer públicamente su hallazgo</strong> una vez corregido. Un reporte responsable protege a cientos de familias que trabajan con su vehículo — no es poca cosa y no lo tratamos como tal.</p>
+
+        <p style="margin-top:34px;font-size:14px;color:var(--muted-2)">Canal exclusivo de seguridad: security@starkapital.com · Para cualquier otro tema, use <a href="/starkapital-web/contacto/">contacto</a> o <a href="/starkapital-web/pqrs/">PQRS</a>.</p>
+      </div>
+
+      <div class="doc-fin reveal">
+        <a class="btn-ghost" href="/starkapital-web/legal/">← Todos los documentos legales</a>
+        <a class="btn-ghost" href="/starkapital-web/legal/terminos-y-condiciones/">Volver al primer documento →</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="foot-grid">
+    <nav aria-label="El crédito">
+      <h4>El crédito</h4>
+      <ul>
+        <li><a href="/starkapital-web/creditos/compra-de-taxi/">Crédito para comprar taxi</a></li>
+        <li><a href="/starkapital-web/creditos/compra-de-taxi/bogota/">Comprar taxi en Bogotá</a></li>
+        <li><a href="/starkapital-web/simulador/">Simulador</a></li>
+        <li><a href="/starkapital-web/requisitos/">Requisitos</a></li>
+        <li><a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Vitrinas">
+      <h4>Vitrinas</h4>
+      <ul>
+        <li><a href="/starkapital-web/vitrinas/" class="vit-dot">Propuesta para vitrinas</a></li>
+        <li><a href="/starkapital-web/vitrinas/registro/">Registrar mi vitrina</a></li>
+        <li><a href="/starkapital-web/vitrinas/radicar-cliente/">Radicar un cliente</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Empresa">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="/starkapital-web/nosotros/">Quiénes somos</a></li>
+        <li><a href="/starkapital-web/nosotros/manifiesto/">Manifiesto</a></li>
+        <li><a href="/starkapital-web/nosotros/equipo/">Equipo</a></li>
+        <li><a href="/starkapital-web/nosotros/tecnologia/">Tecnología</a></li>
+        <li><a href="/starkapital-web/contacto/">Contacto</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Recursos">
+      <h4>Recursos</h4>
+      <ul>
+        <li><a href="/starkapital-web/blog/">Blog</a></li>
+        <li><a href="/starkapital-web/preguntas-frecuentes/">Preguntas frecuentes</a></li>
+        <li><a href="/starkapital-web/requisitos/">Requisitos</a></li>
+        <li><a href="/starkapital-web/como-funciona/">Cómo funciona</a></li>
+        <li><a href="/starkapital-web/mapa-del-sitio/">Mapa del sitio</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Legal y transparencia">
+      <h4>Legal y transparencia</h4>
+      <ul>
+        <li><a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a></li>
+        <li><a href="/starkapital-web/pqrs/">PQRS</a></li>
+        <li><a href="/starkapital-web/legal/terminos-y-condiciones/">Términos y condiciones</a></li>
+        <li><a href="/starkapital-web/legal/politica-de-privacidad/">Política de privacidad</a></li>
+        <li><a href="/starkapital-web/legal/tratamiento-de-datos-personales/">Tratamiento de datos</a></li>
+        <li><a href="/starkapital-web/legal/" aria-current="true">Todos los documentos</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="foot-id">
+    <div>
+      <img class="logo" src="/starkapital-web/img/logo.svg" alt="Starkapital" width="150" height="37">
+      <div><b>Starkapital S.A.S.</b> · Bogotá D.C., Colombia<br>
+      hola@starkapital.com · Lunes a sábado, 8:00 a.&nbsp;m. – 6:00 p.&nbsp;m.<br>
+      NIT, dirección y teléfono se publican al cierre de la revisión jurídica.</div>
+    </div>
+    <div class="col-r">© 2026 Starkapital S.A.S. Todos los derechos reservados.<br>
+    Documentos legales en <a href="/starkapital-web/legal/" aria-current="true" style="color:var(--muted)">revisión jurídica</a>.</div>
+  </div>
+</footer>
+
+<!-- barra fija móvil -->
+<div class="mbar">
+  <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar mi crédito</a>
+  <a class="mwa js-wa" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.7-5c-.8-1.4-1-2.5-.8-3 .1-.5.8-1.3 1.3-1.4h.7c.2 0 .5-.1.8.6l1 2.4c.1.2.1.4 0 .6l-.5.8c-.2.2-.3.4-.1.7a9 9 0 0 0 3.9 3.5c.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .2 0 .6-.5 1.6Z"/></svg>
+  </a>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/starkapital-web/js/site.js?v=3"></script>
+</body>
+</html>

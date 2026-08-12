@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solicite su crédito en línea | Starkapital</title>
+<meta name="description" content="Cuéntenos qué necesita en tres pasos cortos. Guardamos su avance si se le va la señal y le respondemos en máximo 24 horas hábiles con la cuota por escrito.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://starkapital.com/solicitud/">
+<meta name="theme-color" content="#0F1E32">
+<link rel="icon" type="image/svg+xml" href="/starkapital-web/img/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Solicite su crédito en línea | Starkapital">
+<meta property="og:description" content="Tres pasos cortos, avance guardado y respuesta en máximo 24 horas hábiles con la cuota por escrito.">
+<meta property="og:url" content="https://starkapital.com/solicitud/">
+<meta property="og:image" content="https://starkapital.com/img/taxi-noche.jpg?v=2">
+<meta property="og:locale" content="es_CO">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/starkapital-web/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Inicio","item":"https://starkapital.com/"},
+    {"@type":"ListItem","position":2,"name":"Solicitud","item":"https://starkapital.com/solicitud/"}
+  ]
+}
+</script>
+<style>
+  [hidden]{display:none!important}
+  .sol-wrap{max-width:640px;margin:0 auto;padding:0 28px}
+  .sol-top{padding:52px 0 0}
+  .sol-top h1{font-size:clamp(32px,5vw,42px);color:var(--white)}
+  .sol-lead{color:var(--muted);margin-top:14px;font-size:17.5px;max-width:52ch}
+  .sol-lead strong{color:var(--ink);font-weight:600}
+  .sol-facts{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+  .sol-facts span{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:6px 12px}
+  .sol-facts b{color:var(--pear);font-weight:600}
+  .sol-form-sec{padding:44px 0 96px}
+  .retomar{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--navy-2);border:1px dashed rgba(202,217,0,.5);border-radius:14px;padding:14px 18px;margin-bottom:26px;font-size:14px;color:var(--muted)}
+  .retomar p{margin:0}
+  .retomar b{color:var(--pear);font-weight:600}
+  .retomar button{background:none;border:1px solid var(--line);color:var(--ink);border-radius:99px;padding:8px 15px;font-family:var(--sans);font-size:13px;font-weight:500;cursor:pointer;flex:none}
+  .retomar button:hover{border-color:var(--pear);color:var(--lime)}
+  /* los pasos son <section>: anulamos el padding global de section en site.css */
+  .fpaso{display:none;padding:0}
+  .fpaso.on{display:flex;flex-direction:column;gap:22px;padding:0}
+  .fp-t{font-size:23px;color:var(--white);letter-spacing:-.02em}
+  .fp-t:focus{outline:none}
+  .fld.invalid .chips label{border-color:var(--bad)}
+  .fld-chk{display:flex;flex-direction:column;gap:8px}
+  .fld-chk .err{font-size:13px;color:var(--bad);display:none}
+  .fld-chk.invalid .err{display:block}
+  .resumen-dl{margin:0;border:1px solid var(--line);border-radius:16px;background:var(--navy-2);padding:6px 20px}
+  .resumen-dl > div{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:13px 0;border-bottom:1px dashed rgba(42,62,88,.6);font-size:14.5px}
+  .resumen-dl > div:last-child{border-bottom:none}
+  .resumen-dl dt{color:var(--muted-2);font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;font-weight:600;flex:none}
+  .resumen-dl dd{margin:0;color:var(--white);font-weight:500;text-align:right;overflow-wrap:anywhere}
+  .fnav{display:flex;gap:12px;margin-top:4px}
+  .fnav .btn-cta{flex:1;justify-content:center;font-size:16.5px;padding:17px 22px;margin:0}
+  .fnav .btn-ghost{flex:none;padding:16px 26px;font-size:16px}
+</style>
+</head>
+<body data-wa-msg="Hola, estoy llenando la solicitud en starkapital.com y prefiero terminarla por WhatsApp. ¿Me ayudan?">
+
+<!-- ============ BARRA SUPERIOR ============ -->
+<div class="topbar">
+  <div class="topbar-in">
+    <a href="#" class="soon" data-page="Portal de cliente (app.starkapital.com)">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Ingresar
+    </a>
+    <a href="#" class="js-wa" target="_blank" rel="noopener">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.7-5c-.8-1.4-1-2.5-.8-3 .1-.5.8-1.3 1.3-1.4h.7c.2 0 .5-.1.8.6l1 2.4c.1.2.1.4 0 .6l-.5.8c-.2.2-.3.4-.1.7a9 9 0 0 0 3.9 3.5c.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .2 0 .6-.5 1.6Z"/></svg>
+      WhatsApp
+    </a>
+    <a href="/starkapital-web/pqrs/">PQRS</a>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav-in">
+    <a href="/starkapital-web/" class="logo-link" aria-label="Starkapital — inicio">
+      <img class="logo" src="/starkapital-web/img/logo.svg" alt="Starkapital" width="172" height="42">
+    </a>
+    <ul class="menu">
+      <li>
+        <button class="mi" aria-haspopup="true" aria-expanded="false">Crédito <span class="caret" aria-hidden="true"></span></button>
+        <div class="dropdown">
+          <div class="dd-lab">El crédito</div>
+          <a href="/starkapital-web/creditos/compra-de-taxi/">Crédito para comprar taxi</a>
+          <a href="/starkapital-web/creditos/compra-de-taxi/bogota/">Comprar taxi en Bogotá</a>
+          <div class="dd-lab" style="margin-top:14px">Herramientas</div>
+          <a href="/starkapital-web/simulador/">Simulador</a>
+          <a href="/starkapital-web/requisitos/">Requisitos</a>
+          <a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a>
+        </div>
+      </li>
+      <li><a href="/starkapital-web/como-funciona/">Cómo funciona</a></li>
+      <li><a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a></li>
+      <li><a href="/starkapital-web/vitrinas/" class="mi-vitrinas">Vitrinas</a></li>
+      <li><a href="/starkapital-web/blog/">Blog</a></li>
+      <li>
+        <button class="mi" aria-haspopup="true" aria-expanded="false">Nosotros <span class="caret" aria-hidden="true"></span></button>
+        <div class="dropdown">
+          <a href="/starkapital-web/nosotros/">Quiénes somos</a>
+          <a href="/starkapital-web/nosotros/manifiesto/">Manifiesto</a>
+          <a href="/starkapital-web/nosotros/equipo/">Equipo</a>
+          <a href="/starkapital-web/nosotros/tecnologia/">Tecnología</a>
+        </div>
+      </li>
+    </ul>
+    <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar mi crédito</a>
+    <button class="hamb" id="hamb" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- drawer móvil -->
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-label="Menú">
+    <button class="drawer-close" id="drawerClose" aria-label="Cerrar menú">✕</button>
+    <div class="dlab">El crédito</div>
+    <a href="/starkapital-web/creditos/compra-de-taxi/">Crédito para comprar taxi</a>
+    <a href="/starkapital-web/creditos/compra-de-taxi/bogota/">Comprar taxi en Bogotá</a>
+    <div class="dlab">Herramientas</div>
+    <a href="/starkapital-web/simulador/">Simulador</a>
+    <a href="/starkapital-web/requisitos/">Requisitos</a>
+    <a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a>
+    <div class="dlab">Sitio</div>
+    <a href="/starkapital-web/como-funciona/">Cómo funciona</a>
+    <a href="/starkapital-web/vitrinas/" class="vit-dot">Vitrinas</a>
+    <a href="/starkapital-web/blog/">Blog</a>
+    <a href="/starkapital-web/nosotros/">Nosotros</a>
+    <a href="/starkapital-web/preguntas-frecuentes/">Preguntas frecuentes</a>
+    <a href="/starkapital-web/contacto/">Contacto</a>
+    <div class="dlab">Utilidades</div>
+    <a href="#" class="soon" data-page="Portal de cliente">Ingresar</a>
+    <a href="/starkapital-web/pqrs/">PQRS</a>
+    <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar mi crédito</a>
+  </div>
+</div>
+
+<nav class="crumbs" aria-label="Miga de pan">
+  <ol>
+    <li><a href="/starkapital-web/">Inicio</a></li>
+    <li><span aria-current="page">Solicitud</span></li>
+  </ol>
+</nav>
+
+<main>
+
+  <!-- ENCABEZADO -->
+  <section class="sol-top" aria-label="Solicitud de crédito">
+    <div class="sol-wrap">
+      <span class="eyebrow h-in d1">Solicitud · 3 pasos</span>
+      <h1 class="h-in d2">Solicite su crédito</h1>
+      <p class="sol-lead h-in d3">Tres pasos cortos, unos 10 minutos. Al terminar, <strong>le respondemos en máximo 24 horas hábiles con la cuota por escrito</strong>.</p>
+      <div class="sol-facts h-in d4">
+        <span>Estudio de crédito <b>$0</b></span>
+        <span>Respuesta <b>en 24 h hábiles</b></span>
+        <span>Avance <b>guardado</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO POR PASOS -->
+  <section class="sol-form-sec" aria-label="Formulario de solicitud por pasos">
+    <div class="sol-wrap">
+
+      <div class="retomar" id="retomar" hidden>
+        <p><b>Retomamos donde iba.</b> Su avance quedó guardado en este navegador.</p>
+        <button type="button" id="btnReset">Empezar de nuevo</button>
+      </div>
+
+      <form id="solForm" class="form" novalidate autocomplete="on">
+
+        <div>
+          <div class="fstep-lab" id="stepLab" aria-live="polite">Paso 1 de 3 · Cuánto necesita</div>
+          <div class="fsteps" aria-hidden="true">
+            <div class="fstep on"></div><div class="fstep"></div><div class="fstep"></div>
+          </div>
+        </div>
+
+        <!-- PASO 1 -->
+        <section class="fpaso on" data-paso="1" aria-labelledby="st1">
+          <h2 class="fp-t" id="st1" tabindex="-1">¿Cuánto necesita?</h2>
+          <p class="form-note" style="margin-top:-12px">Un solo crédito: el del vehículo con el que usted trabaja. Empecemos por el monto.</p>
+
+          <div class="fld" data-name="monto">
+            <label id="labMonto">Monto aproximado</label>
+            <div class="chips" role="radiogroup" aria-labelledby="labMonto">
+              <label><input type="radio" name="monto" value="20-40">$20 a $40 millones</label>
+              <label><input type="radio" name="monto" value="40-70">$40 a $70 millones</label>
+              <label><input type="radio" name="monto" value="70-100">$70 a $100 millones</label>
+              <label><input type="radio" name="monto" value="100-150">$100 a $150 millones</label>
+              <label><input type="radio" name="monto" value="nose">Todavía no lo sé</label>
+            </div>
+            <span class="err">Elija un rango. Si no está seguro, marque «Todavía no lo sé».</span>
+          </div>
+
+          <div class="fld" data-name="visto">
+            <label id="labVisto">¿Ya tiene visto el vehículo?</label>
+            <div class="chips" role="radiogroup" aria-labelledby="labVisto">
+              <label><input type="radio" name="visto" value="si">Sí, ya lo tengo visto</label>
+              <label><input type="radio" name="visto" value="no">Todavía no</label>
+            </div>
+            <span class="err">Cuéntenos si ya tiene el vehículo visto.</span>
+            <p class="form-note">Si todavía no, no se detenga: conocemos las vitrinas y lo acompañamos a elegir bien.</p>
+          </div>
+
+          <div class="fld" data-name="ciudad">
+            <label for="fCiudad">Ciudad donde trabaja el vehículo</label>
+            <select id="fCiudad" name="ciudad">
+              <option value="" selected disabled>Elija su ciudad</option>
+              <option value="bogota">Bogotá D.C.</option>
+              <option value="medellin">Medellín y área metropolitana</option>
+              <option value="cali">Cali</option>
+              <option value="barranquilla">Barranquilla</option>
+              <option value="otra">Otra ciudad</option>
+            </select>
+            <span class="err">Elija la ciudad donde trabaja o va a trabajar el vehículo.</span>
+          </div>
+        </section>
+
+        <!-- PASO 2 -->
+        <section class="fpaso" data-paso="2" aria-labelledby="st2">
+          <h2 class="fp-t" id="st2" tabindex="-1">Sobre usted y su vehículo</h2>
+
+          <div class="fld" data-name="nombre">
+            <label for="fNombre">Nombre completo</label>
+            <input type="text" id="fNombre" name="nombre" autocomplete="name" autocapitalize="words">
+            <span class="err">Escriba su nombre completo, como aparece en la cédula.</span>
+          </div>
+
+          <div class="fld" data-name="celular">
+            <label for="fCelular">Celular</label>
+            <input type="tel" id="fCelular" name="celular" inputmode="tel" autocomplete="tel" placeholder="Empieza por 3, 10 dígitos">
+            <span class="err">Revise el celular: son 10 dígitos y empieza por 3.</span>
+            <p class="form-note">A este número lo llamamos con la respuesta.</p>
+          </div>
+
+          <div class="fld" data-name="anos">
+            <label id="labAnos">¿Hace cuántos años trabaja conduciendo?</label>
+            <div class="chips" role="radiogroup" aria-labelledby="labAnos">
+              <label><input type="radio" name="anos" value="<2">Menos de 2 años</label>
+              <label><input type="radio" name="anos" value="2-5">2 a 5 años</label>
+              <label><input type="radio" name="anos" value="5-10">5 a 10 años</label>
+              <label><input type="radio" name="anos" value="+10">Más de 10 años</label>
+            </div>
+            <span class="err">Elija el rango de años que lleva en el oficio.</span>
+          </div>
+
+          <div class="fld" data-name="produccion">
+            <label id="labProd">¿Cuánto le queda libre al día?</label>
+            <div class="chips" role="radiogroup" aria-labelledby="labProd">
+              <label><input type="radio" name="produccion" value="<100">Menos de $100.000</label>
+              <label><input type="radio" name="produccion" value="100-130">$100.000 a $130.000</label>
+              <label><input type="radio" name="produccion" value="130-180">$130.000 a $180.000</label>
+              <label><input type="radio" name="produccion" value="+180">Más de $180.000</label>
+            </div>
+            <span class="err">Elija el rango que más se parezca a un día normal.</span>
+            <p class="form-note">En promedio, después de gasolina y gastos. Para este paso no necesitamos extractos: su palabra primero, los papeles después.</p>
+          </div>
+        </section>
+
+        <!-- PASO 3 -->
+        <section class="fpaso" data-paso="3" aria-labelledby="st3">
+          <h2 class="fp-t" id="st3" tabindex="-1">Confirme y envíe</h2>
+
+          <dl class="resumen-dl" id="resumen"></dl>
+          <p class="form-note" style="margin-top:-8px">¿Algo quedó mal? Vuelva con «Atrás»: no se borra nada de lo que escribió.</p>
+
+          <div class="fld" data-name="correo">
+            <label for="fCorreo">Correo <span class="opt">(opcional — para enviarle la cuota por escrito)</span></label>
+            <input type="email" id="fCorreo" name="correo" inputmode="email" autocomplete="email">
+            <span class="err">Ese correo no se ve completo. Revíselo o déjelo vacío.</span>
+          </div>
+
+          <div class="fld-chk" data-name="datos">
+            <label class="check">
+              <input type="checkbox" name="datos">
+              <span>Autorizo a Starkapital S.A.S. el <a href="/starkapital-web/legal/tratamiento-de-datos-personales/" target="_blank" rel="noopener">tratamiento de mis datos personales</a> para estudiar esta solicitud y contactarme con la respuesta.</span>
+            </label>
+            <span class="err">Necesitamos esta autorización para poder estudiar su solicitud.</span>
+          </div>
+
+          <div class="fld-chk" data-name="centrales">
+            <label class="check">
+              <input type="checkbox" name="centrales">
+              <span>Autorizo a Starkapital S.A.S. a consultar y reportar mi información en centrales de riesgo. Estar reportado no lo descarta: cada caso se estudia.</span>
+            </label>
+            <span class="err">Sin esta autorización no podemos hacer el estudio de crédito.</span>
+          </div>
+
+          <p class="form-note">La cuota exacta se calcula con la tasa vigente — 29,5% E.A. (2,18% M.V.) a agosto de 2026 — e incluye el seguro de vida deudor. Se la damos por escrito antes de que firme nada, junto con la membresía de seguimiento GPS de $500.000 al año, que se paga aparte. El estudio de crédito cuesta $0, se apruebe o no.</p>
+        </section>
+
+        <div class="fnav">
+          <button type="button" class="btn-ghost" id="btnAtras" hidden>Atrás</button>
+          <button type="button" class="btn-cta" id="btnSig">Siguiente</button>
+          <button type="submit" class="btn-cta" id="btnEnviar" hidden>Enviar mi solicitud</button>
+        </div>
+
+        <p class="form-note">Su avance se guarda en este navegador a cada cambio: si se le va la señal, no pierde lo escrito.</p>
+      </form>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="foot-grid">
+    <nav aria-label="El crédito">
+      <h4>El crédito</h4>
+      <ul>
+        <li><a href="/starkapital-web/creditos/compra-de-taxi/">Crédito para comprar taxi</a></li>
+        <li><a href="/starkapital-web/creditos/compra-de-taxi/bogota/">Comprar taxi en Bogotá</a></li>
+        <li><a href="/starkapital-web/simulador/">Simulador</a></li>
+        <li><a href="/starkapital-web/requisitos/">Requisitos</a></li>
+        <li><a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Vitrinas">
+      <h4>Vitrinas</h4>
+      <ul>
+        <li><a href="/starkapital-web/vitrinas/" class="vit-dot">Propuesta para vitrinas</a></li>
+        <li><a href="/starkapital-web/vitrinas/registro/">Registrar mi vitrina</a></li>
+        <li><a href="/starkapital-web/vitrinas/radicar-cliente/">Radicar un cliente</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Empresa">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="/starkapital-web/nosotros/">Quiénes somos</a></li>
+        <li><a href="/starkapital-web/nosotros/manifiesto/">Manifiesto</a></li>
+        <li><a href="/starkapital-web/nosotros/equipo/">Equipo</a></li>
+        <li><a href="/starkapital-web/nosotros/tecnologia/">Tecnología</a></li>
+        <li><a href="/starkapital-web/contacto/">Contacto</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Recursos">
+      <h4>Recursos</h4>
+      <ul>
+        <li><a href="/starkapital-web/blog/">Blog</a></li>
+        <li><a href="/starkapital-web/preguntas-frecuentes/">Preguntas frecuentes</a></li>
+        <li><a href="/starkapital-web/requisitos/">Requisitos</a></li>
+        <li><a href="/starkapital-web/como-funciona/">Cómo funciona</a></li>
+        <li><a href="/starkapital-web/mapa-del-sitio/">Mapa del sitio</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Legal y transparencia">
+      <h4>Legal y transparencia</h4>
+      <ul>
+        <li><a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a></li>
+        <li><a href="/starkapital-web/pqrs/">PQRS</a></li>
+        <li><a href="/starkapital-web/legal/terminos-y-condiciones/">Términos y condiciones</a></li>
+        <li><a href="/starkapital-web/legal/politica-de-privacidad/">Política de privacidad</a></li>
+        <li><a href="/starkapital-web/legal/tratamiento-de-datos-personales/">Tratamiento de datos</a></li>
+        <li><a href="/starkapital-web/legal/">Todos los documentos</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="foot-id">
+    <div>
+      <img class="logo" src="/starkapital-web/img/logo.svg" alt="Starkapital" width="150" height="37">
+      <div><b>Starkapital S.A.S.</b> · Bogotá D.C., Colombia<br>
+      hola@starkapital.com · Lunes a sábado, 8:00 a.&nbsp;m. – 6:00 p.&nbsp;m.<br>
+      NIT, dirección y teléfono se publican al cierre de la revisión jurídica.</div>
+    </div>
+    <div class="col-r">© 2026 Starkapital S.A.S. Todos los derechos reservados.<br>
+    Documentos legales en <a href="/starkapital-web/legal/" style="color:var(--muted)">revisión jurídica</a>.</div>
+  </div>
+</footer>
+
+<!-- barra fija móvil -->
+<div class="mbar">
+  <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar mi crédito</a>
+  <a class="mwa js-wa" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.7-5c-.8-1.4-1-2.5-.8-3 .1-.5.8-1.3 1.3-1.4h.7c.2 0 .5-.1.8.6l1 2.4c.1.2.1.4 0 .6l-.5.8c-.2.2-.3.4-.1.7a9 9 0 0 0 3.9 3.5c.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .2 0 .6-.5 1.6Z"/></svg>
+  </a>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/starkapital-web/js/site.js?v=3"></script>
+<script>
+/* Solicitud por pasos con avance guardado (localStorage) */
+(function(){
+  'use strict';
+
+  var LS = 'sk-solicitud';
+  var form = document.getElementById('solForm');
+  var secs = form.querySelectorAll('.fpaso');
+  var bars = form.querySelectorAll('.fstep');
+  var lab = document.getElementById('stepLab');
+  var btnA = document.getElementById('btnAtras');
+  var btnS = document.getElementById('btnSig');
+  var btnE = document.getElementById('btnEnviar');
+  var aviso = document.getElementById('retomar');
+  var TITULOS = ['Cuánto necesita', 'Sobre usted y su vehículo', 'Confirmar'];
+  var NOMBRES = ['monto','visto','ciudad','nombre','celular','anos','produccion','correo','datos','centrales'];
+  var RADIOS = ['monto','visto','anos','produccion'];
+  var CHECKS = ['datos','centrales'];
+  var paso = 1;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function esc(s){
+    return String(s).replace(/[&<>"']/g, function(m){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m];
+    });
+  }
+  function getVal(n){
+    if (RADIOS.indexOf(n) > -1) {
+      var r = form.querySelector('input[name="' + n + '"]:checked');
+      return r ? r.value : '';
+    }
+    if (CHECKS.indexOf(n) > -1) return !!(form.elements[n] && form.elements[n].checked);
+    return form.elements[n] ? form.elements[n].value : '';
+  }
+  function setVal(n, v){
+    if (RADIOS.indexOf(n) > -1) {
+      if (!v) return;
+      var r = form.querySelector('input[name="' + n + '"][value="' + v + '"]');
+      if (r) r.checked = true;
+      return;
+    }
+    if (CHECKS.indexOf(n) > -1) { if (form.elements[n]) form.elements[n].checked = !!v; return; }
+    if (form.elements[n] && v != null) form.elements[n].value = v;
+  }
+  function chipTxt(n){
+    var r = form.querySelector('input[name="' + n + '"]:checked');
+    return r ? r.closest('label').textContent.trim() : '—';
+  }
+
+  /* ---- avance guardado ---- */
+  function guardar(){
+    var c = {};
+    NOMBRES.forEach(function(n){ c[n] = getVal(n); });
+    try { localStorage.setItem(LS, JSON.stringify({ v: 1, p: paso, c: c })); } catch(e){}
+  }
+  function restaurar(){
+    var raw = null;
+    try { raw = localStorage.getItem(LS); } catch(e){}
+    if (!raw) return;
+    var d;
+    try { d = JSON.parse(raw); } catch(e){ return; }
+    if (!d || !d.c) return;
+    var hay = false;
+    NOMBRES.forEach(function(n){
+      var v = d.c[n];
+      if (v === true || (typeof v === 'string' && v !== '')) hay = true;
+      setVal(n, v);
+    });
+    if (hay) {
+      aviso.hidden = false;
+      var p = parseInt(d.p, 10);
+      if (p >= 1 && p <= 3) paso = p;
+    }
+  }
+
+  /* ---- validación por paso (nunca borra lo escrito) ---- */
+  function validar(n){
+    var mal = [];
+    function pide(name, ok){
+      var box = form.querySelector('[data-name="' + name + '"]');
+      if (!box) return;
+      box.classList.remove('invalid');
+      if (!ok) { box.classList.add('invalid'); mal.push(box); }
+    }
+    if (n === 1) {
+      pide('monto', !!getVal('monto'));
+      pide('visto', !!getVal('visto'));
+      pide('ciudad', getVal('ciudad') !== '');
+    }
+    if (n === 2) {
+      pide('nombre', /\S+\s+\S+/.test((getVal('nombre') || '').trim()));
+      var dig = (getVal('celular') || '').replace(/\D/g, '');
+      pide('celular', /^3\d{9}$/.test(dig));
+      pide('anos', !!getVal('anos'));
+      pide('produccion', !!getVal('produccion'));
+    }
+    if (n === 3) {
+      var c = (getVal('correo') || '').trim();
+      pide('correo', c === '' || /^\S+@\S+\.\S+$/.test(c));
+      pide('datos', getVal('datos') === true);
+      pide('centrales', getVal('centrales') === true);
+    }
+    return mal;
+  }
+  function avisarError(mal){
+    var box = mal[0];
+    box.scrollIntoView({ block: 'center', behavior: reduced ? 'auto' : 'smooth' });
+    var inp = box.querySelector('input, select');
+    if (inp) inp.focus({ preventScroll: true });
+    if (window.skToast) window.skToast('Revise los campos marcados para continuar');
+  }
+
+  /* ---- resumen del paso 3 ---- */
+  function pintarResumen(){
+    var sel = form.elements['ciudad'];
+    var ciudad = sel && sel.value ? sel.options[sel.selectedIndex].text : '—';
+    var filas = [
+      ['Crédito', 'Compra de vehículo productivo'],
+      ['Monto aproximado', chipTxt('monto')],
+      ['Vehículo', chipTxt('visto')],
+      ['Ciudad', ciudad],
+      ['Nombre', (getVal('nombre') || '').trim() || '—'],
+      ['Celular', (getVal('celular') || '').trim() || '—'],
+      ['Años conduciendo', chipTxt('anos')],
+      ['Producción diaria libre', chipTxt('produccion')]
+    ];
+    document.getElementById('resumen').innerHTML = filas.map(function(f){
+      return '<div><dt>' + f[0] + '</dt><dd>' + esc(f[1]) + '</dd></div>';
+    }).join('');
+  }
+
+  /* ---- navegación entre pasos ---- */
+  function mostrarPaso(n, mover){
+    paso = n;
+    secs.forEach(function(s){ s.classList.toggle('on', parseInt(s.getAttribute('data-paso'), 10) === n); });
+    bars.forEach(function(b, i){ b.classList.toggle('on', i < n); });
+    lab.textContent = 'Paso ' + n + ' de 3 · ' + TITULOS[n - 1];
+    btnA.hidden = (n === 1);
+    btnS.hidden = (n === 3);
+    btnE.hidden = (n !== 3);
+    if (n === 3) pintarResumen();
+    guardar();
+    if (mover !== false) {
+      var y = form.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top: Math.max(y, 0), behavior: reduced ? 'auto' : 'smooth' });
+      var h = form.querySelector('.fpaso.on .fp-t');
+      if (h) h.focus({ preventScroll: true });
+    }
+  }
+  function siguiente(){
+    var mal = validar(paso);
+    if (mal.length) { avisarError(mal); return; }
+    mostrarPaso(Math.min(paso + 1, 3));
+  }
+
+  /* ---- eventos ---- */
+  function alEditar(e){
+    var box = e.target.closest('[data-name]');
+    if (box) box.classList.remove('invalid');
+    guardar();
+  }
+  form.addEventListener('input', alEditar);
+  form.addEventListener('change', alEditar);
+  btnS.addEventListener('click', siguiente);
+  btnA.addEventListener('click', function(){ mostrarPaso(Math.max(paso - 1, 1)); });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (paso < 3) { siguiente(); return; }
+    for (var n = 1; n <= 3; n++) {
+      var mal = validar(n);
+      if (mal.length) {
+        if (paso !== n) mostrarPaso(n);
+        avisarError(mal);
+        return;
+      }
+    }
+    var rad = window.skRadicado ? window.skRadicado('SOL') : 'SOL-2026-00417';
+    window.location.href = '/solicitud/gracias/?rad=' + encodeURIComponent(rad);
+  });
+
+  document.getElementById('btnReset').addEventListener('click', function(){
+    try { localStorage.removeItem(LS); } catch(e){}
+    form.reset();
+    form.querySelectorAll('.invalid').forEach(function(b){ b.classList.remove('invalid'); });
+    aviso.hidden = true;
+    mostrarPaso(1, false);
+    if (window.skToast) window.skToast('Listo, empezamos de cero');
+  });
+
+  /* ---- arranque ---- */
+  restaurar();
+  mostrarPaso(paso, false);
+})();
+</script>
+</body>
+</html>

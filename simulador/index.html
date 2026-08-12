@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulador de crédito para vehículo productivo | Starkapital</title>
+<meta name="description" content="Calcule la cuota mensual de su crédito con la tasa real del 29,5% E.A. y el seguro de vida deudor incluido. Mueva monto y plazo y comparta su simulación por WhatsApp.">
+<link rel="canonical" href="https://starkapital.com/simulador/">
+<meta name="theme-color" content="#0F1E32">
+<link rel="icon" type="image/svg+xml" href="/starkapital-web/img/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Simulador de crédito para vehículo productivo | Starkapital">
+<meta property="og:description" content="Mueva monto y plazo y vea su cuota mensual con el seguro de vida deudor incluido. El enlace guarda su simulación para compartirla por WhatsApp.">
+<meta property="og:url" content="https://starkapital.com/simulador/">
+<meta property="og:image" content="https://starkapital.com/img/taxi-noche.jpg?v=2">
+<meta property="og:locale" content="es_CO">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/starkapital-web/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://starkapital.com/"},
+        {"@type":"ListItem","position":2,"name":"Simulador","item":"https://starkapital.com/simulador/"}
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Simulador de crédito para vehículo productivo Starkapital",
+      "url": "https://starkapital.com/simulador/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "description": "Calcula la cuota mensual de un crédito para vehículo productivo en Colombia con tasa del 29,5% efectivo anual y seguro de vida deudor incluido en la cuota. Montos de $20.000.000 a $150.000.000 y plazos de 12, 24, 36, 48 y 60 meses. La membresía de seguimiento GPS de $500.000 al año se paga aparte. El enlace guarda el monto y el plazo elegidos para compartir la simulación.",
+      "provider": {"@id": "https://starkapital.com/#org"},
+      "offers": {"@type":"Offer","price":"0","priceCurrency":"COP"}
+    }
+  ]
+}
+</script>
+<style>
+  .hero-sim .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .hero-sim h1{max-width:22ch}
+  .hero-sim .lead{margin-left:auto;margin-right:auto}
+  .sim-stage{max-width:680px;margin:0 auto}
+  .share-note{max-width:640px;margin:20px auto 0;text-align:center;font-size:13.5px;color:var(--muted-2);line-height:1.6}
+  .share-note b{color:var(--muted);font-weight:600}
+  .lee .card .num{display:block;margin-bottom:10px}
+  .lee .card h3{font-size:18px;margin-bottom:8px}
+  .lee .card .mono-n{font-family:var(--mono);font-size:13px;color:var(--pear);margin-top:12px;display:block}
+</style>
+</head>
+<body data-wa-msg="Hola, vengo del simulador de starkapital.com y quiero información sobre un crédito de taxi.">
+
+<!-- ============ BARRA SUPERIOR ============ -->
+<div class="topbar">
+  <div class="topbar-in">
+    <a href="#" class="soon" data-page="Portal de cliente (app.starkapital.com)">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Ingresar
+    </a>
+    <a href="#" class="js-wa" target="_blank" rel="noopener">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.7-5c-.8-1.4-1-2.5-.8-3 .1-.5.8-1.3 1.3-1.4h.7c.2 0 .5-.1.8.6l1 2.4c.1.2.1.4 0 .6l-.5.8c-.2.2-.3.4-.1.7a9 9 0 0 0 3.9 3.5c.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .2 0 .6-.5 1.6Z"/></svg>
+      WhatsApp
+    </a>
+    <a href="/starkapital-web/pqrs/">PQRS</a>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav-in">
+    <a href="/starkapital-web/" class="logo-link" aria-label="Starkapital — inicio">
+      <img class="logo" src="/starkapital-web/img/logo.svg" alt="Starkapital" width="172" height="42">
+    </a>
+    <ul class="menu">
+      <li>
+        <button class="mi" aria-haspopup="true" aria-expanded="false">Crédito <span class="caret" aria-hidden="true"></span></button>
+        <div class="dropdown">
+          <div class="dd-lab">El crédito</div>
+          <a href="/starkapital-web/creditos/compra-de-taxi/">Crédito para comprar taxi</a>
+          <a href="/starkapital-web/creditos/compra-de-taxi/bogota/">Comprar taxi en Bogotá</a>
+          <div class="dd-lab" style="margin-top:14px">Herramientas</div>
+          <a href="/starkapital-web/simulador/" aria-current="page">Simulador</a>
+          <a href="/starkapital-web/requisitos/">Requisitos</a>
+          <a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a>
+        </div>
+      </li>
+      <li><a href="/starkapital-web/como-funciona/">Cómo funciona</a></li>
+      <li><a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a></li>
+      <li><a href="/starkapital-web/vitrinas/" class="mi-vitrinas">Vitrinas</a></li>
+      <li><a href="/starkapital-web/blog/">Blog</a></li>
+      <li>
+        <button class="mi" aria-haspopup="true" aria-expanded="false">Nosotros <span class="caret" aria-hidden="true"></span></button>
+        <div class="dropdown">
+          <a href="/starkapital-web/nosotros/">Quiénes somos</a>
+          <a href="/starkapital-web/nosotros/manifiesto/">Manifiesto</a>
+          <a href="/starkapital-web/nosotros/equipo/">Equipo</a>
+          <a href="/starkapital-web/nosotros/tecnologia/">Tecnología</a>
+        </div>
+      </li>
+    </ul>
+    <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar mi crédito</a>
+    <button class="hamb" id="hamb" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- drawer móvil -->
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-label="Menú">
+    <button class="drawer-close" id="drawerClose" aria-label="Cerrar menú">✕</button>
+    <div class="dlab">El crédito</div>
+    <a href="/starkapital-web/creditos/compra-de-taxi/">Crédito para comprar taxi</a>
+    <a href="/starkapital-web/creditos/compra-de-taxi/bogota/">Comprar taxi en Bogotá</a>
+    <div class="dlab">Herramientas</div>
+    <a href="/starkapital-web/simulador/" aria-current="page">Simulador</a>
+    <a href="/starkapital-web/requisitos/">Requisitos</a>
+    <a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a>
+    <div class="dlab">Sitio</div>
+    <a href="/starkapital-web/como-funciona/">Cómo funciona</a>
+    <a href="/starkapital-web/vitrinas/" class="vit-dot">Vitrinas</a>
+    <a href="/starkapital-web/blog/">Blog</a>
+    <a href="/starkapital-web/nosotros/">Nosotros</a>
+    <a href="/starkapital-web/preguntas-frecuentes/">Preguntas frecuentes</a>
+    <a href="/starkapital-web/contacto/">Contacto</a>
+    <div class="dlab">Utilidades</div>
+    <a href="#" class="soon" data-page="Portal de cliente">Ingresar</a>
+    <a href="/starkapital-web/pqrs/">PQRS</a>
+    <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar mi crédito</a>
+  </div>
+</div>
+
+<nav class="crumbs" aria-label="Miga de pan">
+  <ol>
+    <li><a href="/starkapital-web/">Inicio</a></li>
+    <li><span aria-current="page">Simulador</span></li>
+  </ol>
+</nav>
+
+<main>
+
+  <!-- HERO CORTO -->
+  <section class="page-hero hero-sim" style="padding:44px 0 30px;border-bottom:none">
+    <div class="wrap">
+      <span class="eyebrow h-in d1">Herramientas · Simulador</span>
+      <h1 class="h-in d2">Simule la cuota <em>de su vehículo de trabajo</em></h1>
+      <p class="lead h-in d3">Mueva el monto y el plazo y vea su cuota mensual completa: <strong>capital, intereses y seguro de vida deudor</strong>. Con la tasa real del 29,5% E.A., la misma del contrato. La membresía de seguimiento GPS va aparte y también se la mostramos.</p>
+    </div>
+  </section>
+
+  <!-- SIMULADOR -->
+  <section aria-label="Simulador de crédito" style="padding:10px 0 76px">
+    <div class="wrap">
+      <div class="sim-stage h-in d4">
+        <div class="sim" id="simulador" data-sim data-share-url data-monto="90000000" data-plazo="60" aria-label="Simulador de crédito de taxi">
+          <div class="sim-head">
+            <h2 class="sim-t">Su simulación</h2>
+            <span class="rate">Tasa <b>29,5% E.A.</b> · 2,18% M.V.</span>
+          </div>
+          <div class="fgroup">
+            <div class="flabel">
+              <label for="montoNum">Monto del crédito</label>
+              <span class="amount-in"><span class="cur">$</span><input type="text" id="montoNum" class="js-monto-num" inputmode="numeric" autocomplete="off" aria-label="Monto del crédito en pesos"></span>
+            </div>
+            <input type="range" class="js-monto-range" min="20000000" max="150000000" step="1000000" value="90000000" aria-label="Monto del crédito">
+            <div class="range-marks"><span>$20 millones</span><span>$150 millones</span></div>
+          </div>
+          <div class="fgroup">
+            <div class="flabel"><span class="flab" id="plazoLab">Plazo en meses</span></div>
+            <div class="plazos" role="radiogroup" aria-labelledby="plazoLab">
+            <label><input type="radio" name="plazo" value="12">12</label>
+            <label><input type="radio" name="plazo" value="24">24</label>
+            <label><input type="radio" name="plazo" value="36">36</label>
+            <label><input type="radio" name="plazo" value="48">48</label>
+            <label><input type="radio" name="plazo" value="60" checked>60</label>
+          </div>
+          </div>
+          <div class="sim-result" aria-live="polite">
+            <div class="sr-label">Su cuota mensual estimada</div>
+            <div class="sr-cuota"><span class="js-cuota-total">$0</span><small> /mes</small></div>
+            <div class="sr-rows">
+              <div class="sr-row"><span>Capital e intereses</span><b class="js-cuota-credito">$0</b></div>
+            <div class="sr-row"><span>Seguro de vida deudor</span><b class="js-cuota-seguro">$0</b></div>
+            <div class="sr-row" style="border-top:1px dashed var(--line);padding-top:8px;margin-top:2px"><span>Membresía GPS (aparte, una vez al año)</span><b class="js-gps-anual">$0</b></div>
+            <div class="sr-row"><span>Total pagado al final</span><b class="js-total-pagado">$0</b></div>
+            </div>
+          </div>
+          <div class="sim-actions">
+            <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar con estos datos</a>
+            <a class="btn-wa js-wa-share" href="#" target="_blank" rel="noopener">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.7-5c-.8-1.4-1-2.5-.8-3 .1-.5.8-1.3 1.3-1.4h.7c.2 0 .5-.1.8.6l1 2.4c.1.2.1.4 0 .6l-.5.8c-.2.2-.3.4-.1.7a9 9 0 0 0 3.9 3.5c.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .2 0 .6-.5 1.6Z"/></svg>
+              Compartir
+            </a>
+          </div>
+          <p class="sim-note">Cálculo informativo con tasa vigente a agosto de 2026. No constituye una oferta comercial: la cuota final depende del estudio de su solicitud.</p>
+        </div>
+        <p class="share-note h-in d5"><b>El enlace de esta página guarda su simulación.</b> Cuando mueve el monto o el plazo, la dirección se actualiza sola: cópiela o compártala por WhatsApp y la otra persona verá exactamente sus números.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO LEEMOS LA CUOTA -->
+  <section class="sec-alt lee" aria-label="Cómo leemos la cuota" style="padding-top:72px;padding-bottom:72px">
+    <div class="wrap">
+      <div class="sec-eyebrow reveal">Sin letra menuda</div>
+      <h2 class="sec-t reveal" style="--d:.08s">¿Qué hay dentro de la cuota que le mostramos?</h2>
+      <p class="sec-sub reveal" style="--d:.16s">Dos números dentro de la cuota y uno aparte, los tres a la vista. Aquí calculamos con la tasa real del contrato; la cuota definitiva se confirma por escrito cuando estudiamos su caso.</p>
+      <div class="grid g3" style="margin-top:44px">
+        <div class="card reveal">
+          <span class="num">01</span>
+          <h3>Capital e intereses</h3>
+          <p>La cuota fija del crédito, calculada con la tasa del 29,5% E.A. (2,18% M.V.). No cambia durante todo el plazo: la del primer mes es la del último.</p>
+        </div>
+        <div class="card reveal" style="--d:.08s">
+          <span class="num">02</span>
+          <h3>Seguro de vida deudor</h3>
+          <p>Cuesta el 0,033% mensual sobre el valor desembolsado y va dentro de la cuota. Sobre $90.000.000 son $29.700 al mes. Si al deudor le pasa algo, la deuda no queda en la familia.</p>
+        </div>
+        <div class="card reveal" style="--d:.16s">
+          <span class="num">03</span>
+          <h3>La membresía GPS, aparte</h3>
+          <p>El seguimiento del vehículo cuesta $500.000 al año y se paga por separado, no dentro de la cuota. Se lo mostramos en el mismo cuadro para que sepa el total real, no solo el mensual.</p>
+        </div>
+      </div>
+      <div class="callout reveal">
+        <div class="t">Un ejemplo completo, con todas las cifras</div>
+        <p>Crédito de <strong>$90.000.000</strong> a <strong>60 meses</strong>: capital e intereses $2.702.000 + seguro de vida deudor $29.700 = <strong>$2.732.000 al mes</strong>. En los cinco años son $163.920.000 en cuotas más $2.500.000 de membresía GPS: <strong>$166.420.000 en total</strong>. El seguro todo riesgo lo contrata usted por su cuenta y lo endosa al crédito.</p>
+      </div>
+      <p class="corte reveal">Cifras vigentes a agosto de 2026 · cálculo informativo, no es una oferta comercial</p>
+    </div>
+  </section>
+
+  <!-- QUÉ CAMBIA LA CUOTA -->
+  <section aria-label="Qué cambia la cuota">
+    <div class="wrap">
+      <div class="sec-eyebrow reveal">Para decidir mejor</div>
+      <h2 class="sec-t reveal" style="--d:.08s">¿Qué hace subir o bajar la cuota?</h2>
+      <p class="sec-sub reveal" style="--d:.16s">Tres palancas. Muévalas en el simulador y vea el efecto en vivo antes de decidir.</p>
+      <div class="dif" style="margin-top:44px">
+        <div class="dif-row reveal">
+          <span class="dn">01</span>
+          <h3>El monto</h3>
+          <p>La palanca más directa: a más plata, más cuota. Financiamos entre $20.000.000 y $150.000.000, hasta el 70% del valor del vehículo.</p>
+        </div>
+        <div class="dif-row reveal" style="--d:.08s">
+          <span class="dn">02</span>
+          <h3>El plazo</h3>
+          <p>Más meses bajan la cuota mensual, pero suben el total de intereses al final. Hay cinco plazos: 12, 24, 36, 48 y 60 meses. A 60 la cuota es la más liviana; a 12, el crédito sale más barato en total. El punto justo depende de lo que produce su vehículo.</p>
+        </div>
+        <div class="dif-row reveal" style="--d:.16s">
+          <span class="dn">03</span>
+          <h3>La cuota inicial</h3>
+          <p>El simulador calcula sobre el monto del crédito, no sobre el precio del vehículo. Entre mayor sea su inicial, menos necesita financiar y menor la cuota. La inicial parte del 30% del valor del vehículo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRANJA: TASAS Y COSTOS -->
+  <section class="band-lime" aria-label="Tasas y costos" style="padding:72px 0">
+    <div class="wrap">
+      <div class="sec-eyebrow reveal">Transparencia total</div>
+      <h2 class="sec-t reveal" style="--d:.08s">¿De dónde salen estos números?</h2>
+      <p class="band-sub reveal" style="--d:.16s">La tasa completa está publicada con fecha: <strong>29,5% E.A. (2,18% M.V.)</strong> vigente a agosto de 2026, seguro de vida deudor del 0,033% mensual dentro de la cuota, membresía de seguimiento GPS de <strong>$500.000 al año</strong> aparte y estudio de crédito <strong>$0</strong>. Peso por peso, sin asteriscos.</p>
+      <div class="reveal" style="--d:.24s;margin-top:32px;display:flex;gap:14px;flex-wrap:wrap">
+        <a class="btn-navy" href="/starkapital-web/tasas-y-costos/">Ver tasas y costos completos</a>
+        <a class="btn-navy-o" href="/starkapital-web/como-funciona/">Cómo funciona el crédito</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIERRE -->
+  <section class="cierre" aria-label="Cierre">
+    <div class="wrap">
+      <h2 class="reveal">¿La cuota le cuadra? <em>Pida su crédito</em></h2>
+      <p class="reveal" style="--d:.1s">Solicítelo con los datos de su simulación. En máximo 24 horas hábiles tiene la respuesta por escrito, y el estudio de crédito cuesta $0.</p>
+      <div class="acts reveal" style="--d:.18s">
+        <a class="btn-cta" href="/starkapital-web/solicitud/" style="font-size:16.5px;padding:16px 30px">Solicitar mi crédito</a>
+        <a class="btn-wa js-wa" href="#" target="_blank" rel="noopener">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.7-5c-.8-1.4-1-2.5-.8-3 .1-.5.8-1.3 1.3-1.4h.7c.2 0 .5-.1.8.6l1 2.4c.1.2.1.4 0 .6l-.5.8c-.2.2-.3.4-.1.7a9 9 0 0 0 3.9 3.5c.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .2 0 .6-.5 1.6Z"/></svg>
+          Escribir por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="foot-grid">
+    <nav aria-label="El crédito">
+      <h4>El crédito</h4>
+      <ul>
+        <li><a href="/starkapital-web/creditos/compra-de-taxi/">Crédito para comprar taxi</a></li>
+        <li><a href="/starkapital-web/creditos/compra-de-taxi/bogota/">Comprar taxi en Bogotá</a></li>
+        <li><a href="/starkapital-web/simulador/" aria-current="page">Simulador</a></li>
+        <li><a href="/starkapital-web/requisitos/">Requisitos</a></li>
+        <li><a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Vitrinas">
+      <h4>Vitrinas</h4>
+      <ul>
+        <li><a href="/starkapital-web/vitrinas/" class="vit-dot">Propuesta para vitrinas</a></li>
+        <li><a href="/starkapital-web/vitrinas/registro/">Registrar mi vitrina</a></li>
+        <li><a href="/starkapital-web/vitrinas/radicar-cliente/">Radicar un cliente</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Empresa">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="/starkapital-web/nosotros/">Quiénes somos</a></li>
+        <li><a href="/starkapital-web/nosotros/manifiesto/">Manifiesto</a></li>
+        <li><a href="/starkapital-web/nosotros/equipo/">Equipo</a></li>
+        <li><a href="/starkapital-web/nosotros/tecnologia/">Tecnología</a></li>
+        <li><a href="/starkapital-web/contacto/">Contacto</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Recursos">
+      <h4>Recursos</h4>
+      <ul>
+        <li><a href="/starkapital-web/blog/">Blog</a></li>
+        <li><a href="/starkapital-web/preguntas-frecuentes/">Preguntas frecuentes</a></li>
+        <li><a href="/starkapital-web/requisitos/">Requisitos</a></li>
+        <li><a href="/starkapital-web/como-funciona/">Cómo funciona</a></li>
+        <li><a href="/starkapital-web/mapa-del-sitio/">Mapa del sitio</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Legal y transparencia">
+      <h4>Legal y transparencia</h4>
+      <ul>
+        <li><a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a></li>
+        <li><a href="/starkapital-web/pqrs/">PQRS</a></li>
+        <li><a href="/starkapital-web/legal/terminos-y-condiciones/">Términos y condiciones</a></li>
+        <li><a href="/starkapital-web/legal/politica-de-privacidad/">Política de privacidad</a></li>
+        <li><a href="/starkapital-web/legal/tratamiento-de-datos-personales/">Tratamiento de datos</a></li>
+        <li><a href="/starkapital-web/legal/">Todos los documentos</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="foot-id">
+    <div>
+      <img class="logo" src="/starkapital-web/img/logo.svg" alt="Starkapital" width="150" height="37">
+      <div><b>Starkapital S.A.S.</b> · Bogotá D.C., Colombia<br>
+      hola@starkapital.com · Lunes a sábado, 8:00 a.&nbsp;m. – 6:00 p.&nbsp;m.<br>
+      NIT, dirección y teléfono se publican al cierre de la revisión jurídica.</div>
+    </div>
+    <div class="col-r">© 2026 Starkapital S.A.S. Todos los derechos reservados.<br>
+    Documentos legales en <a href="/starkapital-web/legal/" style="color:var(--muted)">revisión jurídica</a>.</div>
+  </div>
+</footer>
+
+<!-- barra fija móvil -->
+<div class="mbar">
+  <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar mi crédito</a>
+  <a class="mwa js-wa" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.7-5c-.8-1.4-1-2.5-.8-3 .1-.5.8-1.3 1.3-1.4h.7c.2 0 .5-.1.8.6l1 2.4c.1.2.1.4 0 .6l-.5.8c-.2.2-.3.4-.1.7a9 9 0 0 0 3.9 3.5c.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .2 0 .6-.5 1.6Z"/></svg>
+  </a>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/starkapital-web/js/site.js?v=3"></script>
+</body>
+</html>

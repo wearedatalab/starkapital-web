@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!--
+  NOTA TÉCNICA · Página de error 404
+  El servidor debe configurarse para servir este archivo en errores 404 manteniendo el código de estado:
+    · Nginx:        error_page 404 /404.html;
+    · Apache:       ErrorDocument 404 /404.html
+    · Netlify/CDN:  regla de error hacia /404.html (la mayoría lo detecta por convención de nombre)
+  python -m http.server (el servidor de desarrollo de este prototipo) NO sirve páginas 404
+  personalizadas: en desarrollo esta página solo se ve visitando /404.html directamente.
+  Todos los recursos usan rutas absolutas (/css/, /js/, /img/) para funcionar desde cualquier URL.
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página no encontrada | Starkapital</title>
+<meta name="description" content="Esta dirección no existe en starkapital.com. Busque lo que necesita o vaya directo al crédito para comprar su vehículo de trabajo, al simulador, a los requisitos o a las tasas.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0F1E32">
+<link rel="icon" type="image/svg+xml" href="/starkapital-web/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/starkapital-web/css/site.css">
+<style>
+  .e404{padding:72px 0 88px;position:relative;overflow:hidden}
+  .e404::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(680px 460px at 88% -14%, rgba(202,217,0,.13), transparent 62%)}
+  .e404 .wrap-narrow{position:relative}
+  .e404 .code{font-family:var(--mono);font-size:clamp(64px,12vw,120px);font-weight:600;color:var(--lime);line-height:1;letter-spacing:-.04em}
+  .e404 h1{font-size:clamp(28px,4vw,44px);color:var(--white);margin-top:18px;max-width:22ch}
+  .e404 .lead{color:var(--muted);font-size:18px;margin-top:16px;max-width:56ch}
+  .e404 .lead strong{color:var(--ink);font-weight:600}
+  .buscador{margin-top:36px;position:relative}
+  .buscador input{
+    width:100%;background:var(--navy-2);border:1px solid var(--line);border-radius:14px;color:var(--white);
+    font-family:var(--sans);font-size:17px;font-weight:400;padding:17px 20px 17px 52px;
+  }
+  .buscador input:focus{outline:none;border-color:var(--pear)}
+  .buscador input::placeholder{color:var(--muted-2)}
+  .buscador svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--muted-2);pointer-events:none}
+  .resultados{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+  .resultados a{
+    display:block;background:var(--navy-2);border:1px solid var(--line);border-radius:12px;padding:13px 18px;
+    text-decoration:none;transition:.13s;
+  }
+  .resultados a:hover{border-color:rgba(202,217,0,.55);background:var(--navy-3)}
+  .resultados a b{display:block;color:var(--ink);font-weight:600;font-size:15.5px}
+  .resultados a span{display:block;color:var(--muted-2);font-size:13px;margin-top:2px}
+  .resultados .nada{color:var(--muted);font-size:14.5px;padding:12px 4px}
+  .rutas{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:44px}
+  @media(max-width:760px){.rutas{grid-template-columns:1fr}}
+  .rutas .card-link{padding:22px 22px 18px}
+  .rutas .card-link h2{font-size:17.5px;color:var(--white);font-weight:700}
+  .rutas .card-link p{font-size:14px}
+  .rutas .destacada{grid-column:1/-1;padding:28px 26px 24px}
+  .rutas .destacada h2{font-size:clamp(21px,3vw,26px);letter-spacing:-.01em}
+  .rutas .destacada p{font-size:15.5px;max-width:60ch}
+  .rutas .destacada .num{color:var(--pear)}
+  .e404 .acts{display:flex;gap:14px;margin-top:44px;flex-wrap:wrap}
+</style>
+</head>
+<body data-wa-msg="Hola, llegué a una página que no existe en starkapital.com y estoy buscando información sobre un crédito de taxi.">
+
+<!-- ============ BARRA SUPERIOR ============ -->
+<div class="topbar">
+  <div class="topbar-in">
+    <a href="#" class="soon" data-page="Portal de cliente (app.starkapital.com)">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Ingresar
+    </a>
+    <a href="#" class="js-wa" target="_blank" rel="noopener">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.7-5c-.8-1.4-1-2.5-.8-3 .1-.5.8-1.3 1.3-1.4h.7c.2 0 .5-.1.8.6l1 2.4c.1.2.1.4 0 .6l-.5.8c-.2.2-.3.4-.1.7a9 9 0 0 0 3.9 3.5c.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .2 0 .6-.5 1.6Z"/></svg>
+      WhatsApp
+    </a>
+    <a href="/starkapital-web/pqrs/">PQRS</a>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav-in">
+    <a href="/starkapital-web/" class="logo-link" aria-label="Starkapital — inicio">
+      <img class="logo" src="/starkapital-web/img/logo.svg" alt="Starkapital" width="172" height="42">
+    </a>
+    <ul class="menu">
+      <li>
+        <button class="mi" aria-haspopup="true" aria-expanded="false">Crédito <span class="caret" aria-hidden="true"></span></button>
+        <div class="dropdown">
+          <div class="dd-lab">El crédito</div>
+          <a href="/starkapital-web/creditos/compra-de-taxi/">Crédito para comprar taxi</a>
+          <a href="/starkapital-web/creditos/compra-de-taxi/bogota/">Comprar taxi en Bogotá</a>
+          <div class="dd-lab" style="margin-top:14px">Herramientas</div>
+          <a href="/starkapital-web/simulador/">Simulador</a>
+          <a href="/starkapital-web/requisitos/">Requisitos</a>
+          <a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a>
+        </div>
+      </li>
+      <li><a href="/starkapital-web/como-funciona/">Cómo funciona</a></li>
+      <li><a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a></li>
+      <li><a href="/starkapital-web/vitrinas/" class="mi-vitrinas">Vitrinas</a></li>
+      <li><a href="/starkapital-web/blog/">Blog</a></li>
+      <li>
+        <button class="mi" aria-haspopup="true" aria-expanded="false">Nosotros <span class="caret" aria-hidden="true"></span></button>
+        <div class="dropdown">
+          <a href="/starkapital-web/nosotros/">Quiénes somos</a>
+          <a href="/starkapital-web/nosotros/manifiesto/">Manifiesto</a>
+          <a href="/starkapital-web/nosotros/equipo/">Equipo</a>
+          <a href="/starkapital-web/nosotros/tecnologia/">Tecnología</a>
+        </div>
+      </li>
+    </ul>
+    <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar mi crédito</a>
+    <button class="hamb" id="hamb" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- drawer móvil -->
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-label="Menú">
+    <button class="drawer-close" id="drawerClose" aria-label="Cerrar menú">✕</button>
+    <div class="dlab">El crédito</div>
+    <a href="/starkapital-web/creditos/compra-de-taxi/">Crédito para comprar taxi</a>
+    <a href="/starkapital-web/creditos/compra-de-taxi/bogota/">Comprar taxi en Bogotá</a>
+    <div class="dlab">Herramientas</div>
+    <a href="/starkapital-web/simulador/">Simulador</a>
+    <a href="/starkapital-web/requisitos/">Requisitos</a>
+    <a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a>
+    <div class="dlab">Sitio</div>
+    <a href="/starkapital-web/como-funciona/">Cómo funciona</a>
+    <a href="/starkapital-web/vitrinas/" class="vit-dot">Vitrinas</a>
+    <a href="/starkapital-web/blog/">Blog</a>
+    <a href="/starkapital-web/nosotros/">Nosotros</a>
+    <a href="/starkapital-web/preguntas-frecuentes/">Preguntas frecuentes</a>
+    <a href="/starkapital-web/contacto/">Contacto</a>
+    <div class="dlab">Utilidades</div>
+    <a href="#" class="soon" data-page="Portal de cliente">Ingresar</a>
+    <a href="/starkapital-web/pqrs/">PQRS</a>
+    <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar mi crédito</a>
+  </div>
+</div>
+
+<main>
+
+  <section class="e404" aria-label="Página no encontrada">
+    <div class="wrap-narrow">
+      <div class="code h-in d1" aria-hidden="true">404</div>
+      <h1 class="h-in d2">Esta página no existe. Su crédito, sí.</h1>
+      <p class="lead h-in d3">La dirección que buscaba se movió o nunca existió. Escriba abajo qué necesita —<strong>«taxi», «tasa», «requisitos»</strong>— o siga derecho al crédito: en Starkapital hay uno solo y es el del vehículo con el que usted trabaja.</p>
+
+      <div class="buscador h-in d4" role="search">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
+        <input type="text" id="buscar" placeholder="¿Qué está buscando?" autocomplete="off" aria-label="Buscar una página del sitio" aria-describedby="resultados">
+      </div>
+      <ul class="resultados" id="resultados" aria-live="polite"></ul>
+
+      <div class="rutas h-in d5">
+        <a class="card card-link destacada" href="/starkapital-web/creditos/compra-de-taxi/">
+          <span class="num">NUESTRO ÚNICO CRÉDITO</span>
+          <h2>Comprar su vehículo de trabajo</h2>
+          <p>Deje de conducir ajeno: financiamos hasta el 70% del valor del vehículo, de $20.000.000 a $150.000.000 y a plazos de 12, 24, 36, 48 y 60 meses, sin carta laboral. Un solo producto, hecho bien.</p>
+          <span class="go">Ir al crédito <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="card card-link" href="/starkapital-web/simulador/">
+          <h2>Simulador</h2>
+          <p>Su cuota mensual con el seguro de vida deudor incluido, calculada en su navegador con la tasa 29,5% E.A.</p>
+          <span class="go">Simular mi cuota <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="card card-link" href="/starkapital-web/requisitos/">
+          <h2>Requisitos</h2>
+          <p>Qué necesita para aplicar, qué documentos pedimos y qué pasa si está reportado.</p>
+          <span class="go">Ver requisitos <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="card card-link" href="/starkapital-web/tasas-y-costos/">
+          <h2>Tasas y costos</h2>
+          <p>29,5% E.A. (2,18% M.V.), seguro de vida deudor dentro de la cuota, membresía GPS de $500.000 al año y estudio de crédito $0.</p>
+          <span class="go">Ver los números <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+
+      <div class="acts">
+        <a class="btn-cta" href="/starkapital-web/">Ir a la portada</a>
+        <a class="btn-wa js-wa" href="#" target="_blank" rel="noopener">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.7-5c-.8-1.4-1-2.5-.8-3 .1-.5.8-1.3 1.3-1.4h.7c.2 0 .5-.1.8.6l1 2.4c.1.2.1.4 0 .6l-.5.8c-.2.2-.3.4-.1.7a9 9 0 0 0 3.9 3.5c.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .2 0 .6-.5 1.6Z"/></svg>
+          Preguntar por WhatsApp
+        </a>
+        <a class="btn-ghost" href="/starkapital-web/mapa-del-sitio/">Ver el mapa del sitio</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="foot-grid">
+    <nav aria-label="El crédito">
+      <h4>El crédito</h4>
+      <ul>
+        <li><a href="/starkapital-web/creditos/compra-de-taxi/">Crédito para comprar taxi</a></li>
+        <li><a href="/starkapital-web/creditos/compra-de-taxi/bogota/">Comprar taxi en Bogotá</a></li>
+        <li><a href="/starkapital-web/simulador/">Simulador</a></li>
+        <li><a href="/starkapital-web/requisitos/">Requisitos</a></li>
+        <li><a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Vitrinas">
+      <h4>Vitrinas</h4>
+      <ul>
+        <li><a href="/starkapital-web/vitrinas/" class="vit-dot">Propuesta para vitrinas</a></li>
+        <li><a href="/starkapital-web/vitrinas/registro/">Registrar mi vitrina</a></li>
+        <li><a href="/starkapital-web/vitrinas/radicar-cliente/">Radicar un cliente</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Empresa">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="/starkapital-web/nosotros/">Quiénes somos</a></li>
+        <li><a href="/starkapital-web/nosotros/manifiesto/">Manifiesto</a></li>
+        <li><a href="/starkapital-web/nosotros/equipo/">Equipo</a></li>
+        <li><a href="/starkapital-web/nosotros/tecnologia/">Tecnología</a></li>
+        <li><a href="/starkapital-web/contacto/">Contacto</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Recursos">
+      <h4>Recursos</h4>
+      <ul>
+        <li><a href="/starkapital-web/blog/">Blog</a></li>
+        <li><a href="/starkapital-web/preguntas-frecuentes/">Preguntas frecuentes</a></li>
+        <li><a href="/starkapital-web/requisitos/">Requisitos</a></li>
+        <li><a href="/starkapital-web/como-funciona/">Cómo funciona</a></li>
+        <li><a href="/starkapital-web/mapa-del-sitio/">Mapa del sitio</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Legal y transparencia">
+      <h4>Legal y transparencia</h4>
+      <ul>
+        <li><a href="/starkapital-web/tasas-y-costos/">Tasas y costos</a></li>
+        <li><a href="/starkapital-web/pqrs/">PQRS</a></li>
+        <li><a href="/starkapital-web/legal/terminos-y-condiciones/">Términos y condiciones</a></li>
+        <li><a href="/starkapital-web/legal/politica-de-privacidad/">Política de privacidad</a></li>
+        <li><a href="/starkapital-web/legal/tratamiento-de-datos-personales/">Tratamiento de datos</a></li>
+        <li><a href="/starkapital-web/legal/">Todos los documentos</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="foot-id">
+    <div>
+      <img class="logo" src="/starkapital-web/img/logo.svg" alt="Starkapital" width="150" height="37">
+      <div><b>Starkapital S.A.S.</b> · Bogotá D.C., Colombia<br>
+      hola@starkapital.com · Lunes a sábado, 8:00 a.&nbsp;m. – 6:00 p.&nbsp;m.<br>
+      NIT, dirección y teléfono se publican al cierre de la revisión jurídica.</div>
+    </div>
+    <div class="col-r">© 2026 Starkapital S.A.S. Todos los derechos reservados.<br>
+    Documentos legales en <a href="/starkapital-web/legal/" style="color:var(--muted)">revisión jurídica</a>.</div>
+  </div>
+</footer>
+
+<!-- barra fija móvil -->
+<div class="mbar">
+  <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar mi crédito</a>
+  <a class="mwa js-wa" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.7-5c-.8-1.4-1-2.5-.8-3 .1-.5.8-1.3 1.3-1.4h.7c.2 0 .5-.1.8.6l1 2.4c.1.2.1.4 0 .6l-.5.8c-.2.2-.3.4-.1.7a9 9 0 0 0 3.9 3.5c.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .2 0 .6-.5 1.6Z"/></svg>
+  </a>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/starkapital-web/js/site.js?v=3"></script>
+<script>
+(function(){
+  'use strict';
+  /* Buscador de la página 404: filtra las páginas publicadas del sitio, sin servidor.
+     Solo rutas que existen: Starkapital tiene un único crédito, el del vehículo productivo. */
+  var PAGINAS = [
+    ['/', 'Portada', 'El crédito que se paga con el trabajo de su vehículo'],
+    ['/creditos/compra-de-taxi/', 'Crédito para comprar taxi', 'Nuestro único crédito: su vehículo de trabajo sin carta laboral, hasta el 70% del valor'],
+    ['/creditos/compra-de-taxi/bogota/', 'Comprar taxi en Bogotá', 'Precios de referencia y vitrinas aliadas de la ciudad'],
+    ['/simulador/', 'Simulador', 'Su cuota mensual con el seguro de vida deudor, a la tasa 29,5% E.A.'],
+    ['/solicitud/', 'Solicitud de crédito', 'Radique su solicitud: respuesta en 24 horas hábiles'],
+    ['/como-funciona/', 'Cómo funciona', 'Los cinco pasos del crédito, con tiempos'],
+    ['/requisitos/', 'Requisitos', 'Qué necesita para aplicar y qué pasa si está reportado'],
+    ['/tasas-y-costos/', 'Tasas y costos', 'Tasas sin letra menuda: 29,5% E.A., seguro de vida deudor, membresía GPS y ejemplo completo'],
+    ['/vitrinas/', 'Vitrinas', 'Usted vende el vehículo, nosotros ponemos el crédito'],
+    ['/vitrinas/registro/', 'Registrar mi vitrina', 'Alta como vitrina aliada, una sola vez'],
+    ['/vitrinas/radicar-cliente/', 'Radicar un cliente', 'El formulario diario del vendedor, en un minuto'],
+    ['/blog/', 'Blog', 'Guías honestas sobre el mundo del taxi'],
+    ['/blog/como-comprar-taxi-colombia/', 'Cómo comprar un taxi en Colombia', 'La guía completa de la compra: carro, cupo y papeles'],
+    ['/blog/estoy-reportado-puedo-pedir-credito/', '¿Estoy reportado, puedo pedir crédito?', 'La respuesta de frente, sin rodeos'],
+    ['/blog/vida-util-taxi-cuando-reponer/', 'Vida útil del taxi: ¿cuándo reponer?', 'Cómo saber cuándo le toca y cómo prepararse'],
+    ['/nosotros/', 'Quiénes somos', 'Por qué financiamos el vehículo con el que usted trabaja'],
+    ['/nosotros/manifiesto/', 'Manifiesto', 'Usted pone el sudor, nosotros ponemos el motor'],
+    ['/nosotros/equipo/', 'Equipo', 'Las personas detrás del crédito'],
+    ['/nosotros/tecnologia/', 'Tecnología', 'Qué automatizamos y qué decide una persona'],
+    ['/preguntas-frecuentes/', 'Preguntas frecuentes', 'Las preguntas reales del gremio, por tema'],
+    ['/contacto/', 'Contacto', 'Canales, horarios y cómo llegar'],
+    ['/pqrs/', 'PQRS', 'Peticiones, quejas, reclamos y sugerencias con radicado'],
+    ['/legal/', 'Documentos legales', 'Términos, privacidad, datos personales, cookies y más'],
+    ['/mapa-del-sitio/', 'Mapa del sitio', 'Todas las páginas, con una línea de descripción']
+  ];
+  var input = document.getElementById('buscar');
+  var out = document.getElementById('resultados');
+  var norm = function(s){
+    return s.toLowerCase()
+      .replace(/[áàä]/g,'a').replace(/[éèë]/g,'e').replace(/[íìï]/g,'i')
+      .replace(/[óòö]/g,'o').replace(/[úùü]/g,'u').replace(/ñ/g,'n');
+  };
+  input.addEventListener('input', function(){
+    var q = norm(input.value.trim());
+    if (!q) { out.innerHTML = ''; return; }
+    var res = PAGINAS.filter(function(p){
+      return norm(p[0] + ' ' + p[1] + ' ' + p[2]).indexOf(q) > -1;
+    }).slice(0, 6);
+    if (!res.length) {
+      out.innerHTML = '<li class="nada">Nada con ese término. Pruebe «taxi», «tasa» o «requisitos» — o pregúntenos por WhatsApp aquí abajo.</li>';
+      return;
+    }
+    out.innerHTML = res.map(function(p){
+      return '<li><a href="' + p[0] + '"><b>' + p[1] + '</b><span>' + p[2] + '</span></a></li>';
+    }).join('');
+  });
+})();
+</script>
+</body>
+</html>

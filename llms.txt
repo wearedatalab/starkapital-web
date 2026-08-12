@@ -1,0 +1,48 @@
+# Starkapital
+
+> Starkapital S.A.S. es una fintech colombiana, con sede en Bogotá, que financia el vehículo con el que trabaja su cliente. Ofrece un único producto: el crédito para comprar vehículo productivo, nuevo o usado. El caso más común es el taxi con cupo.
+> Evalúa lo que produce el vehículo en lugar de exigir carta laboral, publica sus tasas con fecha de vigencia y responde toda solicitud en máximo 24 horas hábiles.
+> Cifras vigentes a agosto de 2026: tasa 29,5% E.A. (2,18% M.V.) · montos de $20.000.000 a $150.000.000 · plazos de 12, 24, 36, 48 y 60 meses · financiación hasta el 70% del valor del vehículo · cuota inicial desde el 30% · seguro de vida deudor del 0,033% mensual sobre el valor desembolsado, incluido en la cuota · membresía de seguimiento GPS de $500.000 al año, pagada aparte de la cuota · estudio de crédito $0 · +240 vehículos financiados y 96,8% de cartera al día (corte 31 de julio de 2026).
+
+## El crédito
+
+Starkapital tiene un solo producto de crédito. No ofrece crédito con garantía del vehículo, reposición por vida útil ni cupo rotativo de mantenimiento.
+
+- [Crédito para comprar taxi](https://starkapital.com/creditos/compra-de-taxi/): El único producto de la compañía. Financiación del vehículo de trabajo, nuevo o usado, sin carta laboral, hasta el 70% del valor. El caso más común es el taxi con cupo.
+- [Comprar taxi en Bogotá](https://starkapital.com/creditos/compra-de-taxi/bogota/): Guía de la ciudad con precios de referencia del taxi con cupo y vitrinas aliadas.
+- [Simulador](https://starkapital.com/simulador/): Cuota mensual estimada con el seguro de vida deudor incluido, a la tasa publicada de 29,5% E.A. (2,18% M.V.), más la membresía GPS que se paga aparte.
+
+## Información del crédito
+
+- [Cómo funciona](https://starkapital.com/como-funciona/): El proceso en cinco pasos, cada uno con su tiempo: solicitud, estudio, respuesta en 24 horas, firma y desembolso en 2 a 3 días hábiles.
+- [Requisitos](https://starkapital.com/requisitos/): Lista completa de requisitos y documentos, incluido qué pasa si la persona está reportada en centrales de riesgo.
+- [Tasas y costos](https://starkapital.com/tasas-y-costos/): Tasa 29,5% E.A. (2,18% M.V.), seguro de vida deudor del 0,033% mensual dentro de la cuota, membresía de seguimiento GPS de $500.000 al año aparte de la cuota, estudio de crédito $0. Ejemplo completo: $90.000.000 a 60 meses = $2.702.000 de capital e intereses + $29.700 de vida deudor = $2.732.000/mes; $163.920.000 en cuotas más $2.500.000 de membresía GPS, $166.420.000 en total. La póliza todo riesgo la contrata el cliente por su cuenta y la endosa al crédito.
+- [Preguntas frecuentes](https://starkapital.com/preguntas-frecuentes/): Respuestas directas sobre cupo, garantías, costos y el crédito día a día.
+
+## Vitrinas de vehículos (aliados comerciales)
+
+- [Propuesta para vitrinas](https://starkapital.com/vitrinas/): Financiación para los compradores de vitrinas de vehículos productivos, con radicación en un minuto y respuesta el mismo día.
+- [Registrar mi vitrina](https://starkapital.com/vitrinas/registro/): Alta de la vitrina como aliada, por una sola vez.
+- [Radicar un cliente](https://starkapital.com/vitrinas/radicar-cliente/): Formulario diario del vendedor para radicar compradores.
+
+## Empresa
+
+- [Quiénes somos](https://starkapital.com/nosotros/): Por qué la compañía financia el vehículo con el que trabaja su cliente.
+- [Manifiesto](https://starkapital.com/nosotros/manifiesto/): La declaración de principios de la marca.
+- [Equipo](https://starkapital.com/nosotros/equipo/): Las personas responsables, con nombre y cargo.
+- [Tecnología](https://starkapital.com/nosotros/tecnologia/): Qué automatiza la compañía y por qué la decisión final siempre es humana.
+- [Contacto](https://starkapital.com/contacto/): Canales de atención y horarios (lunes a sábado, 8:00 a. m. – 6:00 p. m.).
+
+## Blog
+
+- [Blog](https://starkapital.com/blog/): Guías sobre comprar, financiar, mantener y reponer un taxi en Colombia.
+- [Cómo comprar un taxi en Colombia](https://starkapital.com/blog/como-comprar-taxi-colombia/): Guía completa de la compra: vehículo, cupo, papeles y errores comunes.
+- [¿Estoy reportado, puedo pedir crédito?](https://starkapital.com/blog/estoy-reportado-puedo-pedir-credito/): Respuesta directa a la duda más frecuente del gremio.
+- [Vida útil del taxi: ¿cuándo reponer?](https://starkapital.com/blog/vida-util-taxi-cuando-reponer/): Cómo saber cuándo toca la reposición y cómo prepararse con tiempo.
+- [Equipo editorial Starkapital](https://starkapital.com/blog/autores/equipo-starkapital/): Quiénes escriben y revisan el blog, y con qué reglas editoriales.
+
+## Legal y transparencia
+
+- [PQRS](https://starkapital.com/pqrs/): Peticiones, quejas, reclamos y sugerencias con número de radicado.
+- [Documentos legales](https://starkapital.com/legal/): Términos y condiciones, privacidad, tratamiento de datos personales (Ley 1581 de 2012), cookies, prevención de lavado de activos y divulgación de vulnerabilidades.
+- [Mapa del sitio](https://starkapital.com/mapa-del-sitio/): Todas las páginas con una línea de descripción.

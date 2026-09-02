@@ -1,3 +1,22 @@
-# Demostracion: no indexar.
+# Sitio de demostracion.
+# Los buscadores no deben indexarlo mientras las cifras y los documentos
+# legales esten pendientes de confirmacion, pero SI permitimos a los
+# rastreadores de vista previa para que el enlace se vea bien al compartirlo.
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Slackbot-LinkExpanding
+Allow: /
+
 User-agent: *
 Disallow: /

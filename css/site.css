@@ -281,7 +281,17 @@ input[type=range]::-moz-range-thumb{width:17px;height:17px;border-radius:50%;bac
 .sim-actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
 .sim-actions .btn-cta{margin:0;flex:1;justify-content:center;padding:14px 18px}
 .sim-actions .btn-wa{flex:1}
-.sim-note{font-size:11.5px;color:var(--muted-2);margin-top:14px;line-height:1.5}
+.sr-dia{
+  margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);
+  font-size:15px;color:var(--muted);text-align:center;line-height:1.5;
+}
+.sr-dia span{font-family:var(--mono);font-size:20px;font-weight:600;color:var(--lime);letter-spacing:-.02em}
+.sim-tasa{
+  font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-top:18px;
+  padding-top:14px;border-top:1px solid var(--line);letter-spacing:.02em;
+}
+.sim-tasa b{color:var(--pear);font-weight:600}
+.sim-note{font-size:11.5px;color:var(--muted-2);margin-top:10px;line-height:1.5}
 .sim-note a{color:var(--pear)}
 @media(max-width:520px){
   .sim{padding:24px 20px 22px;border-radius:18px}

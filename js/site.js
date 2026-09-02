@@ -12,7 +12,9 @@
   var TASA_EA = 0.295;
   var iMes = Math.pow(1 + TASA_EA, 1/12) - 1;   /* ≈ 0,021776 → 2,18% M.V. */
   var VIDA_DEUDOR_PCT = 0.00033;                 /* mensual, sobre el desembolso */
-  var GPS_ANUAL = 500000;                        /* membresía anual, no va en la cuota */
+  var GPS_ANUAL = 500000;                        /* beneficio GPS: se prorratea al mes */
+  var GPS_MES = Math.round(GPS_ANUAL / 12);      /* va dentro de la cuota */
+  var DIAS_MES = 30;                             /* base del ahorro diario */
   var WA_NUMBER = '573000000000';                /* número comercial por confirmar */
   var WA_PLACEHOLDER = WA_NUMBER === '573000000000';
 
@@ -155,6 +157,7 @@
     var cuotaSeguroEl = simRoot.querySelector('.js-cuota-seguro');   /* seguro de vida deudor */
     var totalPagadoEl = simRoot.querySelector('.js-total-pagado');
     var gpsEl = simRoot.querySelector('.js-gps-anual');
+    var diaEl = simRoot.querySelector('.js-al-dia');
     var waShare = simRoot.querySelector('.js-wa-share');
     var plazoLabels = simRoot.querySelectorAll('.plazos label');
     var shareUrl = simRoot.hasAttribute('data-share-url');
@@ -190,18 +193,18 @@
     var render = function(P, n, actualizarCampo){
       /* todo se muestra redondeado a miles y el total se calcula sobre la
          cuota MOSTRADA, para que la multiplicación del usuario siempre cierre */
+      /* la cuota es capital + intereses + seguro de vida deudor + beneficio GPS */
       var cuotaCredito = redondearMiles(cuotaDe(P, n));
       var vidaDeudor = Math.round(P * VIDA_DEUDOR_PCT);
-      var cuotaTotal = redondearMiles(cuotaCredito + vidaDeudor);
-      /* la membresía GPS no va en la cuota: se paga aparte, una vez al año */
-      var anios = Math.ceil(n / 12);
-      var totalPagado = cuotaTotal * n + GPS_ANUAL * anios;
+      var cuotaTotal = redondearMiles(cuotaCredito + vidaDeudor + GPS_MES);
+      var alDia = redondearMiles(cuotaTotal / DIAS_MES);
 
       cuotaCreditoEl.textContent = fmt(cuotaCredito);
       cuotaSeguroEl.textContent = fmt(vidaDeudor);
       cuotaTotalEl.textContent = fmt(cuotaTotal);
-      totalPagadoEl.textContent = fmt(totalPagado);
-      if (gpsEl) gpsEl.textContent = fmt(GPS_ANUAL);
+      if (gpsEl) gpsEl.textContent = fmt(GPS_MES);
+      if (totalPagadoEl) totalPagadoEl.textContent = fmt(cuotaTotal * n);
+      if (diaEl) diaEl.textContent = fmt(alDia);
 
       if (actualizarCampo) num.value = P.toLocaleString('es-CO');
       range.setAttribute('aria-valuetext', fmt(P) + ' pesos');

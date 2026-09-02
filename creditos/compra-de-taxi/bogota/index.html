@@ -278,15 +278,14 @@
         <div class="sim" data-sim data-monto="126000000" data-plazo="60" aria-label="Simulador de crédito para comprar taxi en Bogotá">
           <div class="sim-head">
             <h3 class="sim-t">Simule su cuota</h3>
-            <span class="rate">Tasa <b>29,5% E.A.</b> · 2,18% M.V.</span>
           </div>
           <div class="fgroup">
             <div class="flabel">
               <label for="montoNum">Monto del crédito</label>
               <span class="amount-in"><span class="cur">$</span><input type="text" id="montoNum" class="js-monto-num" inputmode="numeric" autocomplete="off" aria-label="Monto del crédito en pesos"></span>
             </div>
-            <input type="range" class="js-monto-range" min="20000000" max="150000000" step="1000000" value="126000000" aria-label="Monto del crédito">
-            <div class="range-marks"><span>$20 millones</span><span>$150 millones</span></div>
+            <input type="range" class="js-monto-range" min="10000000" max="150000000" step="1000000" value="126000000" aria-label="Monto del crédito">
+            <div class="range-marks"><span>$10 millones</span><span>$150 millones</span></div>
           </div>
           <div class="fgroup">
             <div class="flabel"><span class="flab" id="plazoLab">Plazo en meses</span></div>
@@ -299,14 +298,14 @@
           </div>
           </div>
           <div class="sim-result" aria-live="polite">
-            <div class="sr-label">Su cuota mensual estimada</div>
+            <div class="sr-label">Su cuota mensual</div>
             <div class="sr-cuota"><span class="js-cuota-total">$0</span><small> /mes</small></div>
             <div class="sr-rows">
-              <div class="sr-row"><span>Capital e intereses</span><b class="js-cuota-credito">$0</b></div>
+            <div class="sr-row"><span>Capital e intereses</span><b class="js-cuota-credito">$0</b></div>
             <div class="sr-row"><span>Seguro de vida deudor</span><b class="js-cuota-seguro">$0</b></div>
-            <div class="sr-row" style="border-top:1px dashed var(--line);padding-top:8px;margin-top:2px"><span>Membresía GPS (aparte, una vez al año)</span><b class="js-gps-anual">$0</b></div>
-            <div class="sr-row"><span>Total pagado al final</span><b class="js-total-pagado">$0</b></div>
-            </div>
+            <div class="sr-row"><span>Beneficio GPS</span><b class="js-gps-anual">$0</b></div>
+          </div>
+          <div class="sr-dia"><span class="js-al-dia">$0</span> al día y el vehículo es suyo</div>
           </div>
           <div class="sim-actions">
             <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar con estos datos</a>
@@ -315,6 +314,7 @@
               Compartir
             </a>
           </div>
+          <p class="sim-tasa">Tasa <b>29,5% E.A.</b> · 2,18% M.V. · vigente a agosto de 2026</p>
           <p class="sim-note">Cálculo informativo con tasa vigente a agosto de 2026. No constituye una oferta comercial: la cuota final depende del estudio de su solicitud.</p>
         </div>
       </div>

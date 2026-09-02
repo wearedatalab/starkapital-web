@@ -1,4 +1,3 @@
-# Sitio de demostracion: no debe indexarse mientras las cifras y los
-# documentos legales esten pendientes de confirmacion del cliente.
+# Demostracion: no indexar.
 User-agent: *
 Disallow: /

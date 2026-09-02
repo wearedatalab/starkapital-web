@@ -4,14 +4,14 @@
 <meta name="robots" content="noindex, nofollow">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Radicar un cliente para crédito de vehículo | Starkapital</title>
+<title>Radicar un cliente para crédito de vehículo productivo | Starkapital</title>
 <meta name="description" content="Deje aquí los datos de su comprador en menos de un minuto. Llamamos al cliente hoy mismo, estudiamos el crédito y usted cierra la venta con el desembolso.">
 <link rel="canonical" href="https://starkapital.com/vitrinas/radicar-cliente/">
 <meta name="theme-color" content="#0F1E32">
 <link rel="icon" type="image/svg+xml" href="/starkapital-web/img/favicon.svg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Radicar un cliente para crédito de vehículo | Starkapital">
-<meta property="og:description" content="Ocho datos desde el celular, con el comprador al lado. Lo llamamos hoy mismo y la venta no se enfría.">
+<meta property="og:title" content="Radicar un cliente para crédito de vehículo productivo | Starkapital">
+<meta property="og:description" content="Los datos justos desde el celular, con el comprador al lado. Lo llamamos hoy mismo y la venta no se enfría.">
 <meta property="og:url" content="https://starkapital.com/vitrinas/radicar-cliente/">
 <meta property="og:image" content="https://starkapital.com/img/vitrina-taxis.jpg?v=2">
 <meta property="og:locale" content="es_CO">
@@ -48,7 +48,7 @@
   .tiempo{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;color:var(--pear);border:1px solid rgba(202,217,0,.3);border-radius:99px;padding:5px 12px}
 </style>
 </head>
-<body data-wa-msg="Hola, soy de una vitrina aliada y necesito ayuda para radicar un cliente de crédito de taxi.">
+<body data-wa-msg="Hola, soy de una vitrina aliada y necesito ayuda para radicar un cliente de crédito de vehículo productivo.">
 
 <!-- ============ BARRA SUPERIOR ============ -->
 <div class="topbar">
@@ -143,7 +143,7 @@
     <div class="wrap">
       <span class="eyebrow h-in d1">Formulario 2 · Uso diario</span>
       <h1 class="h-in d2">Radique a su cliente <em>en un minuto</em></h1>
-      <p class="lead h-in d3">Ocho datos desde el celular, con el comprador al lado. <strong>Lo llamamos hoy mismo</strong> — la venta no se enfría.</p>
+      <p class="lead h-in d3">Los datos justos desde el celular, con el comprador al lado. <strong>Lo llamamos hoy mismo</strong> — la venta no se enfría.</p>
       <p class="h-in d4" style="margin-top:20px"><span class="tiempo">Se llena en menos de 60 segundos</span></p>
     </div>
   </section>
@@ -156,9 +156,9 @@
 
           <div class="frow">
             <div class="fld">
-              <label for="cVitrina">Vitrina que radica</label>
-              <input type="text" id="cVitrina" placeholder="Nombre de su vitrina">
-              <span class="err">Escriba el nombre de la vitrina</span>
+              <label for="cVitrina">Vitrina o concesionario que radica</label>
+              <input type="text" id="cVitrina" placeholder="Nombre de su negocio">
+              <span class="err">Escriba el nombre de su negocio</span>
             </div>
             <div class="fld">
               <label for="cVendedor">Nombre del vendedor</label>
@@ -194,6 +194,18 @@
             </div>
           </div>
 
+          <div class="fld" data-group="tipo">
+            <label id="labTipo">Tipo de vehículo productivo</label>
+            <div class="chips" role="radiogroup" aria-labelledby="labTipo">
+              <label><input type="radio" name="tipo" value="Taxi">Taxi</label>
+              <label><input type="radio" name="tipo" value="Carga liviana">Carga liviana</label>
+              <label><input type="radio" name="tipo" value="Camión">Camión</label>
+              <label><input type="radio" name="tipo" value="Van o pasajeros">Van o pasajeros</label>
+              <label><input type="radio" name="tipo" value="Otro">Otro</label>
+            </div>
+            <span class="err">Marque el tipo de vehículo</span>
+          </div>
+
           <div class="fld" data-group="veh">
             <label id="labVeh">El vehículo es</label>
             <div class="chips" role="radiogroup" aria-labelledby="labVeh">
@@ -217,12 +229,13 @@
           </div>
 
           <div class="fld" data-group="cupo">
-            <label id="labCupo">¿Incluye cupo?</label>
+            <label id="labCupo">¿El vehículo lleva cupo? <span class="opt">— solo aplica en taxi</span></label>
             <div class="chips" role="radiogroup" aria-labelledby="labCupo">
               <label><input type="radio" name="cupo" value="Sí">Sí</label>
               <label><input type="radio" name="cupo" value="No">No</label>
+              <label><input type="radio" name="cupo" value="No aplica">No aplica</label>
             </div>
-            <span class="err">Marque sí o no</span>
+            <span class="err">Marque una opción</span>
           </div>
 
           <div class="fld" data-group="ini">
@@ -262,7 +275,7 @@
     <div class="rad-wrap">
       <div class="callout reveal" style="margin:0">
         <div class="t">Antes de radicar, recuerde la lista</div>
-        <p>Cédula vigente · licencia C1 o superior · 2 años o más de experiencia conduciendo · inicial desde el 30% · producción de $130.000 o más libres al día. Si el caso cumple, radíquelo: <strong>esos son los que más rápido salen</strong>. La lista completa está en la <a href="/starkapital-web/vitrinas/" aria-current="true" style="color:var(--pear);font-weight:600">página del canal</a>.</p>
+        <p>Cédula vigente · licencia C1 o superior · 2 años o más de experiencia conduciendo · cuota inicial desde el 30% del valor · producción de $130.000 o más libres al día. Si el caso cumple, radíquelo: <strong>esos son los que más rápido salen</strong>. La lista completa está en la <a href="/starkapital-web/vitrinas/" aria-current="true" style="color:var(--pear);font-weight:600">página del canal de vitrinas y concesionarios</a>.</p>
       </div>
     </div>
   </section>
@@ -386,7 +399,7 @@
     if (marcar($('cCiudad'), !$('cCiudad').value)) errores++;
     if (marcar(val, !(parseInt((val.value || '').replace(/\D/g, ''), 10) > 0))) errores++;
 
-    ['veh', 'cupo', 'ini'].forEach(function(n){
+    ['tipo', 'veh', 'cupo', 'ini'].forEach(function(n){
       var elegido = form.querySelector('input[name="' + n + '"]:checked');
       form.querySelector('[data-group="' + n + '"]').classList.toggle('invalid', !elegido);
       if (!elegido) errores++;

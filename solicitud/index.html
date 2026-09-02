@@ -158,7 +158,7 @@
     <div class="sol-wrap">
       <span class="eyebrow h-in d1">Solicitud · 3 pasos</span>
       <h1 class="h-in d2">Solicite su crédito</h1>
-      <p class="sol-lead h-in d3">Tres pasos cortos, unos 10 minutos. Al terminar, <strong>le respondemos en máximo 24 horas hábiles con la cuota por escrito</strong>.</p>
+      <p class="sol-lead h-in d3">Tres pasos cortos, unos 10 minutos. Cuéntenos qué necesita su negocio y <strong>le respondemos en máximo 24 horas hábiles con la cuota por escrito</strong>.</p>
       <div class="sol-facts h-in d4">
         <span>Estudio de crédito <b>$0</b></span>
         <span>Respuesta <b>en 24 h hábiles</b></span>
@@ -188,12 +188,12 @@
         <!-- PASO 1 -->
         <section class="fpaso on" data-paso="1" aria-labelledby="st1">
           <h2 class="fp-t" id="st1" tabindex="-1">¿Cuánto necesita?</h2>
-          <p class="form-note" style="margin-top:-12px">Un solo crédito: el del vehículo con el que usted trabaja. Empecemos por el monto.</p>
+          <p class="form-note" style="margin-top:-12px">Empezamos por el crédito de vehículo productivo, el primer paso para hacer crecer su negocio. Comencemos por el monto.</p>
 
           <div class="fld" data-name="monto">
             <label id="labMonto">Monto aproximado</label>
             <div class="chips" role="radiogroup" aria-labelledby="labMonto">
-              <label><input type="radio" name="monto" value="20-40">$20 a $40 millones</label>
+              <label><input type="radio" name="monto" value="10-40">$10 a $40 millones</label>
               <label><input type="radio" name="monto" value="40-70">$40 a $70 millones</label>
               <label><input type="radio" name="monto" value="70-100">$70 a $100 millones</label>
               <label><input type="radio" name="monto" value="100-150">$100 a $150 millones</label>
@@ -244,14 +244,14 @@
           </div>
 
           <div class="fld" data-name="anos">
-            <label id="labAnos">¿Hace cuántos años trabaja conduciendo?</label>
+            <label id="labAnos">¿Hace cuántos años trabaja en este negocio?</label>
             <div class="chips" role="radiogroup" aria-labelledby="labAnos">
               <label><input type="radio" name="anos" value="<2">Menos de 2 años</label>
               <label><input type="radio" name="anos" value="2-5">2 a 5 años</label>
               <label><input type="radio" name="anos" value="5-10">5 a 10 años</label>
               <label><input type="radio" name="anos" value="+10">Más de 10 años</label>
             </div>
-            <span class="err">Elija el rango de años que lleva en el oficio.</span>
+            <span class="err">Elija el rango de años que lleva en el negocio.</span>
           </div>
 
           <div class="fld" data-name="produccion">
@@ -263,7 +263,7 @@
               <label><input type="radio" name="produccion" value="+180">Más de $180.000</label>
             </div>
             <span class="err">Elija el rango que más se parezca a un día normal.</span>
-            <p class="form-note">En promedio, después de gasolina y gastos. Para este paso no necesitamos extractos: su palabra primero, los papeles después.</p>
+            <p class="form-note">En promedio, después de combustible y gastos de operación. Para este paso no necesitamos extractos: su palabra primero, los papeles después.</p>
           </div>
         </section>
 
@@ -296,7 +296,7 @@
             <span class="err">Sin esta autorización no podemos hacer el estudio de crédito.</span>
           </div>
 
-          <p class="form-note">La cuota exacta se calcula con la tasa vigente — 29,5% E.A. (2,18% M.V.) a agosto de 2026 — e incluye el seguro de vida deudor. Se la damos por escrito antes de que firme nada, junto con la membresía de seguimiento GPS de $500.000 al año, que se paga aparte. El estudio de crédito cuesta $0, se apruebe o no.</p>
+          <p class="form-note">La cuota exacta se calcula con la tasa vigente — 29,5% E.A. (2,18% M.V.) a agosto de 2026 — e incluye el seguro de vida deudor y el beneficio GPS ($500.000 al año, prorrateados en $41.667 mensuales). Se la damos por escrito antes de que firme nada, sin cobros por fuera de la cuota. El estudio de crédito cuesta $0, se apruebe o no.</p>
         </section>
 
         <div class="fnav">
@@ -511,7 +511,7 @@
       ['Ciudad', ciudad],
       ['Nombre', (getVal('nombre') || '').trim() || '—'],
       ['Celular', (getVal('celular') || '').trim() || '—'],
-      ['Años conduciendo', chipTxt('anos')],
+      ['Años en el negocio', chipTxt('anos')],
       ['Producción diaria libre', chipTxt('produccion')]
     ];
     document.getElementById('resumen').innerHTML = filas.map(function(f){

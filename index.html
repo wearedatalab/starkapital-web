@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta name="robots" content="noindex">
+<meta name="robots" content="noindex, nofollow">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Starkapital | Aliado financiero de empresarios · Crédito de vehículo productivo</title>
@@ -13,16 +13,16 @@
 <meta property="og:title" content="Starkapital | Aliado financiero de empresarios · Crédito de vehículo productivo">
 <meta property="og:description" content="Acompañamos el crecimiento de los empresarios con apoyo crediticio para distintas necesidades. El primer paso es el crédito de vehículo productivo: evaluamos lo que produce su negocio, no su nómina. Respuesta en 24 horas hábiles.">
 <meta property="og:url" content="https://wearedatalab.github.io/starkapital-web/">
-<meta property="og:image" content="https://wearedatalab.github.io/starkapital-web/img/og-starkapital.jpg">
+<meta property="og:image" content="https://wearedatalab.github.io/starkapital-web/img/og-starkapital.jpg?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:alt" content="Starkapital: usted construye la empresa, nosotros el capital.">
+<meta property="og:image:alt" content="Starkapital: usted construye su negocio, nosotros el capital.">
 <meta property="og:site_name" content="Starkapital">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Starkapital | Aliado financiero de empresarios · Crédito de vehículo productivo">
 <meta name="twitter:description" content="Acompañamos el crecimiento de los empresarios con apoyo crediticio para distintas necesidades. El primer paso es el crédito de vehículo productivo: evaluamos lo que produce su negocio, no su nómina. Respuesta en 24 horas hábiles.">
-<meta name="twitter:image" content="https://wearedatalab.github.io/starkapital-web/img/og-starkapital.jpg">
+<meta name="twitter:image" content="https://wearedatalab.github.io/starkapital-web/img/og-starkapital.jpg?v=2">
 <meta property="og:locale" content="es_CO">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,15 +65,31 @@
 </script>
 <style>
   /* ---------- estilos propios de la portada ---------- */
-  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:var(--navy)}
+  /* fotografía de fondo: avenida al anochecer, vehículos productivos en operación */
+  .hero-foto{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+  .hero-foto img{
+    position:absolute;left:0;bottom:0;width:100%;height:132%;
+    object-fit:cover;object-position:50% 100%;
+    filter:saturate(.95) contrast(1.02) brightness(.62)
+  }
+  /* velos en porcentaje: se comportan igual en cualquier ancho de pantalla */
+  .hero-foto::after{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(58% 54% at 20% 44%, rgba(15,30,50,.95) 0%, rgba(15,30,50,.8) 46%, rgba(15,30,50,0) 80%),
+      radial-gradient(60% 46% at 6% 102%, rgba(15,30,50,.93) 0%, rgba(15,30,50,.52) 55%, rgba(15,30,50,0) 85%),
+      linear-gradient(90deg, rgba(15,30,50,.9) 0%, rgba(15,30,50,.76) 24%, rgba(15,30,50,.4) 48%, rgba(15,30,50,.28) 68%, rgba(15,30,50,.44) 100%),
+      linear-gradient(180deg, var(--navy) 0%, rgba(15,30,50,.74) 20%, rgba(15,30,50,.32) 46%, rgba(15,30,50,.06) 72%, rgba(15,30,50,.4) 95%, var(--navy) 100%);
+  }
   .hero::before{
-    content:"";position:absolute;inset:0;pointer-events:none;
+    content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
     background:
       radial-gradient(760px 520px at 84% -10%, rgba(202,217,0,.14), transparent 62%),
       radial-gradient(520px 420px at -6% 108%, rgba(30,49,73,.85), transparent 70%);
   }
   .hero-grid{
-    position:relative;max-width:var(--maxw);margin:0 auto;padding:66px 28px 76px;
+    position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:66px 28px 76px;
     display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);
     grid-template-areas:"copy sim" "after sim";gap:0 64px;align-items:center;
   }
@@ -82,16 +98,24 @@
   .hero .sim{grid-area:sim}
   .hero h1{font-size:clamp(38px,4.6vw,64px);max-width:15ch;color:var(--white)}
   .hero h1 em{font-style:normal;color:var(--lime)}
-  .hero .lead{max-width:52ch;margin-top:24px;font-size:19px;color:var(--muted);font-weight:300}
+  .hero .lead{max-width:52ch;margin-top:24px;font-size:19px;color:var(--muted);font-weight:300;text-shadow:0 1px 14px rgba(15,30,50,.9)}
   .hero .lead strong{color:var(--ink);font-weight:600}
   .hero-ctas{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;align-items:center}
-  .hero-trust{margin-top:30px;font-size:13.5px;color:var(--muted-2);display:flex;gap:18px;flex-wrap:wrap}
+  .hero-ctas .btn-ghost{backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);background:rgba(15,30,50,.5)}
+  .hero-trust{margin-top:30px;font-size:13.5px;color:var(--muted-2);display:flex;gap:18px;flex-wrap:wrap;text-shadow:0 1px 12px rgba(15,30,50,.95)}
   .hero-trust span{display:inline-flex;align-items:center;gap:7px}
   .hero-trust svg{width:14px;height:14px;color:var(--apple);flex:none}
   @media(max-width:980px){
     /* la ficha Portada exige el simulador inmediatamente debajo del titular en móvil */
     .hero-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "sim" "after";gap:38px;padding-top:48px;padding-bottom:60px}
     .hero h1{max-width:none}
+    /* en móvil la foto es una banda superior que se funde con el navy */
+    .hero-foto{top:0;bottom:auto;height:min(540px,62vh)}
+    .hero-foto img{height:100%;object-position:50% 92%;filter:saturate(.95) contrast(1.02) brightness(.7)}
+    .hero-foto::after{
+      background:
+        linear-gradient(180deg, rgba(15,30,50,.7) 0%, rgba(15,30,50,.48) 24%, rgba(15,30,50,.74) 52%, rgba(15,30,50,.92) 78%, var(--navy) 96%);
+    }
   }
 
   .cifras{border-bottom:1px solid var(--line);padding:0}
@@ -305,10 +329,15 @@
 
   <!-- ============ 1 · HERO + SIMULADOR ============ -->
   <section class="hero" aria-label="Portada" style="padding:0">
+    <div class="hero-foto" aria-hidden="true">
+      <img src="/starkapital-web/img/hero-home.jpg?v=1"
+           srcset="/starkapital-web/img/hero-home-sm.jpg?v=1 1200w, /starkapital-web/img/hero-home.jpg?v=1 2000w"
+           sizes="100vw" width="2000" height="1116" alt="" fetchpriority="high" decoding="async">
+    </div>
     <div class="hero-grid">
       <div class="hero-copy">
         <span class="eyebrow h-in d1">Crédito para vehículo productivo</span>
-        <h1 class="h-in d2">Usted construye la empresa. <em>Nosotros, el capital.</em></h1>
+        <h1 class="h-in d2">Usted construye su negocio. <em>Nosotros, el capital.</em></h1>
         <p class="lead h-in d3">Acompañamos el crecimiento de su negocio con líneas de crédito para distintas necesidades, y el primer paso es el <strong>crédito de vehículo productivo</strong>. No le pedimos carta laboral: evaluamos lo que produce su negocio. Respuesta en 24 horas hábiles.</p>
       </div>
       <div class="hero-after">
@@ -377,7 +406,7 @@
   <section id="el-credito" aria-label="Apoyo crediticio">
     <div class="wrap">
       <div class="sec-eyebrow reveal">Apoyo crediticio</div>
-      <h2 class="sec-t reveal" style="--d:.08s">El aliado financiero que crece con su empresa</h2>
+      <h2 class="sec-t reveal" style="--d:.08s">El aliado financiero que crece con su negocio</h2>
       <p class="sec-sub reveal" style="--d:.16s">Starkapital es la solución de apoyo crediticio para empresarios: acompañamos el crecimiento de su negocio con <strong>líneas de crédito para distintas necesidades</strong>. Hoy el primer paso es el crédito de vehículo productivo, y ahí está todo lo que sabemos del gremio: el cupo, la operación diaria y el valor real de un vehículo trabajando.</p>
 
       <div class="producto reveal" style="--d:.24s">

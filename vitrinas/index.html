@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <head>
 <meta name="robots" content="noindex, nofollow">
 <meta charset="UTF-8">
@@ -27,37 +27,201 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/starkapital-web/css/site.css">
+<link rel="stylesheet" href="/starkapital-web/css/site.css?v=7">
+<script src="/starkapital-web/js/analitica.js?v=1" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": [
+        "Organization",
+        "FinancialService"
+      ],
+      "@id": "https://wearedatalab.github.io/starkapital-web/#org",
+      "name": "Starkapital",
+      "legalName": "Starkapital S.A.S.",
+      "url": "https://wearedatalab.github.io/starkapital-web/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wearedatalab.github.io/starkapital-web/img/logo.svg",
+        "width": 1370,
+        "height": 245,
+        "caption": "Starkapital"
+      },
+      "image": "https://wearedatalab.github.io/starkapital-web/img/og-starkapital.jpg?v=2",
+      "email": "hola@starkapital.com",
+      "slogan": "Si usted pone el sudor, nosotros ponemos el motor.",
+      "description": "Aliado financiero de los empresarios que producen con su vehículo: apoyo crediticio para acompañar el crecimiento de su negocio, empezando por el crédito para la compra del vehículo productivo.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bogotá D.C.",
+        "addressCountry": "CO"
+      },
+      "currenciesAccepted": "COP",
+      "openingHours": "Mo-Sa 08:00-18:00",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 5
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "hola@starkapital.com",
+        "url": "https://wearedatalab.github.io/starkapital-web/contacto/",
+        "availableLanguage": {
+          "@type": "Language",
+          "name": "Spanish",
+          "alternateName": "es"
+        },
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      },
+      "knowsAbout": [
+        "Crédito para compra de vehículo productivo",
+        "Crédito para compra de taxi",
+        "Taxi con cupo",
+        "Financiación de activos productivos",
+        "Apoyo crediticio a empresarios del transporte"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://wearedatalab.github.io/starkapital-web/#website",
+      "url": "https://wearedatalab.github.io/starkapital-web/",
+      "name": "Starkapital",
+      "publisher": {
+        "@id": "https://wearedatalab.github.io/starkapital-web/#org"
+      },
+      "inLanguage": "es-CO"
+    },
+    {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://wearedatalab.github.io/starkapital-web/"},
-        {"@type":"ListItem","position":2,"name":"Vitrinas","item":"https://wearedatalab.github.io/starkapital-web/vitrinas/"}
-      ]
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://wearedatalab.github.io/starkapital-web/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Vitrinas",
+          "item": "https://wearedatalab.github.io/starkapital-web/vitrinas/"
+        }
+      ],
+      "@id": "https://wearedatalab.github.io/starkapital-web/vitrinas/#breadcrumb"
     },
     {
       "@type": "Service",
       "name": "Financiación para compradores de vitrinas y concesionarios de vehículos productivos",
       "serviceType": "Alianza comercial de financiación de vehículos productivos",
-      "provider": {"@id": "https://wearedatalab.github.io/starkapital-web/#org"},
-      "audience": {"@type":"BusinessAudience","audienceType":"Vitrinas y concesionarios de vehículos productivos"},
+      "provider": {
+        "@id": "https://wearedatalab.github.io/starkapital-web/#org"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Vitrinas y concesionarios de vehículos productivos"
+      },
       "url": "https://wearedatalab.github.io/starkapital-web/vitrinas/",
-      "potentialAction": {"@type":"RegisterAction","name":"Registrar mi vitrina o concesionario","target":"https://wearedatalab.github.io/starkapital-web/vitrinas/registro/"}
+      "potentialAction": {
+        "@type": "RegisterAction",
+        "name": "Registrar mi vitrina o concesionario",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://wearedatalab.github.io/starkapital-web/vitrinas/registro/",
+          "actionPlatform": [
+            "https://schema.org/DesktopWebPlatform",
+            "https://schema.org/MobileWebPlatform"
+          ]
+        }
+      },
+      "@id": "https://wearedatalab.github.io/starkapital-web/vitrinas/#programa-aliados",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Bogotá D.C. y la sabana de Bogotá"
+      },
+      "description": "Starkapital financia a los empresarios que compran su vehículo productivo en vitrinas y concesionarios aliados: la vitrina radica al cliente, Starkapital responde en máximo 24 horas hábiles y desembolsa en 2 a 3 días hábiles."
     },
     {
-      "@type": "FAQPage",
+      "@type": [
+        "WebPage",
+        "FAQPage"
+      ],
       "mainEntity": [
-        {"@type":"Question","name":"¿Solo financian taxis?","acceptedAnswer":{"@type":"Answer","text":"No. Financiamos vehículos productivos: el activo con el que su comprador genera ingresos. El taxi es hoy el caso más frecuente —y por eso hablamos de cupo—, pero si su vitrina o su concesionario vende otro vehículo de trabajo, radíquelo y su responsable de canal le confirma de inmediato si entra en el perfil."}},
-        {"@type":"Question","name":"¿Cuándo me pagan la comisión?","acceptedAnswer":{"@type":"Answer","text":"La comisión se causa únicamente con el desembolso: ni radicar ni la aprobación la generan. El valor y el momento de pago quedan por escrito en el acuerdo de alianza que firma al registrarse, y su responsable de canal se la liquida operación por operación."}},
-        {"@type":"Question","name":"¿Qué pasa si el cliente no aprueba?","acceptedAnswer":{"@type":"Answer","text":"Usted no pierde nada: el estudio cuesta $0 y el caso no lo compromete. Le decimos el motivo real —a usted y al comprador— y, si el caso se arregla con más cuota inicial o con otro vehículo, también se lo decimos. Por eso publicamos la lista de lo que necesita su cliente: para que radique casos que sí pasan."}},
-        {"@type":"Question","name":"¿Pueden financiar vehículos usados?","acceptedAnswer":{"@type":"Answer","text":"Sí. Financiamos vehículos nuevos y usados. Si es taxi, con cupo o con el cupo negociado aparte. En usados revisamos el estado mecánico y la documentación antes del desembolso — igual que usted revisa un vehículo antes de recibirlo en parte de pago."}},
-        {"@type":"Question","name":"¿Trabajan en mi ciudad?","acceptedAnswer":{"@type":"Answer","text":"Hoy la operación está concentrada en Bogotá y su sabana, y las ciudades nuevas se abren donde hay aliados esperando. Regístrese aunque su ciudad aún no esté activa: es la señal que usamos para priorizar la apertura, y su responsable de canal le confirma fechas."}},
-        {"@type":"Question","name":"¿El cliente tiene que ir a alguna oficina?","acceptedAnswer":{"@type":"Answer","text":"No. El estudio se hace por teléfono y WhatsApp, y la firma y el desembolso se coordinan para que el comprador no suelte la compra: 2 a 3 días hábiles después de aprobado, usted entrega el vehículo en su punto de venta."}}
-      ]
+        {
+          "@type": "Question",
+          "name": "¿Solo financian taxis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Financiamos vehículos productivos: el activo con el que su comprador genera ingresos. El taxi es hoy el caso más frecuente —y por eso hablamos de cupo—, pero si su vitrina o su concesionario vende otro vehículo de trabajo, radíquelo y su responsable de canal le confirma de inmediato si entra en el perfil."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuándo me pagan la comisión?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La comisión se causa únicamente con el desembolso: ni radicar ni la aprobación la generan. El valor y el momento de pago quedan por escrito en el acuerdo de alianza que firma al registrarse, y su responsable de canal se la liquida operación por operación."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si el cliente no aprueba?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usted no pierde nada: el estudio cuesta $0 y el caso no lo compromete. Le decimos el motivo real —a usted y al comprador— y, si el caso se arregla con más cuota inicial o con otro vehículo, también se lo decimos. Por eso publicamos la lista de lo que necesita su cliente: para que radique casos que sí pasan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Pueden financiar vehículos usados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Financiamos vehículos nuevos y usados. Si es taxi, con cupo o con el cupo negociado aparte. En usados revisamos el estado mecánico y la documentación antes del desembolso — igual que usted revisa un vehículo antes de recibirlo en parte de pago."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Trabajan en mi ciudad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hoy la operación está concentrada en Bogotá y su sabana, y las ciudades nuevas se abren donde hay aliados esperando. Regístrese aunque su ciudad aún no esté activa: es la señal que usamos para priorizar la apertura, y su responsable de canal le confirma fechas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El cliente tiene que ir a alguna oficina?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El estudio se hace por teléfono y WhatsApp, y la firma y el desembolso se coordinan para que el comprador no suelte la compra: 2 a 3 días hábiles después de aprobado, usted entrega el vehículo en su punto de venta."
+          }
+        }
+      ],
+      "@id": "https://wearedatalab.github.io/starkapital-web/vitrinas/#webpage",
+      "url": "https://wearedatalab.github.io/starkapital-web/vitrinas/",
+      "inLanguage": "es-CO",
+      "isPartOf": {
+        "@id": "https://wearedatalab.github.io/starkapital-web/#website"
+      },
+      "about": {
+        "@id": "https://wearedatalab.github.io/starkapital-web/#org"
+      },
+      "breadcrumb": {
+        "@id": "https://wearedatalab.github.io/starkapital-web/vitrinas/#breadcrumb"
+      }
     }
   ]
 }
@@ -91,9 +255,9 @@
 <!-- ============ BARRA SUPERIOR ============ -->
 <div class="topbar">
   <div class="topbar-in">
-    <a href="#" class="soon" data-page="Portal de cliente (app.starkapital.com)">
+    <a href="#" class="soon" data-page="Zona de clientes (app.starkapital.com)">
       <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-      Ingresar
+      Zona clientes
     </a>
     <a href="#" class="js-wa" target="_blank" rel="noopener">
       <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.7-5c-.8-1.4-1-2.5-.8-3 .1-.5.8-1.3 1.3-1.4h.7c.2 0 .5-.1.8.6l1 2.4c.1.2.1.4 0 .6l-.5.8c-.2.2-.3.4-.1.7a9 9 0 0 0 3.9 3.5c.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .2 0 .6-.5 1.6Z"/></svg>
@@ -136,6 +300,7 @@
         </div>
       </li>
     </ul>
+    <a href="#" class="btn-zona soon" data-page="Zona de clientes (app.starkapital.com)" aria-label="Zona clientes"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Zona clientes</span></a>
     <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar mi crédito</a>
     <button class="hamb" id="hamb" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
@@ -160,7 +325,7 @@
     <a href="/starkapital-web/preguntas-frecuentes/">Preguntas frecuentes</a>
     <a href="/starkapital-web/contacto/">Contacto</a>
     <div class="dlab">Utilidades</div>
-    <a href="#" class="soon" data-page="Portal de cliente">Ingresar</a>
+    <a href="#" class="soon" data-page="Zona de clientes (app.starkapital.com)">Zona clientes</a>
     <a href="/starkapital-web/pqrs/">PQRS</a>
     <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar mi crédito</a>
   </div>
@@ -395,6 +560,6 @@
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="/starkapital-web/js/site.js?v=3"></script>
+<script src="/starkapital-web/js/site.js?v=6"></script>
 </body>
 </html>

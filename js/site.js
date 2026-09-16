@@ -56,6 +56,27 @@
     });
   });
 
+  /* ---------- Nav afirmado al bajar ----------
+     La barra superior se va con el scroll, así que el nav se vuelve opaco y
+     revela el acceso a Zona clientes, que hasta ese momento vivía arriba. */
+  var nav = document.querySelector('.nav');
+  if (nav) {
+    var topbar = document.querySelector('.topbar');
+    var umbral = 24;
+    /* el umbral solo cambia al redimensionar: medirlo en cada scroll forzaría layout */
+    var medirUmbral = function(){
+      umbral = (topbar && topbar.offsetParent !== null) ? topbar.offsetHeight : 24;
+    };
+    var pintarNav = function(){
+      var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+      nav.classList.toggle('fija', y > umbral);
+    };
+    medirUmbral();
+    pintarNav();
+    window.addEventListener('scroll', pintarNav, { passive: true });
+    window.addEventListener('resize', function(){ medirUmbral(); pintarNav(); }, { passive: true });
+  }
+
   /* ---------- Menú de escritorio: estado accesible de los desplegables ---------- */
   document.querySelectorAll('.menu button.mi').forEach(function(btn){
     var li = btn.parentElement;
@@ -220,7 +241,16 @@
         history.replaceState(null, '', '/simulador/?monto=' + P + '&plazo=' + n);
       }
     };
-    var calcular = function(){ render(parseInt(range.value, 10), plazoActual(), true); };
+    /* El evento de simulación se reporta una sola vez por ráfaga: mover el
+       control dispara decenas de «input» y no queremos ruido en la analítica. */
+    var tSim = null;
+    var reportarSimulacion = function(){
+      clearTimeout(tSim);
+      tSim = setTimeout(function(){
+        if (window.skEvento) window.skEvento('simulacion', { monto: parseInt(range.value, 10), plazo: plazoActual() });
+      }, 900);
+    };
+    var calcular = function(){ render(parseInt(range.value, 10), plazoActual(), true); reportarSimulacion(); };
     range.addEventListener('input', calcular);
     radios.forEach(function(r){
       r.addEventListener('change', calcular);
@@ -241,7 +271,8 @@
         mostrarToast('Número de WhatsApp por confirmar — este botón compartirá la simulación por chat');
       });
     }
-    calcular();
+    /* Pintado inicial: sin reportar evento — nadie ha simulado nada todavía. */
+    render(parseInt(range.value, 10), plazoActual(), true);
   }
 
   /* ---------- Radicados de demostración (formularios) ----------
@@ -252,4 +283,67 @@
     localStorage.setItem(k, String(n));
     return prefijo + '-2026-' + String(n).padStart(5, '0');
   };
+
+  /* ---------- Atribución ----------
+     De dónde viene la persona. Se guarda en la primera página que pisa y
+     viaja con el lead hasta el back office, para saber qué canal trae negocio. */
+  var ATRIB_K = 'sk-atrib';
+  function atribucion(){
+    try {
+      var guardada = sessionStorage.getItem(ATRIB_K);
+      if (guardada) return JSON.parse(guardada);
+    } catch (e) { /* modo privado */ }
+
+    var q = new URLSearchParams(location.search);
+    var ref = document.referrer || '';
+    var host = '';
+    try { host = ref ? new URL(ref).hostname.replace(/^www\./, '') : ''; } catch (e) { host = ''; }
+
+    var canal = 'directo';
+    if (q.get('utm_source')) canal = q.get('utm_source');
+    else if (q.get('gclid')) canal = 'google-ads';
+    else if (q.get('fbclid')) canal = 'meta-ads';
+    else if (/google\./.test(host)) canal = 'google-organico';
+    else if (/bing\.|duckduckgo\./.test(host)) canal = 'buscador';
+    else if (/facebook\.|instagram\.|linkedin\.|t\.co|x\.com/.test(host)) canal = 'social';
+    else if (host) canal = host;
+
+    var a = { canal: canal, entrada: location.pathname };
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid'].forEach(function(k){
+      if (q.get(k)) a[k] = String(q.get(k)).slice(0, 120);
+    });
+    if (host) a.referente = host;
+    try { sessionStorage.setItem(ATRIB_K, JSON.stringify(a)); } catch (e) {}
+    return a;
+  }
+
+  /* ---------- Envío de leads al back office ----------
+     Devuelve 'ok' | 'sin-api' | 'error'. El formulario decide qué mostrar:
+     nunca se le echa la culpa al usuario por un problema nuestro. */
+  window.skEnviarLead = function(datos){
+    var cuerpo = Object.assign({}, datos, { atribucion: atribucion() });
+    return fetch('/api/public/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(cuerpo)
+    }).then(function(r){
+      if (r.ok) {
+        if (window.skEvento) window.skEvento('generate_lead', { origen: datos.origen || 'contacto' });
+        return 'ok';
+      }
+      /* 404 = el sitio está servido como estático, sin back office detrás */
+      return r.status === 404 ? 'sin-api' : 'error';
+    }).catch(function(){ return 'sin-api'; });
+  };
+
+  /* ---------- Eventos de interacción ---------- */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a');
+    if (!a || !window.skEvento) return;
+    if (a.classList.contains('js-wa') || /wa\.me|api\.whatsapp/.test(a.href || '')) {
+      window.skEvento('click_whatsapp', { pagina: location.pathname });
+    } else if ((a.getAttribute('href') || '').indexOf('tel:') === 0) {
+      window.skEvento('click_llamada', { pagina: location.pathname });
+    }
+  }, true);
 })();

@@ -50,15 +50,22 @@ img{max-width:100%;display:block}
 @media(max-width:860px){.topbar{display:none}}
 
 /* ============ NAV ============ */
-.nav{position:sticky;top:0;z-index:90;background:rgba(15,30,50,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(42,62,88,.6)}
-.nav-in{max-width:var(--maxw);margin:0 auto;padding:0 28px;height:var(--nav-h);display:flex;align-items:center;gap:30px}
+.nav{
+  position:sticky;top:0;z-index:90;background:rgba(15,30,50,.9);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(42,62,88,.6);
+  transition:background .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+/* al bajar, la barra superior desaparece: el nav se afirma y saca el acceso al portal */
+.nav.fija{background:rgba(11,22,38,.97);border-bottom-color:rgba(42,62,88,.95);box-shadow:0 16px 38px -20px rgba(0,0,0,.9)}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:0 28px;height:var(--nav-h);display:flex;align-items:center;gap:22px}
 .nav .logo-link{display:flex;align-items:center;flex:none;text-decoration:none}
 .nav .logo{width:172px;height:auto;display:block}
 .menu{display:flex;align-items:center;gap:4px;margin-left:auto;padding:0;margin-top:0;margin-bottom:0}
 .menu > li{list-style:none;position:relative}
 .menu a, .menu button.mi{
   font-family:var(--sans);font-size:15px;font-weight:500;color:var(--muted);text-decoration:none;
-  background:none;border:0;cursor:pointer;padding:10px 13px;border-radius:10px;display:inline-flex;align-items:center;gap:6px;line-height:1;
+  background:none;border:0;cursor:pointer;padding:10px 11px;border-radius:10px;display:inline-flex;align-items:center;gap:6px;line-height:1;
+  white-space:nowrap;
 }
 .menu a:hover, .menu button.mi:hover, .menu li:focus-within > .mi{color:var(--white);background:var(--navy-3)}
 .menu a[aria-current="page"]{color:var(--white)}
@@ -85,12 +92,45 @@ img{max-width:100%;display:block}
   transition:transform .15s ease, box-shadow .15s ease;
 }
 .btn-cta:hover{transform:translateY(-1px);box-shadow:0 10px 30px -8px rgba(229,242,36,.45)}
+/* Zona clientes: reserva su espacio siempre (para que el menú no salte) y se revela con .fija */
+.btn-zona{
+  flex:none;margin-left:4px;display:inline-flex;align-items:center;gap:7px;line-height:1;white-space:nowrap;
+  font-family:var(--sans);font-size:14px;font-weight:600;color:var(--lime);text-decoration:none;
+  background:rgba(229,242,36,.07);border:1px solid rgba(229,242,36,.38);border-radius:99px;padding:17px 16px;
+  opacity:0;visibility:hidden;transform:translateY(-6px);
+  transition:opacity .22s ease, transform .22s ease, background .15s ease, border-color .15s ease;
+}
+.btn-zona svg{width:14px;height:14px;flex:none}
+.btn-zona:hover{background:rgba(229,242,36,.15);border-color:rgba(229,242,36,.62)}
+.nav.fija .btn-zona{opacity:1;visibility:visible;transform:none}
 .hamb{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:10px;width:46px;height:46px;cursor:pointer;padding:0;align-items:center;justify-content:center;flex-direction:column;gap:5px}
 .hamb span{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px}
 @media(max-width:1120px){
   .menu, .nav .btn-cta{display:none}
-  .hamb{display:flex}
+  .hamb{display:flex;margin-left:12px}
   .nav .logo{width:150px}
+  .btn-zona{margin-left:auto}
+}
+@media(max-width:380px){
+  .nav-in{padding:0 16px;gap:10px}
+  .nav .logo{width:126px}
+}
+/* Sin aire para la etiqueta, la pildora cede el texto antes que el CTA su sitio.
+   Los rangos se solapan a proposito: dos @media adyacentes (…1120 / 1121…) dejan
+   fuera los anchos fraccionarios, y ahi el nav desbordaba. */
+@media (max-width:1260px){
+  .btn-zona{width:46px;height:46px;padding:0;gap:0;justify-content:center}
+  .btn-zona span{display:none}
+  .btn-zona svg{width:18px;height:18px}
+}
+@media (max-width:1120px) and (min-width:861px){
+  /* en modo hamburguesa sobra aire: la etiqueta vuelve */
+  .btn-zona{width:auto;height:auto;padding:17px 16px;gap:7px}
+  .btn-zona span{display:inline}
+  .btn-zona svg{width:14px;height:14px}
+}
+@media(prefers-reduced-motion:reduce){
+  .nav, .btn-zona{transition:none}
 }
 
 /* drawer móvil */
@@ -475,3 +515,29 @@ footer.foot{border-top:1px solid var(--line);background:#0B1626;font-size:14px}
 }
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 @media(min-width:861px){.toast{bottom:40px}}
+
+/* ============ BANNER DE CONSENTIMIENTO ============
+   Aparece solo si la medición está encendida en el back office y la persona
+   todavía no ha decidido. Las dos opciones pesan lo mismo visualmente: no hay
+   botón gigante de «aceptar» contra un enlace gris de «rechazar». */
+.consent{
+  position:fixed;left:16px;right:16px;bottom:16px;z-index:130;
+  max-width:720px;margin:0 auto;display:flex;gap:18px;align-items:center;flex-wrap:wrap;
+  background:rgba(11,22,38,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border:1px solid var(--line);border-radius:16px;padding:18px 22px;
+  box-shadow:0 26px 60px -24px rgba(0,0,0,.9);
+  opacity:0;transform:translateY(14px);transition:opacity .22s ease, transform .22s ease;
+}
+.consent.visible{opacity:1;transform:none}
+.consent-t{flex:1;min-width:250px;font-size:13.5px;line-height:1.6;color:var(--muted)}
+.consent-t a{color:var(--pear)}
+.consent-btns{display:flex;gap:10px;flex-wrap:wrap}
+.consent .btn-cta{margin:0;padding:11px 20px;font-size:14px}
+.consent .btn-ghost{padding:11px 18px;font-size:14px}
+@media(max-width:860px){
+  /* la barra fija de móvil vive abajo: el banner se le pone encima, no debajo */
+  .consent{bottom:calc(86px + 12px);padding:16px 18px}
+  .consent-btns{width:100%}
+  .consent-btns .btn-cta,.consent-btns .btn-ghost{flex:1;justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){.consent{transition:none}}

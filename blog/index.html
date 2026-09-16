@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <head>
 <meta name="robots" content="noindex, nofollow">
 <meta charset="UTF-8">
@@ -27,17 +27,123 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/starkapital-web/css/site.css">
+<link rel="stylesheet" href="/starkapital-web/css/site.css?v=7">
+<script src="/starkapital-web/js/analitica.js?v=1" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": [
+        "Organization",
+        "FinancialService"
+      ],
+      "@id": "https://wearedatalab.github.io/starkapital-web/#org",
+      "name": "Starkapital",
+      "legalName": "Starkapital S.A.S.",
+      "url": "https://wearedatalab.github.io/starkapital-web/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wearedatalab.github.io/starkapital-web/img/logo.svg",
+        "width": 1370,
+        "height": 245,
+        "caption": "Starkapital"
+      },
+      "image": "https://wearedatalab.github.io/starkapital-web/img/og-starkapital.jpg?v=2",
+      "email": "hola@starkapital.com",
+      "slogan": "Si usted pone el sudor, nosotros ponemos el motor.",
+      "description": "Aliado financiero de los empresarios que producen con su vehículo: apoyo crediticio para acompañar el crecimiento de su negocio, empezando por el crédito para la compra del vehículo productivo.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bogotá D.C.",
+        "addressCountry": "CO"
+      },
+      "currenciesAccepted": "COP",
+      "openingHours": "Mo-Sa 08:00-18:00",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 5
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "hola@starkapital.com",
+        "url": "https://wearedatalab.github.io/starkapital-web/contacto/",
+        "availableLanguage": {
+          "@type": "Language",
+          "name": "Spanish",
+          "alternateName": "es"
+        },
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      },
+      "knowsAbout": [
+        "Crédito para compra de vehículo productivo",
+        "Crédito para compra de taxi",
+        "Taxi con cupo",
+        "Financiación de activos productivos",
+        "Apoyo crediticio a empresarios del transporte"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://wearedatalab.github.io/starkapital-web/#website",
+      "url": "https://wearedatalab.github.io/starkapital-web/",
+      "name": "Starkapital",
+      "publisher": {
+        "@id": "https://wearedatalab.github.io/starkapital-web/#org"
+      },
+      "inLanguage": "es-CO"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://wearedatalab.github.io/starkapital-web/blog/#webpage",
+      "url": "https://wearedatalab.github.io/starkapital-web/blog/",
+      "name": "Blog para empresarios del transporte: compra, crédito y cupo | Starkapital",
+      "isPartOf": {
+        "@id": "https://wearedatalab.github.io/starkapital-web/#website"
+      },
+      "about": {
+        "@id": "https://wearedatalab.github.io/starkapital-web/#org"
+      },
+      "inLanguage": "es-CO",
+      "dateModified": "2026-09-15",
+      "description": "Guías para el empresario que crece con su vehículo productivo: cuánto cuesta, cómo financiarlo sin carta laboral y cuándo reponer. Con cifras, fuentes y fechas.",
+      "mainEntity": {
+        "@id": "https://wearedatalab.github.io/starkapital-web/blog/#blog"
+      },
+      "breadcrumb": {
+        "@id": "https://wearedatalab.github.io/starkapital-web/blog/#breadcrumb"
+      }
+    },
+    {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://wearedatalab.github.io/starkapital-web/"},
-        {"@type":"ListItem","position":2,"name":"Blog","item":"https://wearedatalab.github.io/starkapital-web/blog/"}
-      ]
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://wearedatalab.github.io/starkapital-web/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://wearedatalab.github.io/starkapital-web/blog/"
+        }
+      ],
+      "@id": "https://wearedatalab.github.io/starkapital-web/blog/#breadcrumb"
     },
     {
       "@type": "Blog",
@@ -47,10 +153,7 @@
       "description": "Guías para comprar, financiar y hacer crecer el vehículo productivo, con cifras fechadas y fuentes citadas.",
       "inLanguage": "es-CO",
       "publisher": {
-        "@type": "Organization",
-        "name": "Starkapital",
-        "url": "https://wearedatalab.github.io/starkapital-web/",
-        "logo": {"@type":"ImageObject","url":"https://wearedatalab.github.io/starkapital-web/img/logo.svg"}
+        "@id": "https://wearedatalab.github.io/starkapital-web/#org"
       },
       "blogPost": [
         {
@@ -60,7 +163,12 @@
           "datePublished": "2026-08-05",
           "dateModified": "2026-08-12",
           "image": "https://wearedatalab.github.io/starkapital-web/img/blog-compra.jpg?v=2",
-          "author": {"@type":"Organization","name":"Equipo editorial Starkapital","url":"https://wearedatalab.github.io/starkapital-web/blog/autores/equipo-starkapital/"}
+          "author": {
+            "@type": "Organization",
+            "name": "Equipo editorial Starkapital",
+            "url": "https://wearedatalab.github.io/starkapital-web/blog/autores/equipo-starkapital/"
+          },
+          "@id": "https://wearedatalab.github.io/starkapital-web/blog/como-comprar-taxi-colombia/#articulo"
         },
         {
           "@type": "BlogPosting",
@@ -69,7 +177,12 @@
           "datePublished": "2026-08-05",
           "dateModified": "2026-08-12",
           "image": "https://wearedatalab.github.io/starkapital-web/img/taxi-noche.jpg?v=2",
-          "author": {"@type":"Organization","name":"Equipo editorial Starkapital","url":"https://wearedatalab.github.io/starkapital-web/blog/autores/equipo-starkapital/"}
+          "author": {
+            "@type": "Organization",
+            "name": "Equipo editorial Starkapital",
+            "url": "https://wearedatalab.github.io/starkapital-web/blog/autores/equipo-starkapital/"
+          },
+          "@id": "https://wearedatalab.github.io/starkapital-web/blog/estoy-reportado-puedo-pedir-credito/#articulo"
         },
         {
           "@type": "BlogPosting",
@@ -78,9 +191,24 @@
           "datePublished": "2026-08-05",
           "dateModified": "2026-08-12",
           "image": "https://wearedatalab.github.io/starkapital-web/img/reposicion-taxi.jpg?v=2",
-          "author": {"@type":"Organization","name":"Equipo editorial Starkapital","url":"https://wearedatalab.github.io/starkapital-web/blog/autores/equipo-starkapital/"}
+          "author": {
+            "@type": "Organization",
+            "name": "Equipo editorial Starkapital",
+            "url": "https://wearedatalab.github.io/starkapital-web/blog/autores/equipo-starkapital/"
+          },
+          "@id": "https://wearedatalab.github.io/starkapital-web/blog/vida-util-taxi-cuando-reponer/#articulo"
         }
       ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://wearedatalab.github.io/starkapital-web/blog/autores/equipo-starkapital/#equipo-editorial",
+      "name": "Equipo editorial Starkapital",
+      "url": "https://wearedatalab.github.io/starkapital-web/blog/autores/equipo-starkapital/",
+      "parentOrganization": {
+        "@id": "https://wearedatalab.github.io/starkapital-web/#org"
+      },
+      "description": "Equipo de crédito, operaciones y edición de Starkapital que escribe, verifica y edita los artículos del blog."
     }
   ]
 }
@@ -118,9 +246,9 @@
 <!-- ============ BARRA SUPERIOR ============ -->
 <div class="topbar">
   <div class="topbar-in">
-    <a href="#" class="soon" data-page="Portal de cliente (app.starkapital.com)">
+    <a href="#" class="soon" data-page="Zona de clientes (app.starkapital.com)">
       <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-      Ingresar
+      Zona clientes
     </a>
     <a href="#" class="js-wa" target="_blank" rel="noopener">
       <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.7-5c-.8-1.4-1-2.5-.8-3 .1-.5.8-1.3 1.3-1.4h.7c.2 0 .5-.1.8.6l1 2.4c.1.2.1.4 0 .6l-.5.8c-.2.2-.3.4-.1.7a9 9 0 0 0 3.9 3.5c.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .2 0 .6-.5 1.6Z"/></svg>
@@ -163,6 +291,7 @@
         </div>
       </li>
     </ul>
+    <a href="#" class="btn-zona soon" data-page="Zona de clientes (app.starkapital.com)" aria-label="Zona clientes"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Zona clientes</span></a>
     <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar mi crédito</a>
     <button class="hamb" id="hamb" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
@@ -187,7 +316,7 @@
     <a href="/starkapital-web/preguntas-frecuentes/">Preguntas frecuentes</a>
     <a href="/starkapital-web/contacto/">Contacto</a>
     <div class="dlab">Utilidades</div>
-    <a href="#" class="soon" data-page="Portal de cliente">Ingresar</a>
+    <a href="#" class="soon" data-page="Zona de clientes (app.starkapital.com)">Zona clientes</a>
     <a href="/starkapital-web/pqrs/">PQRS</a>
     <a class="btn-cta" href="/starkapital-web/solicitud/">Solicitar mi crédito</a>
   </div>
@@ -364,6 +493,6 @@
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="/starkapital-web/js/site.js?v=3"></script>
+<script src="/starkapital-web/js/site.js?v=6"></script>
 </body>
 </html>

@@ -42,8 +42,19 @@ La línea publicada hoy es el crédito de vehículo productivo: es el primer pas
 - [Vida útil del taxi: ¿cuándo reponer?](https://wearedatalab.github.io/starkapital-web/blog/vida-util-taxi-cuando-reponer/): Cómo saber cuándo toca la reposición y cómo prepararse con tiempo.
 - [Equipo editorial Starkapital](https://wearedatalab.github.io/starkapital-web/blog/autores/equipo-starkapital/): Quiénes escriben y revisan el blog, y con qué reglas editoriales.
 
+## Acceso de clientes y aliados
+
+- Zona clientes: acceso al portal de cliente desde la barra superior del sitio. Al bajar la página, el mismo acceso aparece en la barra de navegación, que queda fija. El portal todavía no está disponible al público.
+- El back office interno de Starkapital vive en https://wearedatalab.github.io/starkapital-web/crm, entra solo por enlace de un solo uso enviado al correo de las personas autorizadas, y no es contenido público ni indexable.
+
 ## Legal y transparencia
 
 - [PQRS](https://wearedatalab.github.io/starkapital-web/pqrs/): Peticiones, quejas, reclamos y sugerencias con número de radicado.
 - [Documentos legales](https://wearedatalab.github.io/starkapital-web/legal/): Términos y condiciones, privacidad, tratamiento de datos personales (Ley 1581 de 2012), cookies, prevención de lavado de activos y divulgación de vulnerabilidades.
 - [Mapa del sitio](https://wearedatalab.github.io/starkapital-web/mapa-del-sitio/): Todas las páginas con una línea de descripción.
+
+## Cómo citar este sitio
+
+- Las cifras de esta página son las vigentes a agosto de 2026. La tasa se actualiza periódicamente: la fuente válida en todo momento es https://wearedatalab.github.io/starkapital-web/tasas-y-costos/, que publica el valor con su fecha de vigencia.
+- La cuota mensual siempre incluye capital, intereses, seguro de vida deudor y beneficio GPS. No existen cobros por fuera de la cuota.
+- Starkapital no exige carta laboral ni certificado de nómina: evalúa lo que produce el negocio del solicitante.

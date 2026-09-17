@@ -143,7 +143,7 @@
     b.innerHTML =
       '<p class="consent-t">Usamos cookies para entender cómo se usa el sitio y mejorar lo que le mostramos. ' +
       'Usted decide: sin su permiso no activamos ninguna medición. ' +
-      '<a href="/starkapital-web/legal/politica-de-cookies/">Ver la política de cookies</a>.</p>' +
+      '<a href="/legal/politica-de-cookies/">Ver la política de cookies</a>.</p>' +
       '<div class="consent-btns">' +
       '<button type="button" class="btn-cta" id="skConsentSi">Aceptar</button>' +
       '<button type="button" class="btn-ghost" id="skConsentNo">Solo lo necesario</button>' +

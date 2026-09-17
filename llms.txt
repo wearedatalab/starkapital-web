@@ -9,52 +9,52 @@
 
 La línea publicada hoy es el crédito de vehículo productivo: es el primer paso del acompañamiento, no un catálogo cerrado. Por ahora no se ofrecen crédito con garantía del vehículo, reposición por vida útil ni cupo rotativo de mantenimiento.
 
-- [Crédito para comprar taxi](https://wearedatalab.github.io/starkapital-web/creditos/compra-de-taxi/): La línea con la que empieza el acompañamiento. Financiación del vehículo productivo, nuevo o usado, sin carta laboral, hasta el 70% del valor. El caso más común es el taxi con cupo.
-- [Comprar taxi en Bogotá](https://wearedatalab.github.io/starkapital-web/creditos/compra-de-taxi/bogota/): Guía de la ciudad con precios de referencia del taxi con cupo y vitrinas aliadas.
-- [Simulador](https://wearedatalab.github.io/starkapital-web/simulador/): Cuota mensual completa —capital, intereses, seguro de vida deudor y beneficio GPS— a la tasa publicada de 29,5% E.A. (2,18% M.V.).
+- [Crédito para comprar taxi](https://starkapital.com/creditos/compra-de-taxi/): La línea con la que empieza el acompañamiento. Financiación del vehículo productivo, nuevo o usado, sin carta laboral, hasta el 70% del valor. El caso más común es el taxi con cupo.
+- [Comprar taxi en Bogotá](https://starkapital.com/creditos/compra-de-taxi/bogota/): Guía de la ciudad con precios de referencia del taxi con cupo y vitrinas aliadas.
+- [Simulador](https://starkapital.com/simulador/): Cuota mensual completa —capital, intereses, seguro de vida deudor y beneficio GPS— a la tasa publicada de 29,5% E.A. (2,18% M.V.).
 
 ## Información del crédito
 
-- [Cómo funciona](https://wearedatalab.github.io/starkapital-web/como-funciona/): El proceso en cinco pasos, cada uno con su tiempo: solicitud, estudio, respuesta en 24 horas, firma y desembolso en 2 a 3 días hábiles.
-- [Requisitos](https://wearedatalab.github.io/starkapital-web/requisitos/): Lista completa de requisitos y documentos, incluido qué pasa si el solicitante está reportado en centrales de riesgo.
-- [Tasas y costos](https://wearedatalab.github.io/starkapital-web/tasas-y-costos/): Tasa 29,5% E.A. (2,18% M.V.), seguro de vida deudor del 0,033% mensual y beneficio GPS de $41.667 al mes, ambos dentro de la cuota, y estudio de crédito $0. Ejemplo completo: $90.000.000 a 60 meses = $2.702.000 de capital e intereses + $29.700 de vida deudor + $41.667 de beneficio GPS = $2.773.000 al mes; las 60 cuotas suman $166.380.000 y no hay ningún cobro por fuera. La póliza todo riesgo la contrata el cliente por su cuenta y la endosa al crédito.
-- [Preguntas frecuentes](https://wearedatalab.github.io/starkapital-web/preguntas-frecuentes/): Respuestas directas sobre cupo, garantías, costos y el crédito día a día.
+- [Cómo funciona](https://starkapital.com/como-funciona/): El proceso en cinco pasos, cada uno con su tiempo: solicitud, estudio, respuesta en 24 horas, firma y desembolso en 2 a 3 días hábiles.
+- [Requisitos](https://starkapital.com/requisitos/): Lista completa de requisitos y documentos, incluido qué pasa si el solicitante está reportado en centrales de riesgo.
+- [Tasas y costos](https://starkapital.com/tasas-y-costos/): Tasa 29,5% E.A. (2,18% M.V.), seguro de vida deudor del 0,033% mensual y beneficio GPS de $41.667 al mes, ambos dentro de la cuota, y estudio de crédito $0. Ejemplo completo: $90.000.000 a 60 meses = $2.702.000 de capital e intereses + $29.700 de vida deudor + $41.667 de beneficio GPS = $2.773.000 al mes; las 60 cuotas suman $166.380.000 y no hay ningún cobro por fuera. La póliza todo riesgo la contrata el cliente por su cuenta y la endosa al crédito.
+- [Preguntas frecuentes](https://starkapital.com/preguntas-frecuentes/): Respuestas directas sobre cupo, garantías, costos y el crédito día a día.
 
 ## Vitrinas de vehículos (aliados comerciales)
 
-- [Propuesta para vitrinas](https://wearedatalab.github.io/starkapital-web/vitrinas/): Financiación para los compradores de vitrinas de vehículos productivos, con radicación en un minuto y respuesta el mismo día.
-- [Registrar mi vitrina](https://wearedatalab.github.io/starkapital-web/vitrinas/registro/): Alta de la vitrina como aliada, por una sola vez.
-- [Radicar un cliente](https://wearedatalab.github.io/starkapital-web/vitrinas/radicar-cliente/): Formulario diario del vendedor para radicar compradores.
+- [Propuesta para vitrinas](https://starkapital.com/vitrinas/): Financiación para los compradores de vitrinas de vehículos productivos, con radicación en un minuto y respuesta el mismo día.
+- [Registrar mi vitrina](https://starkapital.com/vitrinas/registro/): Alta de la vitrina como aliada, por una sola vez.
+- [Radicar un cliente](https://starkapital.com/vitrinas/radicar-cliente/): Formulario diario del vendedor para radicar compradores.
 
 ## Empresa
 
-- [Quiénes somos](https://wearedatalab.github.io/starkapital-web/nosotros/): Por qué la compañía es el aliado financiero de los empresarios que producen con su vehículo, y por qué empieza por el crédito de vehículo productivo.
-- [Manifiesto](https://wearedatalab.github.io/starkapital-web/nosotros/manifiesto/): La declaración de principios de la marca.
-- [Equipo](https://wearedatalab.github.io/starkapital-web/nosotros/equipo/): Las personas responsables, con nombre y cargo.
-- [Tecnología](https://wearedatalab.github.io/starkapital-web/nosotros/tecnologia/): Qué automatiza la compañía y por qué la decisión final siempre es humana.
-- [Contacto](https://wearedatalab.github.io/starkapital-web/contacto/): Canales de atención y horarios (lunes a sábado, 8:00 a. m. – 6:00 p. m.).
+- [Quiénes somos](https://starkapital.com/nosotros/): Por qué la compañía es el aliado financiero de los empresarios que producen con su vehículo, y por qué empieza por el crédito de vehículo productivo.
+- [Manifiesto](https://starkapital.com/nosotros/manifiesto/): La declaración de principios de la marca.
+- [Equipo](https://starkapital.com/nosotros/equipo/): Las personas responsables, con nombre y cargo.
+- [Tecnología](https://starkapital.com/nosotros/tecnologia/): Qué automatiza la compañía y por qué la decisión final siempre es humana.
+- [Contacto](https://starkapital.com/contacto/): Canales de atención y horarios (lunes a sábado, 8:00 a. m. – 6:00 p. m.).
 
 ## Blog
 
-- [Blog](https://wearedatalab.github.io/starkapital-web/blog/): Guías sobre comprar, financiar, mantener y reponer un vehículo productivo.
-- [Cómo comprar un taxi](https://wearedatalab.github.io/starkapital-web/blog/como-comprar-taxi-colombia/): Guía completa de la compra: vehículo, cupo, papeles y errores comunes.
-- [¿Estoy reportado, puedo pedir crédito?](https://wearedatalab.github.io/starkapital-web/blog/estoy-reportado-puedo-pedir-credito/): Respuesta directa a la duda más frecuente del sector.
-- [Vida útil del taxi: ¿cuándo reponer?](https://wearedatalab.github.io/starkapital-web/blog/vida-util-taxi-cuando-reponer/): Cómo saber cuándo toca la reposición y cómo prepararse con tiempo.
-- [Equipo editorial Starkapital](https://wearedatalab.github.io/starkapital-web/blog/autores/equipo-starkapital/): Quiénes escriben y revisan el blog, y con qué reglas editoriales.
+- [Blog](https://starkapital.com/blog/): Guías sobre comprar, financiar, mantener y reponer un vehículo productivo.
+- [Cómo comprar un taxi](https://starkapital.com/blog/como-comprar-taxi-colombia/): Guía completa de la compra: vehículo, cupo, papeles y errores comunes.
+- [¿Estoy reportado, puedo pedir crédito?](https://starkapital.com/blog/estoy-reportado-puedo-pedir-credito/): Respuesta directa a la duda más frecuente del sector.
+- [Vida útil del taxi: ¿cuándo reponer?](https://starkapital.com/blog/vida-util-taxi-cuando-reponer/): Cómo saber cuándo toca la reposición y cómo prepararse con tiempo.
+- [Equipo editorial Starkapital](https://starkapital.com/blog/autores/equipo-starkapital/): Quiénes escriben y revisan el blog, y con qué reglas editoriales.
 
 ## Acceso de clientes y aliados
 
 - Zona clientes: acceso al portal de cliente desde la barra superior del sitio. Al bajar la página, el mismo acceso aparece en la barra de navegación, que queda fija. El portal todavía no está disponible al público.
-- El back office interno de Starkapital vive en https://wearedatalab.github.io/starkapital-web/crm, entra solo por enlace de un solo uso enviado al correo de las personas autorizadas, y no es contenido público ni indexable.
+- El back office interno de Starkapital vive en https://starkapital.com/crm, entra solo por enlace de un solo uso enviado al correo de las personas autorizadas, y no es contenido público ni indexable.
 
 ## Legal y transparencia
 
-- [PQRS](https://wearedatalab.github.io/starkapital-web/pqrs/): Peticiones, quejas, reclamos y sugerencias con número de radicado.
-- [Documentos legales](https://wearedatalab.github.io/starkapital-web/legal/): Términos y condiciones, privacidad, tratamiento de datos personales (Ley 1581 de 2012), cookies, prevención de lavado de activos y divulgación de vulnerabilidades.
-- [Mapa del sitio](https://wearedatalab.github.io/starkapital-web/mapa-del-sitio/): Todas las páginas con una línea de descripción.
+- [PQRS](https://starkapital.com/pqrs/): Peticiones, quejas, reclamos y sugerencias con número de radicado.
+- [Documentos legales](https://starkapital.com/legal/): Términos y condiciones, privacidad, tratamiento de datos personales (Ley 1581 de 2012), cookies, prevención de lavado de activos y divulgación de vulnerabilidades.
+- [Mapa del sitio](https://starkapital.com/mapa-del-sitio/): Todas las páginas con una línea de descripción.
 
 ## Cómo citar este sitio
 
-- Las cifras de esta página son las vigentes a agosto de 2026. La tasa se actualiza periódicamente: la fuente válida en todo momento es https://wearedatalab.github.io/starkapital-web/tasas-y-costos/, que publica el valor con su fecha de vigencia.
+- Las cifras de esta página son las vigentes a agosto de 2026. La tasa se actualiza periódicamente: la fuente válida en todo momento es https://starkapital.com/tasas-y-costos/, que publica el valor con su fecha de vigencia.
 - La cuota mensual siempre incluye capital, intereses, seguro de vida deudor y beneficio GPS. No existen cobros por fuera de la cuota.
 - Starkapital no exige carta laboral ni certificado de nómina: evalúa lo que produce el negocio del solicitante.

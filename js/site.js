@@ -5,10 +5,10 @@
   'use strict';
 
   /* ---------- Constantes financieras ----------
-     Estructura confirmada por el cliente (agosto de 2026):
+     Estructura confirmada por el cliente (septiembre de 2026):
        · tasa 29,5% E.A.
        · seguro de vida deudor: 0,033% mensual sobre el valor desembolsado
-       · membresía de seguimiento GPS: $73.780 al mes, aparte de la cuota */
+       · beneficio de seguimiento GPS: $73.780 al mes, dentro de la cuota */
   var TASA_EA = 0.295;
   var iMes = Math.pow(1 + TASA_EA, 1/12) - 1;   /* ≈ 0,021776 → 2,18% M.V. */
   var VIDA_DEUDOR_PCT = 0.00033;                 /* mensual, sobre el desembolso */
@@ -243,7 +243,9 @@
         waShare.href = waHref(msg + (link ? ' ' + link : ''));
       }
       if (shareUrl) {
-        history.replaceState(null, '', '/simulador/?monto=' + P + '&plazo=' + n);
+        /* se conserva el ancla: si la persona llego desde la portada a
+           #nota-dias, reescribir la URL sin el hash la deja sin destino */
+        history.replaceState(null, '', '/simulador/?monto=' + P + '&plazo=' + n + location.hash);
       }
     };
     /* El evento de simulación se reporta una sola vez por ráfaga: mover el

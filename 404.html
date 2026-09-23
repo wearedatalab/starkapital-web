@@ -1,14 +1,4 @@
 <!DOCTYPE html>
-<!--
-  NOTA TÉCNICA · Página de error 404
-  El servidor debe configurarse para servir este archivo en errores 404 manteniendo el código de estado:
-    · Nginx:        error_page 404 /404.html;
-    · Apache:       ErrorDocument 404 /404.html
-    · Netlify/CDN:  regla de error hacia /404.html (la mayoría lo detecta por convención de nombre)
-  python -m http.server (el servidor de desarrollo de este prototipo) NO sirve páginas 404
-  personalizadas: en desarrollo esta página solo se ve visitando /404.html directamente.
-  Todos los recursos usan rutas absolutas (/css/, /js/, /img/) para funcionar desde cualquier URL.
--->
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -266,7 +256,7 @@
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="/js/site.js?v=9"></script>
+<script src="/js/site.js?v=10"></script>
 <script>
 (function(){
   'use strict';

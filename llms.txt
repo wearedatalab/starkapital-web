@@ -2,7 +2,7 @@
 
 > Starkapital S.A.S. es el aliado financiero de los empresarios que producen con su vehículo: una solución de apoyo crediticio que acompaña el crecimiento de su negocio con líneas de crédito para distintas necesidades. La línea con la que se empieza, y la que opera hoy, es el crédito para comprar el vehículo productivo, nuevo o usado. El caso más común es el taxi con cupo.
 > Evalúa lo que produce el negocio en lugar de exigir carta laboral, publica sus tasas con fecha de vigencia y responde toda solicitud en máximo 24 horas hábiles.
-> Cifras vigentes a agosto de 2026: tasa 29,5% E.A. (2,18% M.V.) · montos de $10.000.000 a $150.000.000 · plazos de 12, 24, 36, 48 y 60 meses · financiación hasta el 70% del valor del vehículo · cuota inicial desde el 30% · seguro de vida deudor del 0,033% mensual sobre el valor desembolsado, incluido en la cuota · beneficio GPS de $73.780 mensuales, incluido también en la cuota · estudio de crédito $0 · respuesta en 24 horas hábiles y desembolso en 2 a 3 días hábiles · +240 vehículos financiados y 96,8% de cartera al día (corte 31 de julio de 2026).
+> Cifras vigentes a septiembre de 2026: tasa 29,5% E.A. (2,18% M.V.) · montos de $10.000.000 a $150.000.000 · plazos de 12, 24, 36, 48 y 60 meses · financiación hasta el 70% del valor del vehículo · cuota inicial desde el 30% · seguro de vida deudor del 0,033% mensual sobre el valor desembolsado, incluido en la cuota · beneficio GPS de $73.780 mensuales, incluido también en la cuota · estudio de crédito $0 · respuesta en 24 horas hábiles y desembolso en 2 a 3 días hábiles · +240 vehículos financiados y 96,8% de cartera al día (corte 31 de julio de 2026).
 > La cuota mensual es capital + intereses + seguro de vida deudor + beneficio GPS. No hay cobros por fuera de la cuota. Ejemplo canónico: $90.000.000 a 60 meses = $2.702.000 + $29.700 + $73.780 = $2.805.000 al mes, equivalentes a unos $112.000 diarios sobre 25 días de trabajo.
 
 ## El crédito
@@ -55,6 +55,6 @@ La línea publicada hoy es el crédito de vehículo productivo: es el primer pas
 
 ## Cómo citar este sitio
 
-- Las cifras de esta página son las vigentes a agosto de 2026. La tasa se actualiza periódicamente: la fuente válida en todo momento es https://starkapital.com/tasas-y-costos/, que publica el valor con su fecha de vigencia.
+- Las cifras de esta página son las vigentes a septiembre de 2026. La tasa se actualiza periódicamente: la fuente válida en todo momento es https://starkapital.com/tasas-y-costos/, que publica el valor con su fecha de vigencia.
 - La cuota mensual siempre incluye capital, intereses, seguro de vida deudor y beneficio GPS. No existen cobros por fuera de la cuota.
 - Starkapital no exige carta laboral ni certificado de nómina: evalúa lo que produce el negocio del solicitante.

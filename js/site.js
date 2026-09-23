@@ -180,7 +180,9 @@
     var cuotaCreditoEl = simRoot.querySelector('.js-cuota-credito');
     var cuotaSeguroEl = simRoot.querySelector('.js-cuota-seguro');   /* seguro de vida deudor */
     var totalPagadoEl = simRoot.querySelector('.js-total-pagado');
-    var gpsEl = simRoot.querySelector('.js-gps');
+    /* se acepta el nombre viejo tambien: un renombre a medias dejaba este
+       renglon en «$0», que en una pagina de costos es un cobro que desaparece */
+    var gpsEl = simRoot.querySelector('.js-gps, .js-gps-anual');
     var diaEl = simRoot.querySelector('.js-al-dia');
     var waShare = simRoot.querySelector('.js-wa-share');
     var plazoLabels = simRoot.querySelectorAll('.plazos label');

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-CO">
 <head>
-<meta name="robots" content="noindex, nofollow">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Simulador de crédito para vehículo productivo | Starkapital</title>
@@ -27,8 +26,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/site.css?v=8">
-<script src="/js/analitica.js?v=1" defer></script>
+<link rel="stylesheet" href="/css/site.css?v=9">
+<script src="/js/analitica.js?v=2" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -151,7 +150,7 @@
       "url": "https://starkapital.com/simulador/",
       "applicationCategory": "FinanceApplication",
       "operatingSystem": "All",
-      "description": "Calcula la cuota mensual de un crédito para vehículo productivo con tasa del 29,5% efectivo anual. La cuota incluye capital, intereses, seguro de vida deudor del 0,033% mensual y el beneficio de seguimiento GPS de $500.000 al año prorrateado a $41.667 mensuales. Montos de $10.000.000 a $150.000.000 y plazos de 12, 24, 36, 48 y 60 meses. El enlace guarda el monto y el plazo elegidos para compartir la simulación.",
+      "description": "Calcula la cuota mensual de un crédito para vehículo productivo con tasa del 29,5% efectivo anual. La cuota incluye capital, intereses, seguro de vida deudor del 0,033% mensual y el beneficio de seguimiento GPS de $73.780 mensuales. Montos de $10.000.000 a $150.000.000 y plazos de 12, 24, 36, 48 y 60 meses. El enlace guarda el monto y el plazo elegidos para compartir la simulación.",
       "provider": {
         "@id": "https://starkapital.com/#org"
       },
@@ -203,7 +202,7 @@
         "unitText": "% efectivo anual"
       },
       "requiredCollateral": "Prenda sobre el vehículo financiado",
-      "feesAndCommissionsSpecification": "Estudio de crédito: $0. Cuota de manejo: $0. Seguro de vida deudor: 0,033% mensual sobre el valor desembolsado. Beneficio de seguimiento GPS: $500.000 al año ($41.667 mensuales). Ambos van incluidos dentro de la cuota; no hay cobros por fuera de ella. Detalle completo y fecha de vigencia en https://starkapital.com/tasas-y-costos/"
+      "feesAndCommissionsSpecification": "Estudio de crédito: $0. Cuota de manejo: $0. Seguro de vida deudor: 0,033% mensual sobre el valor desembolsado. Beneficio de seguimiento GPS: $73.780 mensuales. Ambos van incluidos dentro de la cuota; no hay cobros por fuera de ella. Detalle completo y fecha de vigencia en https://starkapital.com/tasas-y-costos/"
     }
   ]
 }
@@ -351,9 +350,9 @@
             <div class="sr-rows">
             <div class="sr-row"><span>Capital e intereses</span><b class="js-cuota-credito">$0</b></div>
             <div class="sr-row"><span>Seguro de vida deudor</span><b class="js-cuota-seguro">$0</b></div>
-            <div class="sr-row"><span>Beneficio GPS</span><b class="js-gps-anual">$0</b></div>
+            <div class="sr-row"><span>Beneficio GPS</span><b class="js-gps">$0</b></div>
           </div>
-          <div class="sr-dia"><span class="js-al-dia">$0</span> al día y el vehículo es suyo</div>
+          <div class="sr-dia"><span class="js-al-dia">$0</span> al día<a href="/simulador/#nota-dias" class="ref" aria-label="Por qué el cálculo va sobre 25 días">*</a> y el vehículo es suyo</div>
           </div>
           <div class="sim-actions">
             <a class="btn-cta" href="/solicitud/">Solicitar con estos datos</a>
@@ -389,18 +388,19 @@
         </div>
         <div class="card reveal" style="--d:.16s">
           <span class="num">03</span>
-          <h3>Beneficio GPS, ya prorrateado</h3>
-          <p>El seguimiento del vehículo vale $500.000 al año y no se lo cobramos de golpe: lo repartimos en doce meses, <strong>$41.667 mensuales dentro de la misma cuota</strong>. Usted siempre sabe dónde está el activo que sostiene su negocio.</p>
+          <h3>Beneficio GPS, dentro de la cuota</h3>
+          <p>El seguimiento del vehículo vale $73.780 al mes y no se cobra aparte: va <strong>dentro de la misma cuota</strong>. Usted siempre sabe dónde está el activo que sostiene su negocio.</p>
         </div>
       </div>
       <div class="callout reveal">
         <div class="t">Un ejemplo completo, con todas las cifras</div>
-        <p>Crédito de <strong>$90.000.000</strong> a <strong>60 meses</strong>: capital e intereses $2.702.000 + seguro de vida deudor $29.700 + beneficio GPS $41.667 = <strong>$2.773.000 al mes</strong>. Una sola cuota, un solo pago. El seguro todo riesgo lo contrata usted por su cuenta y lo endosa al crédito.</p>
+        <p>Crédito de <strong>$90.000.000</strong> a <strong>60 meses</strong>: capital e intereses $2.702.000 + seguro de vida deudor $29.700 + beneficio GPS $73.780 = <strong>$2.805.000 al mes</strong>. Una sola cuota, un solo pago.</p>
       </div>
       <div class="card reveal" style="--d:.08s;margin-top:6px">
-        <h3>Y el número por día, ¿qué significa?</h3>
-        <p>Debajo de la cuota, la herramienta la divide entre 30 días: en el ejemplo, <strong>$92.000 diarios</strong>. Esa es la referencia con la que se decide de verdad, porque su negocio no factura una vez al mes sino todos los días. Si su operación deja con holgura por encima de esa cifra, el crédito le cabe; si queda ajustado, baje el monto o suba el plazo hasta que el número cuadre con la caja real de su negocio.</p>
+        <h3>¿Qué significa el cálculo diario?</h3>
+        <p>Debajo de la cuota mensual, la herramienta muestra un equivalente dividido en 25 días <a href="#nota-dias" class="ref" aria-label="Ver por qué son 25 días">*</a> (por ejemplo, <strong>$112.000 diarios</strong>). Esta cifra es su verdadera referencia de decisión, ya que su negocio genera ingresos diariamente, no solo una vez al mes. Si sus ganancias diarias superan cómodamente este monto, el crédito es viable para usted. Si el margen es muy ajustado, le recomendamos reducir el monto solicitado o ampliar el plazo hasta que la cuota se adapte al flujo de caja real de su negocio.</p>
       </div>
+      <p class="nota-dias" id="nota-dias"><span class="ast">*</span><span><b>¿Por qué 25 días y no 30?</b> Porque el vehículo no rueda todos los días del mes: el pico y placa le quita uno a la semana y hay que contar el día de descanso. Calcular sobre 30 días daría un número diario más bajo del que su operación tiene que producir de verdad para cubrir la cuota.</span></p>
       <p class="corte reveal">Cifras vigentes a agosto de 2026 · cálculo informativo, no es una oferta comercial</p>
     </div>
   </section>
@@ -436,7 +436,7 @@
     <div class="wrap">
       <div class="sec-eyebrow reveal">Transparencia total</div>
       <h2 class="sec-t reveal" style="--d:.08s">¿De dónde salen estos números?</h2>
-      <p class="band-sub reveal" style="--d:.16s">La tasa completa está publicada con fecha: <strong>29,5% E.A. (2,18% M.V.)</strong> vigente a agosto de 2026, seguro de vida deudor del 0,033% mensual y beneficio de seguimiento GPS de <strong>$500.000 al año prorrateado a $41.667 mensuales</strong> — los tres dentro de la misma cuota — y estudio de crédito <strong>$0</strong>. Peso por peso, sin asteriscos.</p>
+      <p class="band-sub reveal" style="--d:.16s">La tasa completa está publicada con fecha: <strong>29,5% E.A. (2,18% M.V.)</strong> vigente a agosto de 2026, seguro de vida deudor del 0,033% mensual y beneficio de seguimiento GPS de <strong>$73.780 mensuales</strong> — los tres dentro de la misma cuota — y estudio de crédito <strong>$0</strong>. Peso por peso, sin asteriscos.</p>
       <div class="reveal" style="--d:.24s;margin-top:32px;display:flex;gap:14px;flex-wrap:wrap">
         <a class="btn-navy" href="/tasas-y-costos/">Ver tasas y costos completos</a>
         <a class="btn-navy-o" href="/como-funciona/">Cómo funciona el crédito</a>
@@ -535,6 +535,6 @@
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="/js/site.js?v=6"></script>
+<script src="/js/site.js?v=8"></script>
 </body>
 </html>

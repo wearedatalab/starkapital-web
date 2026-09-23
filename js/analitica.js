@@ -168,6 +168,11 @@
       cfg = c;
       window.skAnalitica = c;
       if (!c || !c.activa) return;             /* medición apagada: no se carga nada */
+      /* Con el interruptor encendido pero sin ningún identificador no hay nada que
+         cargar: pedir consentimiento para no medir nada molesta sin razón. */
+      var hayEtiquetas = !!(c.gtm || c.ga4 || c.googleAds || c.metaPixel ||
+                            c.linkedin || c.tiktok || c.clarity || c.hotjar);
+      if (!hayEtiquetas) return;
       if (!c.consentMode) {                    /* sin Consent Mode, se carga directo */
         otorgar();
         cargarEtiquetas(c);

@@ -541,3 +541,21 @@ footer.foot{border-top:1px solid var(--line);background:#0B1626;font-size:14px}
   .consent-btns .btn-cta,.consent-btns .btn-ghost{flex:1;justify-content:center}
 }
 @media(prefers-reduced-motion:reduce){.consent{transition:none}}
+
+/* ============ NOTA DE LOS 25 DÍAS ============
+   El equivalente diario se calcula sobre 25 días y no sobre 30: el vehículo no
+   rueda todos los días del mes. La explicación va anclada al asterisco para que
+   nadie tenga que adivinar de dónde sale la base. */
+.ref{
+  font-family:var(--mono);font-size:.72em;vertical-align:super;line-height:0;
+  color:var(--pear);text-decoration:none;padding:0 1px;
+}
+.ref:hover{color:var(--lime)}
+.nota-dias{
+  display:flex;gap:11px;align-items:flex-start;
+  margin-top:22px;padding:14px 18px;
+  background:var(--navy-2);border:1px solid var(--line);border-left:3px solid var(--pear);
+  border-radius:12px;font-size:13.5px;line-height:1.6;color:var(--muted);
+}
+.nota-dias .ast{font-family:var(--mono);color:var(--pear);font-weight:600;flex:none}
+.nota-dias b{color:var(--ink);font-weight:600}

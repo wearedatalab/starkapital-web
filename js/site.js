@@ -8,13 +8,16 @@
      Estructura confirmada por el cliente (agosto de 2026):
        · tasa 29,5% E.A.
        · seguro de vida deudor: 0,033% mensual sobre el valor desembolsado
-       · membresía de seguimiento GPS: $500.000 al año, aparte de la cuota */
+       · membresía de seguimiento GPS: $73.780 al mes, aparte de la cuota */
   var TASA_EA = 0.295;
   var iMes = Math.pow(1 + TASA_EA, 1/12) - 1;   /* ≈ 0,021776 → 2,18% M.V. */
   var VIDA_DEUDOR_PCT = 0.00033;                 /* mensual, sobre el desembolso */
-  var GPS_ANUAL = 500000;                        /* beneficio GPS: se prorratea al mes */
-  var GPS_MES = Math.round(GPS_ANUAL / 12);      /* va dentro de la cuota */
-  var DIAS_MES = 30;                             /* base del ahorro diario */
+  var GPS_MES = 73780;                           /* beneficio GPS: valor mensual, va dentro de la cuota */
+  var GPS_ANUAL = GPS_MES * 12;                  /* equivalente anual, para los textos */
+  /* Base de 25 días y no 30: el vehículo no rueda todos los días del mes —
+     pico y placa y el día de descanso del conductor. Con 30 el número diario
+     saldría más bajo de lo que la operación real puede producir. */
+  var DIAS_MES = 25;
   var WA_NUMBER = '573000000000';                /* número comercial por confirmar */
   var WA_PLACEHOLDER = WA_NUMBER === '573000000000';
 
@@ -177,7 +180,7 @@
     var cuotaCreditoEl = simRoot.querySelector('.js-cuota-credito');
     var cuotaSeguroEl = simRoot.querySelector('.js-cuota-seguro');   /* seguro de vida deudor */
     var totalPagadoEl = simRoot.querySelector('.js-total-pagado');
-    var gpsEl = simRoot.querySelector('.js-gps-anual');
+    var gpsEl = simRoot.querySelector('.js-gps');
     var diaEl = simRoot.querySelector('.js-al-dia');
     var waShare = simRoot.querySelector('.js-wa-share');
     var plazoLabels = simRoot.querySelectorAll('.plazos label');

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- sitemap.xml · starkapital.com · Fase 1
+     Excluidas por diseño: /solicitud/, /solicitud/gracias/ y /vitrinas/gracias/ (noindex). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Portada -->
+  <url><loc>https://starkapital.com/</loc><lastmod>2026-09-23</lastmod></url>
+
+  <!-- El crédito (producto único: compra de taxi) -->
+  <url><loc>https://starkapital.com/creditos/compra-de-taxi/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/creditos/compra-de-taxi/bogota/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/simulador/</loc><lastmod>2026-09-23</lastmod></url>
+
+  <!-- Información del crédito -->
+  <url><loc>https://starkapital.com/como-funciona/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/requisitos/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/tasas-y-costos/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/preguntas-frecuentes/</loc><lastmod>2026-09-23</lastmod></url>
+
+  <!-- Vitrinas -->
+  <url><loc>https://starkapital.com/vitrinas/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/vitrinas/registro/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/vitrinas/radicar-cliente/</loc><lastmod>2026-09-23</lastmod></url>
+
+  <!-- Empresa -->
+  <url><loc>https://starkapital.com/nosotros/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/nosotros/manifiesto/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/nosotros/equipo/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/nosotros/tecnologia/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/contacto/</loc><lastmod>2026-09-23</lastmod></url>
+
+  <!-- Blog -->
+  <url><loc>https://starkapital.com/blog/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/blog/como-comprar-taxi-colombia/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/blog/estoy-reportado-puedo-pedir-credito/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/blog/vida-util-taxi-cuando-reponer/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/blog/autores/equipo-starkapital/</loc><lastmod>2026-09-23</lastmod></url>
+
+  <!-- Transparencia y legal -->
+  <url><loc>https://starkapital.com/pqrs/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/legal/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/legal/terminos-y-condiciones/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/legal/politica-de-privacidad/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/legal/tratamiento-de-datos-personales/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/legal/politica-de-cookies/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/legal/prevencion-de-lavado-de-activos/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/legal/divulgacion-de-vulnerabilidades/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://starkapital.com/mapa-del-sitio/</loc><lastmod>2026-09-23</lastmod></url>
+
+</urlset>

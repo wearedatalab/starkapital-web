@@ -1,12 +1,41 @@
-User-agent: facebookexternalhit
+# robots.txt · starkapital.com
+# Los rastreadores de asistentes de inteligencia artificial se permiten de forma
+# explícita (decisión de negocio, doc. de arquitectura §06 GEO): bloquearlos
+# eliminaría la posibilidad de que el sitio sea citado en sus respuestas.
+
+User-agent: GPTBot
 Allow: /
 
-User-agent: WhatsApp
+User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: Twitterbot
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 User-agent: *
 Allow: /
 Disallow: /crm
+Disallow: /api/
+
+# /crm y /api/ son el back office y su API: no son contenido publico. Ademas
+# /crm responde con X-Robots-Tag: noindex y exige sesion, asi que el Disallow
+# aqui es solo para no gastarles rastreo.
+
+# /solicitud/, /solicitud/gracias/ y /vitrinas/gracias/ NO se bloquean aqui a
+# proposito: las tres declaran <meta name="robots" content="noindex"> y un
+# Disallow impediria al rastreador leer esa directiva, con lo que la URL podria
+# seguir apareciendo en resultados. Un solo mecanismo, y que funcione.
+
+Sitemap: https://starkapital.com/sitemap.xml

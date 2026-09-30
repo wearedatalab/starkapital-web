@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/site.css?v=9">
+<link rel="stylesheet" href="/css/site.css?v=10">
 <script src="/js/analitica.js?v=2" defer></script>
 <script type="application/ld+json">
 {
@@ -404,6 +404,10 @@
    WhatsApp con el radicado incluido y limpiar el avance guardado. */
 (function(){
   'use strict';
+  /* el avance vive en sessionStorage; el removeItem de localStorage se queda
+     un tiempo mas para barrer lo que dejo la version anterior en navegadores
+     que ya habian llenado el formulario */
+  try { sessionStorage.removeItem('sk-solicitud'); } catch(e){}
   try { localStorage.removeItem('sk-solicitud'); } catch(e){}
   var rad = new URLSearchParams(window.location.search).get('rad');
   if (rad) rad = rad.trim().slice(0, 32);
@@ -421,6 +425,6 @@
   }
 })();
 </script>
-<script src="/js/site.js?v=10"></script>
+<script src="/js/site.js?v=14"></script>
 </body>
 </html>

@@ -18,11 +18,14 @@
      pico y placa y el día de descanso del conductor. Con 30 el número diario
      saldría más bajo de lo que la operación real puede producir. */
   var DIAS_MES = 25;
-  var WA_NUMBER = '573000000000';                /* número comercial por confirmar */
+  /* Número comercial confirmado por el cliente. Formato internacional sin «+»
+     ni espacios, que es lo que exige wa.me: 57 (Colombia) + 3162821077. */
+  var WA_NUMBER = '573162821077';
+  /* Queda el interruptor: si alguien vuelve a poner el placeholder, los botones
+     avisan en vez de abrir un chat con un número que no existe. */
   var WA_PLACEHOLDER = WA_NUMBER === '573000000000';
 
   var fmt = function(n){ return '$' + Math.round(n).toLocaleString('es-CO'); };
-  var redondearMiles = function(n){ return Math.round(n/1000)*1000; };
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- Toast ---------- */
@@ -39,6 +42,10 @@
 
   /* ---------- WhatsApp (mensaje según página de origen) ---------- */
   function waHref(msg){ return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg); }
+  /* Los a.js-wa se conectan al cargar la pagina, asi que un enlace creado
+     despues —el aviso de «no pudimos registrar el envio»— se queda en «#».
+     Con esto cualquiera puede pedir un href de verdad. */
+  window.skWaHref = waHref;
   var waMsgBase = document.body.getAttribute('data-wa-msg') ||
                   'Hola, vengo de starkapital.com y quiero información sobre un crédito de taxi.';
   document.querySelectorAll('a.js-wa').forEach(function(a){
@@ -217,13 +224,17 @@
       });
     };
     var render = function(P, n, actualizarCampo){
-      /* todo se muestra redondeado a miles y el total se calcula sobre la
-         cuota MOSTRADA, para que la multiplicación del usuario siempre cierre */
+      /* Valores exactos, al peso. Antes se redondeaba a miles y ademas se
+         redondeaba dos veces, asi que las filas no sumaban el total que se
+         mostraba: 2.401.000 + 26.400 + 73.780 daba 2.501.180 y arriba decia
+         2.501.000. Ahora el total ES la suma de las tres filas mostradas, de
+         modo que si alguien saca la cuenta a mano, cierra. */
       /* la cuota es capital + intereses + seguro de vida deudor + beneficio GPS */
-      var cuotaCredito = redondearMiles(cuotaDe(P, n));
+      var cuotaCredito = Math.round(cuotaDe(P, n));
       var vidaDeudor = Math.round(P * VIDA_DEUDOR_PCT);
-      var cuotaTotal = redondearMiles(cuotaCredito + vidaDeudor + GPS_MES);
-      var alDia = redondearMiles(cuotaTotal / DIAS_MES);
+      var cuotaTotal = cuotaCredito + vidaDeudor + GPS_MES;
+      /* el equivalente diario si se redondea al peso: no existe media moneda */
+      var alDia = Math.round(cuotaTotal / DIAS_MES);
 
       cuotaCreditoEl.textContent = fmt(cuotaCredito);
       cuotaSeguroEl.textContent = fmt(vidaDeudor);
@@ -324,15 +335,69 @@
     return a;
   }
 
+  /* ---------- Antispam ----------
+     Dos piezas, las dos invisibles para quien llena el formulario de verdad:
+       · la trampa, un campo oculto que solo un bot rellena;
+       · el token, que firma el servidor y lleva la hora de cuando la persona
+         empezó a escribir.
+     El token vive en una variable y en ningún otro lado: no va a localStorage,
+     ni a sessionStorage, ni a una cookie. Si no llega, el envío sigue igual —
+     el back office marcará el lead para revisión, pero a nadie se le pierde
+     una solicitud porque falle una defensa nuestra. */
+  var formToken = null;
+  var pidiendoToken = null;
+  function pedirToken(){
+    if (formToken) return Promise.resolve(formToken);
+    if (pidiendoToken) return pidiendoToken;
+    pidiendoToken = fetch('/api/public/form-token', { cache: 'no-store' })
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(d){
+        pidiendoToken = null;
+        formToken = (d && d.s) ? d : null;
+        return formToken;
+      })
+      .catch(function(){ pidiendoToken = null; return null; });
+    return pidiendoToken;
+  }
+  /* Se pide cuando la persona toca el formulario, no al cargar la página: así
+     la edad del token mide lo que debe medir, el tiempo real de llenado. */
+  document.addEventListener('focusin', function(e){
+    if (e.target && e.target.closest && e.target.closest('form')) pedirToken();
+  }, true);
+
+  function trampa(){
+    var h = document.querySelector('form input[name="sk-ref-2"]');
+    return h ? h.value : '';
+  }
+
+  /* ---------- Limpieza de almacenamiento heredado ----------
+     Versiones anteriores dejaban en localStorage el avance de la solicitud
+     —con nombre, celular, correo y las autorizaciones ya marcadas— y el
+     nombre de la vitrina y del vendedor. Eso no debe seguir en el navegador
+     de nadie, y menos en un computador prestado o de mostrador. Se borra al
+     cargar cualquier página, no solo las de esos formularios. */
+  (function limpiaHeredado(){
+    ['sk-solicitud', 'sk-vit-nombre', 'sk-vit-vendedor'].forEach(function(k){
+      try { localStorage.removeItem(k); } catch (e) { /* modo privado */ }
+    });
+  })();
+
   /* ---------- Envío de leads al back office ----------
      Devuelve 'ok' | 'sin-api' | 'error'. El formulario decide qué mostrar:
      nunca se le echa la culpa al usuario por un problema nuestro. */
   window.skEnviarLead = function(datos){
-    var cuerpo = Object.assign({}, datos, { atribucion: atribucion() });
-    return fetch('/api/public/lead', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(cuerpo)
+    return pedirToken().then(function(ft){
+      var cuerpo = Object.assign({}, datos, {
+        atribucion: atribucion(),
+        'sk-ref-2': trampa(),
+        ft: ft ? ft.t : null,
+        fs: ft ? ft.s : null
+      });
+      return fetch('/api/public/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(cuerpo)
+      });
     }).then(function(r){
       if (r.ok) {
         if (window.skEvento) window.skEvento('generate_lead', { origen: datos.origen || 'contacto' });
@@ -340,7 +405,40 @@
       }
       /* 404 = el sitio está servido como estático, sin back office detrás */
       return r.status === 404 ? 'sin-api' : 'error';
-    }).catch(function(){ return 'sin-api'; });
+    }).catch(function(){
+      /* Antes esto devolvía 'sin-api' y el formulario lo trataba como «no hay
+         back office, sigamos». Un corte de red es un fallo de verdad: si se
+         confunden, la persona se va con un radicado de algo que no se guardó. */
+      return 'error';
+    });
+  };
+
+  /* ---------- Radicación de PQRS ----------
+     Devuelve { estado: 'ok'|'sin-api'|'error', radicado }. El radicado lo
+     asigna el servidor: antes se inventaba aquí con un contador local y no
+     existía en ninguna parte, así que quien llamaba con su número no aparecía. */
+  window.skEnviarPqrs = function(datos){
+    return pedirToken().then(function(ft){
+      var cuerpo = Object.assign({}, datos, {
+        atribucion: atribucion(),
+        'sk-ref-2': trampa(),
+        ft: ft ? ft.t : null,
+        fs: ft ? ft.s : null
+      });
+      return fetch('/api/public/pqrs', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(cuerpo)
+      });
+    }).then(function(r){
+      if (r.ok) {
+        return r.json().then(function(d){
+          if (window.skEvento) window.skEvento('pqrs_radicada', { tipo: datos.tipo });
+          return { estado: 'ok', radicado: d && d.radicado };
+        });
+      }
+      return { estado: r.status === 404 ? 'sin-api' : 'error' };
+    }).catch(function(){ return { estado: 'error' }; });
   };
 
   /* ---------- Eventos de interacción ---------- */

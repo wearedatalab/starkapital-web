@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/site.css?v=9">
+<link rel="stylesheet" href="/css/site.css?v=10">
 <script src="/js/analitica.js?v=2" defer></script>
 <script type="application/ld+json">
 {
@@ -279,6 +279,13 @@
     <div class="rad-wrap">
       <div class="rad-card reveal">
         <form class="form" id="fRad" novalidate>
+            <!-- Trampa antispam. Nadie la ve; los bots que rellenan por nombre
+                 de campo sí la llenan, y el back office descarta ese envío.
+                 No se quite ni se le cambie el name. -->
+            <div class="trampa" aria-hidden="true">
+              <label for="radWeb">No llene este campo</label>
+              <input type="text" id="radWeb" name="sk-ref-2" tabindex="-1" autocomplete="off">
+            </div>
 
           <div class="frow">
             <div class="fld">
@@ -482,7 +489,7 @@
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="/js/site.js?v=10"></script>
+<script src="/js/site.js?v=14"></script>
 <script>
 (function(){
   'use strict';
@@ -495,11 +502,11 @@
   var v = qs.get('v');
   if (v) {
     vit.value = v.replace(/[-_]+/g, ' ').trim().replace(/(^|\s)\S/g, function(c){ return c.toUpperCase(); });
-  } else if (localStorage.getItem('sk-vit-nombre')) {
-    vit.value = localStorage.getItem('sk-vit-nombre');
+  } else if (sessionStorage.getItem('sk-vit-nombre')) {
+    vit.value = sessionStorage.getItem('sk-vit-nombre');
   }
-  if (localStorage.getItem('sk-vit-vendedor')) {
-    ven.value = localStorage.getItem('sk-vit-vendedor');
+  if (sessionStorage.getItem('sk-vit-vendedor')) {
+    ven.value = sessionStorage.getItem('sk-vit-vendedor');
   }
 
   /* ---- valor con puntos de miles mientras teclea ---- */
@@ -546,11 +553,37 @@
     }
 
     /* recordar vitrina y vendedor para la próxima radicación */
-    localStorage.setItem('sk-vit-nombre', vit.value.trim());
-    localStorage.setItem('sk-vit-vendedor', ven.value.trim());
+    /* sessionStorage y no localStorage: el mostrador de una vitrina es un
+       equipo compartido, y el nombre del vendedor no tiene por que quedar ahi
+       despues de que cierre el navegador. Dentro de la jornada se conserva. */
+    sessionStorage.setItem('sk-vit-nombre', vit.value.trim());
+    sessionStorage.setItem('sk-vit-vendedor', ven.value.trim());
 
     var rad = window.skRadicado('RAD');
-    var seguir = function(){ location.href = '/vitrinas/gracias/?tipo=radicacion&rad=' + encodeURIComponent(rad); };
+    /* Solo se entrega radicado si el envio llego. Aqui importa el doble: el
+       vendedor le dice al comprador que ya quedo radicado, y si no se guardo
+       nadie lo va a llamar. Ver solicitud/index.html. */
+    var seguir = function(estado){
+      if (estado === 'error') return avisarFallo();
+      location.href = '/vitrinas/gracias/?tipo=radicacion&rad=' + encodeURIComponent(rad);
+    };
+    var avisarFallo = function(){
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = false;
+      if (window.skToast) window.skToast('No pudimos radicar al cliente. Escríbanos por WhatsApp.');
+      var caja = document.getElementById('falloEnvio');
+      if (!caja) {
+        caja = document.createElement('p');
+        caja.id = 'falloEnvio';
+        caja.setAttribute('role', 'alert');
+        caja.style.cssText = 'margin-top:14px;color:var(--warn);font-size:14.5px;line-height:1.6';
+        (btn && btn.parentNode ? btn.parentNode : form).appendChild(caja);
+      }
+      var href = window.skWaHref ? window.skWaHref('Hola, intenté radicar un cliente en starkapital.com y no se registró.') : '#';
+      caja.innerHTML = '<strong>No quedó radicado.</strong> Para no perder al cliente, ' +
+        '<a href="' + href + '" target="_blank" rel="noopener" style="color:var(--pear)">escríbanos por WhatsApp</a>.';
+      caja.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    };
     var elegido = function(n){
       var i = form.querySelector('input[name="' + n + '"]:checked');
       if (!i) return '';
@@ -567,8 +600,7 @@
         'Estado del vehiculo: ' + elegido('veh'),
         'Cupo: ' + elegido('cupo'),
         'Cuota inicial: ' + elegido('ini')
-      ].join('
-');
+      ].join('\n');
 
       window.skEnviarLead({
         nombre: $('cNombre').value.trim(),
@@ -577,7 +609,7 @@
         monto: val.value,
         mensaje: detalle,
         origen: 'vitrina_cliente'
-      }).then(seguir, seguir);
+      }).then(seguir, function(){ seguir('error'); });
     } else {
       seguir();
     }

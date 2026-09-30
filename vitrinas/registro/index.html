@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/site.css?v=9">
+<link rel="stylesheet" href="/css/site.css?v=10">
 <script src="/js/analitica.js?v=2" defer></script>
 <script type="application/ld+json">
 {
@@ -272,6 +272,13 @@
     <div class="reg-wrap">
       <div class="reg-card reveal">
         <form class="form" id="fReg" novalidate>
+            <!-- Trampa antispam. Nadie la ve; los bots que rellenan por nombre
+                 de campo sí la llenan, y el back office descarta ese envío.
+                 No se quite ni se le cambie el name. -->
+            <div class="trampa" aria-hidden="true">
+              <label for="regWeb">No llene este campo</label>
+              <input type="text" id="regWeb" name="sk-ref-2" tabindex="-1" autocomplete="off">
+            </div>
 
           <div class="frow">
             <div class="fld">
@@ -478,7 +485,7 @@
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="/js/site.js?v=10"></script>
+<script src="/js/site.js?v=14"></script>
 <script>
 (function(){
   'use strict';
@@ -527,7 +534,28 @@
     }
 
     var rad = window.skRadicado('VIT');
-    var seguir = function(){ location.href = '/vitrinas/gracias/?tipo=registro&rad=' + encodeURIComponent(rad); };
+    /* Solo se entrega radicado si el envio llego. Ver solicitud/index.html. */
+    var seguir = function(estado){
+      if (estado === 'error') return avisarFallo();
+      location.href = '/vitrinas/gracias/?tipo=registro&rad=' + encodeURIComponent(rad);
+    };
+    var avisarFallo = function(){
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = false;
+      if (window.skToast) window.skToast('No pudimos registrar la vitrina. Escríbanos por WhatsApp.');
+      var caja = document.getElementById('falloEnvio');
+      if (!caja) {
+        caja = document.createElement('p');
+        caja.id = 'falloEnvio';
+        caja.setAttribute('role', 'alert');
+        caja.style.cssText = 'margin-top:14px;color:var(--warn);font-size:14.5px;line-height:1.6';
+        (btn && btn.parentNode ? btn.parentNode : form).appendChild(caja);
+      }
+      var href = window.skWaHref ? window.skWaHref('Hola, intenté registrar mi vitrina en starkapital.com y no se registró.') : '#';
+      caja.innerHTML = 'No pudimos registrar el envío. Para no perderlo, ' +
+        '<a href="' + href + '" target="_blank" rel="noopener" style="color:var(--pear)">escríbanos por WhatsApp</a>.';
+      caja.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    };
     var marcados = function(n){
       return Array.prototype.map.call(form.querySelectorAll('input[name="' + n + '"]:checked'), function(i){
         var l = i.closest('label');
@@ -544,8 +572,7 @@
         'Vehiculos al mes: ' + (mes ? mes.value : ''),
         'Vende: ' + marcados('vende'),
         'Estado: ' + marcados('estado')
-      ].join('
-');
+      ].join('\n');
 
       window.skEnviarLead({
         nombre: $('rNombre').value.trim(),
@@ -554,7 +581,7 @@
         ciudad: $('rCiudad').value,
         mensaje: detalle,
         origen: 'vitrina_registro'
-      }).then(seguir, seguir);
+      }).then(seguir, function(){ seguir('error'); });
     } else {
       seguir();
     }

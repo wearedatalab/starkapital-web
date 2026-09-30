@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/site.css?v=9">
+<link rel="stylesheet" href="/css/site.css?v=10">
 <script src="/js/analitica.js?v=2" defer></script>
 <script type="application/ld+json">
 {
@@ -271,11 +271,18 @@
     <div class="sol-wrap">
 
       <div class="retomar" id="retomar" hidden>
-        <p><b>Retomamos donde iba.</b> Su avance quedó guardado en este navegador.</p>
+        <p><b>Retomamos sus respuestas.</b> El monto, la experiencia y la producción quedaron puestos. Sus datos de contacto se piden de nuevo: por seguridad no los guardamos en el navegador.</p>
         <button type="button" id="btnReset">Empezar de nuevo</button>
       </div>
 
       <form id="solForm" class="form" novalidate autocomplete="on">
+            <!-- Trampa antispam. Nadie la ve; los bots que rellenan por nombre
+                 de campo sí la llenan, y el back office descarta ese envío.
+                 No se quite ni se le cambie el name. -->
+            <div class="trampa" aria-hidden="true">
+              <label for="solWeb">No llene este campo</label>
+              <input type="text" id="solWeb" name="sk-ref-2" tabindex="-1" autocomplete="off">
+            </div>
 
         <div>
           <div class="fstep-lab" id="stepLab" aria-live="polite">Paso 1 de 3 · Cuánto necesita</div>
@@ -404,7 +411,7 @@
           <button type="submit" class="btn-cta" id="btnEnviar" hidden>Enviar mi solicitud</button>
         </div>
 
-        <p class="form-note">Su avance se guarda en este navegador a cada cambio: si se le va la señal, no pierde lo escrito.</p>
+        <p class="form-note">Guardamos sus respuestas sobre el crédito mientras esta pestaña esté abierta. Sus datos personales no quedan en el navegador: si vuelve, se los pedimos otra vez.</p>
       </form>
 
     </div>
@@ -486,9 +493,9 @@
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="/js/site.js?v=10"></script>
+<script src="/js/site.js?v=14"></script>
 <script>
-/* Solicitud por pasos con avance guardado (localStorage) */
+/* Solicitud por pasos con avance guardado (sessionStorage, sin datos personales) */
 (function(){
   'use strict';
 
@@ -536,29 +543,42 @@
     return r ? r.closest('label').textContent.trim() : '—';
   }
 
-  /* ---- avance guardado ---- */
+  /* ---- avance guardado ----
+     Solo se guarda lo que no identifica a nadie: el monto, si ya vio el
+     vehiculo, los anos de experiencia y el rango de produccion. El nombre, el
+     celular, el correo, la ciudad y las dos autorizaciones NO se guardan nunca.
+     El motivo es concreto: esta solicitud se llena en vitrinas y en
+     computadores prestados, y ahi un «retomar» que rellena los datos de otra
+     persona —y que le deja las autorizaciones ya marcadas— no es una comodidad,
+     es un problema de datos personales y de consentimiento.
+     Ademas vive en sessionStorage y no en localStorage: muere con la pestana. */
+  var GUARDABLES = ['monto','visto','anos','produccion'];
   function guardar(){
     var c = {};
-    NOMBRES.forEach(function(n){ c[n] = getVal(n); });
-    try { localStorage.setItem(LS, JSON.stringify({ v: 1, p: paso, c: c })); } catch(e){}
+    GUARDABLES.forEach(function(n){ c[n] = getVal(n); });
+    try { sessionStorage.setItem(LS, JSON.stringify({ v: 2, p: paso, c: c })); } catch(e){}
   }
   function restaurar(){
     var raw = null;
-    try { raw = localStorage.getItem(LS); } catch(e){}
+    try { raw = sessionStorage.getItem(LS); } catch(e){}
     if (!raw) return;
     var d;
     try { d = JSON.parse(raw); } catch(e){ return; }
     if (!d || !d.c) return;
     var hay = false;
-    NOMBRES.forEach(function(n){
+    GUARDABLES.forEach(function(n){
       var v = d.c[n];
       if (v === true || (typeof v === 'string' && v !== '')) hay = true;
       setVal(n, v);
     });
     if (hay) {
       aviso.hidden = false;
-      var p = parseInt(d.p, 10);
-      if (p >= 1 && p <= 3) paso = p;
+      /* Nunca se devuelve a alguien mas alla del paso 1: los datos de contacto
+         no se guardan, asi que aterrizar en «Confirme y envie» con el nombre,
+         el celular y el correo en blanco —y un aviso diciendo que su avance
+         estaba guardado— parece un sitio roto. Las respuestas del credito si
+         quedan puestas, que es lo que se guardo. */
+      paso = 1;
     }
   }
 
@@ -666,7 +686,31 @@
     }
     var rad = window.skRadicado ? window.skRadicado('SOL') : 'SOL-2026-00417';
     var campo = function(n){ var el = form.querySelector('[name="' + n + '"]'); return el ? el.value.trim() : ''; };
-    var seguir = function(){ window.location.href = '/solicitud/gracias/?rad=' + encodeURIComponent(rad); };
+    /* Recibe el estado que devuelve skEnviarLead. Si el envio fallo de verdad
+       no se entrega radicado ni se navega: la persona sigue en el formulario,
+       con sus datos escritos, y se le ofrece WhatsApp para no perder el caso. */
+    var seguir = function(estado){
+      if (estado === 'error') return avisarFallo();
+      window.location.href = '/solicitud/gracias/?rad=' + encodeURIComponent(rad);
+    };
+    var avisarFallo = function(){
+      var btn = form.querySelector('button[type="submit"]') || btnE;
+      if (btn) { btn.disabled = false; }
+      var msg = 'No pudimos registrar su solicitud. Para no perderla, escríbanos por WhatsApp.';
+      if (window.skToast) window.skToast(msg);
+      var caja = document.getElementById('falloEnvio');
+      if (!caja) {
+        caja = document.createElement('p');
+        caja.id = 'falloEnvio';
+        caja.setAttribute('role', 'alert');
+        caja.style.cssText = 'margin-top:14px;color:var(--warn);font-size:14.5px;line-height:1.6';
+        (btn && btn.parentNode ? btn.parentNode : form).appendChild(caja);
+      }
+      var href = window.skWaHref ? window.skWaHref('Hola, intenté enviar mi solicitud en starkapital.com y no se registró.') : '#';
+      caja.innerHTML = 'No pudimos registrar su solicitud. Para no perderla, ' +
+        '<a href="' + href + '" target="_blank" rel="noopener" style="color:var(--pear)">escríbanos por WhatsApp</a>.';
+      caja.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    };
 
     var btnEnv = document.getElementById('btnEnviar');
     if (btnEnv) { btnEnv.disabled = true; btnEnv.textContent = 'Enviando…'; }
@@ -690,14 +734,14 @@
         plazo: campo('plazo'),
         mensaje: detalle,
         origen: 'solicitud'
-      }).then(seguir, seguir);
+      }).then(seguir, function(){ seguir('error'); });
     } else {
       seguir();
     }
   });
 
   document.getElementById('btnReset').addEventListener('click', function(){
-    try { localStorage.removeItem(LS); } catch(e){}
+    try { sessionStorage.removeItem(LS); } catch(e){}
     form.reset();
     form.querySelectorAll('.invalid').forEach(function(b){ b.classList.remove('invalid'); });
     aviso.hidden = true;

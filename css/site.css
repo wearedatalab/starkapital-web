@@ -559,3 +559,9 @@ footer.foot{border-top:1px solid var(--line);background:#0B1626;font-size:14px}
 }
 .nota-dias .ast{font-family:var(--mono);color:var(--pear);font-weight:600;flex:none}
 .nota-dias b{color:var(--ink);font-weight:600}
+
+/* Trampa antispam de los formularios. A proposito NO es display:none ni
+   hidden: varios bots saltan lo que esta oculto asi, pero rellenan lo que
+   sigue en el DOM aunque no se vea. Sale del flujo y del orden de tabulacion,
+   de modo que ni el raton ni el teclado ni un lector de pantalla la alcanzan. */
+.trampa{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}

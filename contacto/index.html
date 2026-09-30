@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/site.css?v=9">
+<link rel="stylesheet" href="/css/site.css?v=10">
 <script src="/js/analitica.js?v=2" defer></script>
 <script type="application/ld+json">
 {
@@ -323,6 +323,13 @@
       <div class="duo">
         <div class="reveal">
           <form class="form" id="formContacto" novalidate>
+            <!-- Trampa antispam. Nadie la ve; los bots que rellenan por nombre
+                 de campo sí la llenan, y el back office descarta ese envío.
+                 No se quite ni se le cambie el name. -->
+            <div class="trampa" aria-hidden="true">
+              <label for="ctWeb">No llene este campo</label>
+              <input type="text" id="ctWeb" name="sk-ref-2" tabindex="-1" autocomplete="off">
+            </div>
             <div class="fld">
               <label for="ctNombre">Su nombre</label>
               <input type="text" id="ctNombre" name="nombre" autocomplete="name" required>
@@ -498,7 +505,7 @@
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="/js/site.js?v=10"></script>
+<script src="/js/site.js?v=14"></script>
 <script>
 (function(){
   'use strict';
@@ -508,7 +515,10 @@
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var primero = null;
-    form.querySelectorAll('input, textarea').forEach(function(el){
+    /* La trampa antispam se excluye a mano: esta vacia a proposito, asi que
+       el bucle la marcaria como campo sin llenar y no dejaria enviar nunca.
+       Ademas no vive dentro de un .fld, y el closest de abajo devolveria null. */
+    form.querySelectorAll('input:not([name="sk-ref-2"]), textarea').forEach(function(el){
       var fld = el.closest('.fld');
       var mal = !el.value.trim() || (el.type === 'email' && !correoOk(el.value.trim()));
       fld.classList.toggle('invalid', mal);
@@ -533,8 +543,10 @@
       if (estado === 'error') {
         var aviso = document.createElement('p');
         aviso.style.cssText = 'margin-top:14px;color:var(--warn);font-size:14.5px;line-height:1.6';
+        /* href de verdad: los a.js-wa se conectan al cargar, y este se crea despues */
+        var waUrl = window.skWaHref ? window.skWaHref('Hola, intenté escribirles por starkapital.com y no se registró mi mensaje.') : '#';
         aviso.innerHTML = 'No pudimos registrar el envío. Para no perder su mensaje, ' +
-          '<a class="js-wa" href="#" target="_blank" rel="noopener" style="color:var(--pear)">escríbanos por WhatsApp</a>.';
+          '<a href="' + waUrl + '" target="_blank" rel="noopener" style="color:var(--pear)">escríbanos por WhatsApp</a>.';
         ok.appendChild(aviso);
       }
       var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

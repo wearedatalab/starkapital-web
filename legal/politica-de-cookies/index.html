@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/site.css?v=9">
+<link rel="stylesheet" href="/css/site.css?v=10">
 <script src="/js/analitica.js?v=2" defer></script>
 <script type="application/ld+json">
 {
@@ -317,13 +317,28 @@
               </tr>
               <tr>
                 <td><strong>Avance de la solicitud</strong></td>
-                <td><span class="tnum">localStorage, técnico</span></td>
-                <td><strong>Sí guarda datos personales:</strong> mientras llena el formulario por pasos, su nombre, celular, correo, ciudad, experiencia y rango de producción quedan en su propio navegador para que no pierda lo escrito si se le cae la señal. No se envían a ningún servidor hasta que usted pulsa enviar, y se borran automáticamente al completar la solicitud. Puede borrarlos antes con el botón «Empezar de nuevo» o limpiando los datos del sitio en su navegador</td>
+                <td><span class="tnum">sessionStorage, técnico</span></td>
+                <td><strong>No guarda datos personales.</strong> Mientras llena el formulario por pasos, el navegador recuerda únicamente el monto, si ya vio el vehículo, sus años de experiencia y el rango de producción, para que no pierda el avance si se le cae la señal. Su nombre, celular, correo, ciudad y las autorizaciones que marque <strong>no se guardan nunca</strong>: se escriben una sola vez y viajan directo al enviar. Lo poco que se recuerda desaparece al cerrar la pestaña</td>
               </tr>
               <tr>
                 <td><strong>Vitrina y vendedor recordados</strong></td>
+                <td><span class="tnum">sessionStorage, técnico</span></td>
+                <td>En la página de radicación para vitrinas, el nombre de la vitrina y del vendedor se recuerdan durante la jornada para no reescribirlos en cada radicación. Desaparecen al cerrar la pestaña, porque el mostrador de una vitrina suele ser un equipo compartido</td>
+              </tr>
+              <tr>
+                <td><strong>Protección antispam de los formularios</strong></td>
+                <td><span class="tlime">No se guarda nada</span></td>
+                <td>Al empezar a escribir, el formulario pide a nuestro servidor una marca de tiempo firmada que sirve para distinguir a una persona de un envío automático. No identifica a nadie, no queda en su navegador y se descarta al enviar</td>
+              </tr>
+              <tr>
+                <td><strong>Su decisión sobre la medición</strong></td>
                 <td><span class="tnum">localStorage, técnico</span></td>
-                <td>En la página de radicación para vitrinas, el nombre de la vitrina y del vendedor quedan guardados en ese celular para no reescribirlos en cada radicación del día</td>
+                <td>Si algún día el sitio activa medición y usted acepta o rechaza, la decisión se guarda en su navegador para no volvérsela a preguntar en cada visita. Guarda únicamente eso: aceptó o no aceptó. Mientras la medición esté apagada, esta clave no se escribe</td>
+              </tr>
+              <tr>
+                <td><strong>De dónde llegó al sitio</strong></td>
+                <td><span class="tnum">sessionStorage, técnico</span></td>
+                <td>Al entrar se anota el canal por el que llegó —un buscador, una campaña, un enlace de otra página— junto con los parámetros <span class="tnum">utm_*</span> y <span class="tnum">gclid</span> que traiga la dirección, y la primera página que vio. Sirve para saber qué canal trae negocio. <strong>Si usted envía un formulario, ese dato viaja con su mensaje</strong> a nuestro back office; no identifica a una persona por sí solo y desaparece del navegador al cerrar la pestaña</td>
               </tr>
               <tr>
                 <td><strong>Parámetros del simulador</strong></td>
@@ -333,7 +348,8 @@
             </tbody>
           </table>
         </div>
-        <p>En consecuencia, hoy el sitio <strong>no muestra aviso de cookies</strong>: no hay nada que consentir. Preferimos no instalar rastreadores a pedirle permiso para hacerlo.</p>
+        <p>En consecuencia, mientras la medición esté apagada el sitio <strong>no muestra aviso de cookies</strong>: no hay nada que consentir. Preferimos no instalar rastreadores a pedirle permiso para hacerlo.</p>
+        <p>Decimos «mientras esté apagada» porque es un interruptor: Starkapital puede activar la medición desde su panel de administración sin modificar el sitio. <strong>El día que se active, usted lo notará antes que nada:</strong> aparecerá el aviso de consentimiento y ningún rastreador se cargará hasta que usted decida. Las reglas que regirán ese momento están en el punto 4, y este inventario se actualizará con el nombre, el proveedor y la duración de cada cookie antes de que se encienda.</p>
 
         <h2 id="externos">3. Recursos externos que el sitio carga</h2>
         <p>El sitio carga las fuentes tipográficas desde Google Fonts. Esa solicitud le comunica a Google la dirección IP de su dispositivo, como cualquier descarga de un recurso web, aunque no instala cookies. El plan técnico del sitio contempla <strong>autoalojar las fuentes</strong> para eliminar incluso esa transferencia.</p>
@@ -441,6 +457,6 @@
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="/js/site.js?v=10"></script>
+<script src="/js/site.js?v=14"></script>
 </body>
 </html>

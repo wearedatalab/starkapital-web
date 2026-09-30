@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/site.css?v=9">
+<link rel="stylesheet" href="/css/site.css?v=10">
 <script src="/js/analitica.js?v=2" defer></script>
 <script type="application/ld+json">
 {
@@ -259,7 +259,6 @@
       <p class="lead h-in d3">Un aliado financiero también responde cuando algo sale mal. Si algo no salió como se lo prometimos, este es el canal para decirlo: radique aquí mismo, reciba su <strong>número de radicado al instante</strong> y le respondemos por escrito en <strong>máximo 15 días hábiles</strong>.</p>
       <div class="hero-ctas h-in d4">
         <a class="btn-cta" href="#radicar">Radicar mi PQRS</a>
-        <a class="btn-ghost" href="#estado">Consultar el estado</a>
       </div>
     </div>
   </section>
@@ -311,6 +310,13 @@
       <p class="sec-sub reveal" style="--d:.16s">Entre más detalle nos dé — fechas, valores, números de cuota —, más rápida y precisa será la respuesta.</p>
 
       <form class="pqrs-form form reveal" id="formPqrs" style="--d:.2s;margin-top:44px" novalidate>
+            <!-- Trampa antispam. Nadie la ve; los bots que rellenan por nombre
+                 de campo sí la llenan, y el back office descarta ese envío.
+                 No se quite ni se le cambie el name. -->
+            <div class="trampa" aria-hidden="true">
+              <label for="pqWeb">No llene este campo</label>
+              <input type="text" id="pqWeb" name="sk-ref-2" tabindex="-1" autocomplete="off">
+            </div>
         <div class="fld">
           <span class="flab" id="tipoLab" style="font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.07em">Tipo de solicitud</span>
           <div class="chips" role="radiogroup" aria-labelledby="tipoLab">
@@ -365,33 +371,15 @@
           <div class="rl">Su número de radicado</div>
           <div class="rn" id="radNum">PQR-2026-00000</div>
         </div>
-        <p class="comp">Su <b id="radTipo">solicitud</b> quedó radicada el <b id="radFecha">—</b>. Le respondemos por escrito en <b>máximo 15 días hábiles</b> al correo que nos dejó. Guarde el número: con él consulta el estado en cualquier momento.</p>
+        <p class="comp">Su <b id="radTipo">solicitud</b> quedó radicada el <b id="radFecha">—</b>. Le respondemos por escrito en <b>máximo 15 días hábiles</b> al correo que nos dejó. Guarde el número por si necesita referirse a este caso.</p>
         <div class="acts">
-          <a class="btn-wa js-wa js-wa-estado" href="#" target="_blank" rel="noopener" data-wa-msg="Hola, quiero consultar el estado de mi PQRS radicada en starkapital.com.">
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.7-5c-.8-1.4-1-2.5-.8-3 .1-.5.8-1.3 1.3-1.4h.7c.2 0 .5-.1.8.6l1 2.4c.1.2.1.4 0 .6l-.5.8c-.2.2-.3.4-.1.7a9 9 0 0 0 3.9 3.5c.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .2 0 .6-.5 1.6Z"/></svg>
-            Consultar por WhatsApp
-          </a>
           <a class="btn-ghost" href="/preguntas-frecuentes/">Ver preguntas frecuentes</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3 · CONSULTAR ESTADO -->
-  <section id="estado" aria-label="Cómo consultar el estado">
-    <div class="wrap">
-      <div class="sec-eyebrow reveal">Seguimiento</div>
-      <h2 class="sec-t reveal" style="--d:.08s">¿Cómo consulta el estado de su PQRS?</h2>
-      <p class="sec-sub reveal" style="--d:.16s">Con el número de radicado en la mano, la consulta toma un minuto.</p>
-      <div class="pasos p3" style="margin-top:56px">
-        <div class="paso reveal"><span class="pn">1</span><h3>Tenga el número a la mano</h3><p>Es el código que recibió al radicar, con el formato PQR-2026-00000. También se lo enviamos al correo.</p></div>
-        <div class="paso reveal" style="--d:.1s"><span class="pn">2</span><h3>Escríbanos por WhatsApp</h3><p>Envíe el número por <a href="#" class="js-wa js-wa-estado" data-wa-msg="Hola, quiero consultar el estado de mi PQRS radicada en starkapital.com." style="color:var(--pear)">nuestro chat</a> y una persona del equipo revisa su caso. También puede escribir a hola@starkapital.com con el radicado en el asunto.</p></div>
-        <div class="paso reveal" style="--d:.2s"><span class="pn">3</span><h3>Le decimos en qué va</h3><p>Recibida, en estudio o respondida — y si está en estudio, la fecha máxima en la que tendrá la respuesta por escrito.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CIERRE -->
+<!-- CIERRE -->
   <section class="cierre" aria-label="Cierre">
     <div class="wrap">
       <h2 class="reveal">¿Solo tiene una pregunta? <em>Quizá ya está respondida</em></h2>
@@ -482,7 +470,7 @@
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="/js/site.js?v=10"></script>
+<script src="/js/site.js?v=14"></script>
 <script>
 (function(){
   'use strict';
@@ -517,29 +505,55 @@
 
     if (primero) { primero.focus(); return; }
 
-    /* radicado de demostración */
-    var num = window.skRadicado('PQR');
-    var fecha = new Date().toLocaleDateString('es-CO', { day: 'numeric', month: 'long', year: 'numeric' });
-    document.getElementById('radNum').textContent = num;
-    document.getElementById('radTipo').textContent = tipoSel.value.toLowerCase();
-    document.getElementById('radFecha').textContent = fecha;
+    var btnEnv = form.querySelector('button[type="submit"]');
+    if (btnEnv) btnEnv.disabled = true;
 
-    /* los enlaces de consulta llevan el radicado en el mensaje */
-    var msg = 'Hola, quiero consultar el estado de mi PQRS. Mi número de radicado es ' + num + '.';
-    document.querySelectorAll('.js-wa-estado').forEach(function(a){
-      a.setAttribute('data-wa-msg', msg);
-      if (a.href && a.href.indexOf('?') > -1) {
-        a.href = a.href.split('?')[0] + '?text=' + encodeURIComponent(msg);
+    var mostrarOk = function(num){
+      var fecha = new Date().toLocaleDateString('es-CO', { day: 'numeric', month: 'long', year: 'numeric' });
+      document.getElementById('radNum').textContent = num;
+      document.getElementById('radTipo').textContent = tipoSel.value.toLowerCase();
+      document.getElementById('radFecha').textContent = fecha;
+      form.hidden = true;
+      var ok = document.getElementById('pqrsOk');
+      ok.hidden = false;
+      ok.classList.add('in');
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      ok.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' });
+      if (window.skToast) window.skToast('PQRS radicada: ' + num);
+    };
+
+    /* Si la radicación no llegó no se entrega número: darle a alguien un
+       radicado de algo que no existe es peor que decirle que hubo un problema. */
+    var fallo = function(){
+      if (btnEnv) btnEnv.disabled = false;
+      var caja = document.getElementById('pqFallo');
+      if (!caja) {
+        caja = document.createElement('p');
+        caja.id = 'pqFallo';
+        caja.setAttribute('role', 'alert');
+        caja.style.cssText = 'margin-top:14px;color:var(--warn);font-size:14.5px;line-height:1.6';
+        (btnEnv && btnEnv.parentNode ? btnEnv.parentNode : form).appendChild(caja);
       }
-    });
+      var href = window.skWaHref ? window.skWaHref('Hola, intenté radicar una PQRS en starkapital.com y no se registró.') : '#';
+      caja.innerHTML = '<strong>No pudimos radicar su PQRS.</strong> Para no perderla, ' +
+        '<a href="' + href + '" target="_blank" rel="noopener" style="color:var(--pear)">escríbanos por WhatsApp</a> ' +
+        'o a <a href="mailto:hola@starkapital.com" style="color:var(--pear)">hola@starkapital.com</a>.';
+      caja.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      if (window.skToast) window.skToast('No pudimos radicar su PQRS');
+    };
 
-    form.hidden = true;
-    var ok = document.getElementById('pqrsOk');
-    ok.hidden = false;
-    ok.classList.add('in');
-    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    ok.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' });
-    if (window.skToast) window.skToast('PQRS radicada: ' + num);
+    if (!window.skEnviarPqrs) { fallo(); return; }
+    window.skEnviarPqrs({
+      tipo: tipoSel.value,
+      nombre: document.getElementById('pqNombre').value.trim(),
+      cedula: document.getElementById('pqCedula').value.trim(),
+      celular: document.getElementById('pqCel').value.trim(),
+      correo: document.getElementById('pqCorreo').value.trim(),
+      relato: document.getElementById('pqRelato').value.trim()
+    }).then(function(r){
+      if (r.estado === 'ok' && r.radicado) mostrarOk(r.radicado);
+      else fallo();
+    }, fallo);
   });
 })();
 </script>

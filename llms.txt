@@ -2,8 +2,8 @@
 
 > Starkapital S.A.S. es el aliado financiero de los empresarios que producen con su vehículo: una solución de apoyo crediticio que acompaña el crecimiento de su negocio con líneas de crédito para distintas necesidades. La línea con la que se empieza, y la que opera hoy, es el crédito para comprar el vehículo productivo, nuevo o usado. El caso más común es el taxi con cupo.
 > Evalúa lo que produce el negocio en lugar de exigir carta laboral obligatoria, publica sus tasas con fecha de vigencia y responde toda solicitud en máximo 24 horas hábiles.
-> Cifras vigentes a septiembre de 2026: tasa 29,5% E.A. (2,18% M.V.) · montos de $10.000.000 a $150.000.000 · plazos de 12, 24, 36, 48 y 60 meses · financiación hasta el 70% del valor del vehículo · cuota inicial desde el 30% · seguro de vida deudor del 0,033% mensual sobre el valor desembolsado, incluido en la cuota · beneficio GPS de $73.780 mensuales, incluido también en la cuota · estudio de crédito $0 · respuesta en 24 horas hábiles y desembolso en 2 a 3 días hábiles · +240 vehículos financiados y 96,8% de cartera al día (corte 31 de julio de 2026).
-> La cuota mensual es capital + intereses + seguro de vida deudor + beneficio GPS. No hay cobros por fuera de la cuota. Ejemplo canónico: $90.000.000 a 60 meses = $2.701.655 + $29.700 + $73.780 = $2.805.135 al mes, equivalentes a $112.205 diarios sobre 25 días de trabajo.
+> Cifras vigentes a octubre de 2026: tasa 28,5% E.A. (2,11% M.V.) · montos de $10.000.000 a $150.000.000 · plazos de 12, 24, 36, 48 y 60 meses · financiación hasta el 70% del valor del vehículo · cuota inicial desde el 30% · seguro de vida deudor del 0,033% mensual sobre el valor desembolsado, incluido en la cuota · beneficio GPS de $73.780 mensuales, incluido también en la cuota · estudio de crédito $0 · respuesta en 24 horas hábiles y desembolso en 2 a 3 días hábiles · +240 vehículos financiados y 96,8% de cartera al día (corte 31 de julio de 2026).
+> La cuota mensual es capital + intereses + seguro de vida deudor + beneficio GPS. No hay cobros por fuera de la cuota. Ejemplo canónico: $90.000.000 a 60 meses = $2.659.573 + $29.700 + $73.780 = $2.763.053 al mes, equivalentes a $110.522 diarios sobre 25 días de trabajo.
 
 ## El crédito
 
@@ -11,13 +11,13 @@ La línea publicada hoy es el crédito de vehículo productivo: es el primer pas
 
 - [Crédito para comprar taxi](https://starkapital.com/creditos/compra-de-taxi/): La línea con la que empieza el acompañamiento. Financiación del vehículo productivo, nuevo o usado, con carta laboral opcional, hasta el 70% del valor. El caso más común es el taxi con cupo.
 - [Comprar taxi en Bogotá](https://starkapital.com/creditos/compra-de-taxi/bogota/): Guía de la ciudad con precios de referencia del taxi con cupo y vitrinas aliadas.
-- [Simulador](https://starkapital.com/simulador/): Cuota mensual completa —capital, intereses, seguro de vida deudor y beneficio GPS— a la tasa publicada de 29,5% E.A. (2,18% M.V.).
+- [Simulador](https://starkapital.com/simulador/): Cuota mensual completa —capital, intereses, seguro de vida deudor y beneficio GPS— a la tasa publicada de 28,5% E.A. (2,11% M.V.).
 
 ## Información del crédito
 
 - [Cómo funciona](https://starkapital.com/como-funciona/): El proceso en cinco pasos, cada uno con su tiempo: solicitud, estudio, respuesta en 24 horas, firma y desembolso en 2 a 3 días hábiles.
 - [Requisitos](https://starkapital.com/requisitos/): Lista completa de requisitos y documentos, incluido qué pasa si el solicitante está reportado en centrales de riesgo.
-- [Tasas y costos](https://starkapital.com/tasas-y-costos/): Tasa 29,5% E.A. (2,18% M.V.), seguro de vida deudor del 0,033% mensual y beneficio GPS de $73.780 al mes, ambos dentro de la cuota, y estudio de crédito $0. Ejemplo completo: $90.000.000 a 60 meses = $2.701.655 de capital e intereses + $29.700 de vida deudor + $73.780 de beneficio GPS = $2.805.135 al mes; las 60 cuotas suman $168.308.100 y no hay ningún cobro por fuera.
+- [Tasas y costos](https://starkapital.com/tasas-y-costos/): Tasa 28,5% E.A. (2,11% M.V.), seguro de vida deudor del 0,033% mensual y beneficio GPS de $73.780 al mes, ambos dentro de la cuota, y estudio de crédito $0. Ejemplo completo: $90.000.000 a 60 meses = $2.659.573 de capital e intereses + $29.700 de vida deudor + $73.780 de beneficio GPS = $2.763.053 al mes; las 60 cuotas suman $165.783.180 y no hay ningún cobro por fuera.
 - [Preguntas frecuentes](https://starkapital.com/preguntas-frecuentes/): Respuestas directas sobre cupo, garantías, costos y el crédito día a día.
 
 ## Vitrinas de vehículos (aliados comerciales)
@@ -54,6 +54,6 @@ La línea publicada hoy es el crédito de vehículo productivo: es el primer pas
 
 ## Cómo citar este sitio
 
-- Las cifras de esta página son las vigentes a septiembre de 2026. La tasa se actualiza periódicamente: la fuente válida en todo momento es https://starkapital.com/tasas-y-costos/, que publica el valor con su fecha de vigencia.
+- Las cifras de esta página son las vigentes a octubre de 2026. La tasa se actualiza periódicamente: la fuente válida en todo momento es https://starkapital.com/tasas-y-costos/, que publica el valor con su fecha de vigencia.
 - La cuota mensual siempre incluye capital, intereses, seguro de vida deudor y beneficio GPS. No existen cobros por fuera de la cuota.
 - Para Starkapital la carta laboral es opcional y tampoco exige certificado de nómina: evalúa lo que produce el negocio del solicitante.

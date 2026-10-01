@@ -5,12 +5,14 @@
   'use strict';
 
   /* ---------- Constantes financieras ----------
-     Estructura confirmada por el cliente (septiembre de 2026):
-       · tasa 29,5% E.A.
+     Estructura confirmada por el cliente (octubre de 2026):
+       · tasa 28,5% E.A.
        · seguro de vida deudor: 0,033% mensual sobre el valor desembolsado
-       · beneficio de seguimiento GPS: $73.780 al mes, dentro de la cuota */
-  var TASA_EA = 0.295;
-  var iMes = Math.pow(1 + TASA_EA, 1/12) - 1;   /* ≈ 0,021776 → 2,18% M.V. */
+       · beneficio de seguimiento GPS: $73.780 al mes, dentro de la cuota
+     Si la tasa vuelve a cambiar: aqui, y ademas los ejemplos escritos a mano
+     en las paginas, que se calculan con ella y dejan de cuadrar solos. */
+  var TASA_EA = 0.285;
+  var iMes = Math.pow(1 + TASA_EA, 1/12) - 1;   /* ≈ 0,021116 → 2,11% M.V. */
   var VIDA_DEUDOR_PCT = 0.00033;                 /* mensual, sobre el desembolso */
   var GPS_MES = 73780;                           /* beneficio GPS: valor mensual, va dentro de la cuota */
   var GPS_ANUAL = GPS_MES * 12;                  /* equivalente anual, para los textos */
